@@ -1,0 +1,156 @@
+﻿
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Muthuraja Design System</title>
+
+
+<link rel="preload" href="../../assets/fonts/OpenSans/opensans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/OpenSans/opensans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/OpenSans/opensans-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/OpenSans/opensans-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
+<meta name="description" content="KDS - A Front-end UI toolkit built with Fractal">
+<meta name="format-detection" content="telephone=no">
+<meta name="referrer" content="origin">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="">
+<meta name="application-name" content="">
+<meta name="msapplication-TileColor" content="#1f145d">
+<meta name="msapplication-TileImage" content="../../assets/img/favicons/mstile-144x144.png">
+<meta name="theme-color" content="#1f145d">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicons/favicon-16x16.png">
+<link rel="mask-icon" href="../../assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../../assets/img/favicons/favicon.ico" type="image/x-icon">
+
+<link rel="manifest" href="../../manifest.json">
+<link rel="author" type="text/plain" href="../../humans.txt">
+    <link media="all" rel="stylesheet" href="../../assets/styles/css/mrx-fonts.css">
+<link media="all" rel="stylesheet" href="../../assets/styles/css/mrx-styles.css">
+
+    
+
+    <script src="../../assets/scripts/js/vendor/modernizr-custom.js"></script>
+<script src="../../assets/scripts/js/vendor/svg4everybody.js"></script>
+<script>
+    svg4everybody();
+</script>
+
+    
+</head>
+<body class="mrx-page">
+    <nav class="mrx-pagination" aria-label="Aria label example">
+    <ul class="mrx-pagination__group">
+        <li class="mrx-pagination__item">
+            <!-- LINK AS BUTTON Component -->
+<a class="mrx-btn mrx-btn--skin-secondary mrx-btn--size-large mrx-pagination__link" href="#">
+    <span class="mrx-btn__inner">
+        <!-- ICON Component -->
+<i class="mrx-icon mrx-icon--size-base">
+    <svg focusable="false">
+        <use xlink:href="../../assets/img/icons/sprites/icons.svg#angle-left"></use>
+    </svg>
+</i>
+        <span class="mrx-btn__txt">Previous</span>
+    </span>
+</a>
+        </li>
+    
+    
+        <li class="mrx-pagination__item">
+            <!-- LINK AS BUTTON Component -->
+<a class="mrx-btn mrx-btn--skin-secondary mrx-btn--size-large mrx-pagination__link" href="#">
+    <span class="mrx-btn__inner">
+        <span class="mrx-btn__txt">1</span>
+    </span>
+</a>
+        </li>
+    
+    
+        <li class="mrx-pagination__item">
+            <!-- LINK AS BUTTON Component -->
+<a class="mrx-btn mrx-btn--skin-secondary mrx-btn--size-large mrx-pagination__link" href="#">
+    <span class="mrx-btn__inner">
+        <span class="mrx-btn__txt">2</span>
+    </span>
+</a>
+        </li>
+    
+    
+        <li class="mrx-pagination__item">
+            <!-- LINK AS BUTTON Component -->
+<a class="mrx-btn mrx-btn--skin-secondary mrx-btn--size-large mrx-pagination__link" href="#">
+    <span class="mrx-btn__inner">
+        <span class="mrx-btn__txt">3</span>
+    </span>
+</a>
+        </li>
+    
+    
+        <li class="mrx-pagination__item">
+            <!-- LINK AS BUTTON Component -->
+<a class="mrx-btn mrx-btn--skin-secondary mrx-btn--size-large mrx-pagination__link" href="#">
+    <span class="mrx-btn__inner">
+        <span class="mrx-btn__txt">4</span>
+    </span>
+</a>
+        </li>
+    
+    
+        <li class="mrx-pagination__item">
+            <!-- LINK AS BUTTON Component -->
+<a class="mrx-btn mrx-btn--skin-secondary mrx-btn--size-large mrx-pagination__link" href="#">
+    <span class="mrx-btn__inner">
+        <span class="mrx-btn__txt">5</span>
+    </span>
+</a>
+        </li>
+    
+    
+        <li class="mrx-pagination__item">
+            <!-- LINK AS BUTTON Component -->
+<a class="mrx-btn mrx-btn--skin-secondary mrx-btn--size-large mrx-pagination__link" href="#">
+    <span class="mrx-btn__inner">
+        <span class="mrx-btn__txt">Next</span>
+        <!-- ICON Component -->
+<i class="mrx-icon mrx-icon--size-base">
+    <svg focusable="false">
+        <use xlink:href="../../assets/img/icons/sprites/icons.svg#angle-right"></use>
+    </svg>
+</i>
+    </span>
+</a>
+        </li>
+    
+    </ul>
+</nav>
+
+    
+<script>
+    let buttons = document.querySelectorAll('.mrx-btn');
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function(event) {
+            this.blur();
+        });
+    }
+</script>
+<script src="../../assets/scripts/js/helpers.js"></script>
+<script src="../../assets/scripts/js/navigation.js"></script>
+<script src="../../assets/scripts/js/object-fit-fallback.js"></script>
+
+
+<script src="../../assets/scripts/js/components/dropdown.js"></script>
+
+    
+    
+</body>
+</html>

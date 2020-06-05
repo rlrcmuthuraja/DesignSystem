@@ -1,0 +1,74 @@
+// ==========================================================================
+// BASE: icons
+// ==========================================================================
+
+.mrx-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// Modifiers: Size
+// ==========================================================================
+
+.mrx-icon--size-tiny {
+    @include icon-scale(tiny);
+}
+
+.mrx-icon--size-small {
+    @include icon-scale(small);
+}
+
+.mrx-icon--size-base {
+    @include icon-scale(base);
+}
+
+.mrx-icon--size-moderate {
+    @include icon-scale(moderate);
+}
+
+.mrx-icon--size-medium {
+    @include icon-scale(medium);
+}
+
+.mrx-icon--size-large {
+    @include icon-scale(large);
+}
+
+.mrx-icon--size-xlarge {
+    @include icon-scale(xlarge);
+}
+
+.mrx-icon--size-xxlarge {
+    @include icon-scale(xxlarge);
+}
+
+.mrx-icon--size-xxxlarge {
+    @include icon-scale(xxxlarge);
+}
+
+// Size of svg inside icon-container
+.mrx-icon {
+    position: relative;
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: inherit;
+        fill: currentColor;
+    }
+}
+
+// Modifiers: Color
+// ==========================================================================
+
+.mrx-icon--light {
+    fill: $color-white;
+}
+
+.mrx-icon--dark {
+    fill: $color-black;
+}
+

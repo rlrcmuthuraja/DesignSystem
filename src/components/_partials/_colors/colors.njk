@@ -1,0 +1,9 @@
+{% for category in categories -%}
+<ul class="mrx-row mrx-row--gutters swatches swatches--colors mrx-ui">
+    {% for color in category.colors %}
+        <li class="mrx-col mrx-col--12@all mrx-col--6@tab-s mrx-col--4@tab-m">
+            {% render '@color-swatch', color.context %}
+        </li>
+    {% endfor %}
+</ul>
+{% endfor -%}

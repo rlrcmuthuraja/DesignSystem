@@ -1,0 +1,89 @@
+@each $mq, $units in $mq-breakpoints {
+    @include mq($mq) {
+
+        $size: 'auto';
+
+        .mrx-mx--#{$size}\@#{$mq} {
+            @include mx($size);
+        }
+
+        .mrx-ml--#{$size}\@#{$mq} {
+            @include ml($size);
+        }
+
+        .mrx-mr--#{$size}\@#{$mq} {
+            @include mr($size);
+        }
+
+        @each $size, $units in $spacing-sizes {
+
+            // === Margin ===
+
+            .mrx-m--#{$size}\@#{$mq} {
+                @include m($size);
+            }
+
+            .mrx-mx--#{$size}\@#{$mq} {
+                @include mx($size);
+            }
+
+            .mrx-my--#{$size}\@#{$mq} {
+                @include my($size);
+            }
+
+            .mrx-ml--#{$size}\@#{$mq} {
+                @include ml($size);
+            }
+
+            .mrx-mt--#{$size}\@#{$mq} {
+                @include mt($size);
+            }
+
+            .mrx-mr--#{$size}\@#{$mq} {
+                @include mr($size);
+            }
+
+            .mrx-mb--#{$size}\@#{$mq} {
+                @include mb($size);
+            }
+
+            // === Padding ===
+
+            .mrx-p--#{$size}\@#{$mq} {
+                @include p($size);
+            }
+
+            .mrx-px--#{$size}\@#{$mq} {
+                @include px($size);
+            }
+
+            .mrx-py--#{$size}\@#{$mq} {
+                @include py($size);
+            }
+
+            .mrx-pl--#{$size}\@#{$mq} {
+                @include pl($size);
+            }
+
+            .mrx-pt--#{$size}\@#{$mq} {
+                @include pt($size);
+            }
+
+            .mrx-pr--#{$size}\@#{$mq} {
+                @include pr($size);
+            }
+
+            .mrx-pb--#{$size}\@#{$mq} {
+                @include pb($size);
+            }
+        }
+    }
+}
+
+[class*=mrx-m--] {
+    transition: margin $duration-default ease;
+}
+
+[class*=mrx-p--] {
+    transition: padding $duration-default ease;
+}

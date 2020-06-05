@@ -1,0 +1,37 @@
+// ==========================================================================
+// Component: switchgroup (Shared styles for radiobuttons & checkboxes)
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+// Block (parent)
+// ==========================================================================
+
+.mrx-switchgroup {
+    position: relative;
+
+    .mrx-switch {
+        flex-basis: 100%;
+    }
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-switchgroup--inline {
+    margin-top: rem-calc(-4) !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .mrx-switch {
+        // If number of switches within a switchgroup with modifier --inline is
+        // more than 3, we force a stacked view.
+        @include at-most(3) {
+            @include m(small, large, none, none);
+            display: inline-block;
+            flex-basis: auto;
+        }
+    }
+}

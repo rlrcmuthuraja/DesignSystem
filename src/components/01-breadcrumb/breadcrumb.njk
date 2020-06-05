@@ -1,0 +1,20 @@
+<!-- BREADCRUMB Component -->
+<nav class="mrx-breadcrumb{% if theme %} mrx-breadcrumb--theme-{{ theme }}{% endif %}">
+    <ol class="mrx-breadcrumb__list">
+        {% for item in items -%}
+        <li class="mrx-breadcrumb__item">
+            {% if item.href -%}
+            <a href="{{ item.href }}" class="mrx-breadcrumb__label">{{ item.txt }}</a>
+                {% if item.dropdownContext %}
+                {%- render '@dropdown', item.dropdownContext -%}
+
+                {% else %}
+                {% render '@icon', { symbol: 'angle-right', size: 'tiny' } %}
+                {%- endif -%}
+            {% else -%}
+            <span class="mrx-breadcrumb__label">{{ item.txt }}</span>
+            {% endif -%}
+        </li>
+        {%- endfor -%}
+    </ol>
+</nav>

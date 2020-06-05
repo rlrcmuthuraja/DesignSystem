@@ -1,0 +1,8 @@
+<button class="mrx-btn mrx-hamburger mrx-hamburger--spin{% for class in classes %} {{ class }}{% endfor %}">
+    <span class="mrx-hamburger__inner">
+        <span class="mrx-hamburger__icon"></span>
+    </span>
+    {% if text -%}
+    <span class="mrx-hamburger__txt mrx-is-vishidden">{{ text }}</span>
+    {%- endif %}
+</button>

@@ -1,0 +1,11 @@
+.mrx-label {
+    @include type-scale(tiny);
+    @include type-weight(bold);
+    text-transform: uppercase;
+
+    .mrx-form__optional {
+        @include type-scale(small);
+        @include type-weight(regular);
+        @include ml(tiny);
+    }
+}

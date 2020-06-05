@@ -1,0 +1,31 @@
+<div class="mrx-notification{% if tone %} mrx-notification--{{ tone }}{% endif %}{% if type %} mrx-notification--{{ type }}{% endif %}{% for class in classes %} {{ class }}{% endfor %}">
+    <div class="mrx-notification__content">
+        {% if icon.symbol -%}
+            <span class="mrx-notification__icon">
+            {% render '@icon', icon %}
+        </span>
+        {% endif -%}
+        {% if title -%}
+            <header class="mrx-notification__header">
+            <h3 class="mrx-notification__title">{{ title }}</h3>
+        </header>
+        {% endif -%}
+        {% if content -%}
+        <div class="mrx-notification__body">
+            <p>{{ content }}</p>
+        </div>
+        {% endif -%}
+    </div>
+    {%if dismissable -%}
+        {% render '@button', {
+            text: 'Close',
+            icon: {
+                symbol: 'close',
+                size: 'base'
+            },
+            size: 'tiny',
+            classes: ['mrx-notification__dismiss mrx-js-notification__dismiss'],
+            hideText: true
+        } %}
+    {% endif -%}
+</div>

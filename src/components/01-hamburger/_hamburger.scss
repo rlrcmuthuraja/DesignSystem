@@ -1,0 +1,121 @@
+// ==========================================================================
+// Component: hamburger
+// ==========================================================================
+
+// Settings
+// ==========================================================================
+$hamburger-padding-x:                  rem-calc(20) !default;
+$hamburger-padding-y:                  rem-calc(18) !default;
+$hamburger-layer-width:                rem-calc(16) !default;
+$hamburger-layer-height:               rem-calc(2) !default;
+$hamburger-layer-spacing:              rem-calc(3) !default;
+$hamburger-layer-border-radius:        rem-calc(0) !default;
+$hamburger-height:                     rem-calc(20) !default;
+
+
+// Elements (children)
+// ==========================================================================
+
+.mrx-hamburger__inner {
+    width: $hamburger-layer-width;
+    height: $hamburger-height;
+    display: inline-block;
+    position: relative;
+
+    + .mrx-hamburger__txt {
+        @include ml(mini);
+    }
+}
+
+.mrx-hamburger__icon {
+    display: block;
+    top: 50%;
+    margin-top: $hamburger-layer-height / -2;
+
+    &,
+    &::before,
+    &::after {
+        width: 100%;
+        height: $hamburger-layer-height;
+        background-color: currentColor;
+        border-radius: $hamburger-layer-border-radius;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: $duration-default;
+        transition-timing-function: ease;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+    }
+
+    &::before {
+        top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+    }
+
+    &::after {
+        bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+    }
+}
+
+// Block (parent)
+// ==========================================================================
+
+.mrx-hamburger {
+    padding: $hamburger-padding-y $hamburger-padding-x;
+    display: inline-block;
+    display: flex;
+    cursor: pointer;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-hamburger--spin {
+    .mrx-hamburger__icon {
+        transition-duration: 0.22s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+        &::before {
+            transition: top 0.1s 0.25s ease-in,
+            opacity 0.1s ease-in;
+        }
+
+        &::after {
+            transition: bottom 0.1s 0.25s ease-in,
+            transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+    }
+
+    &.mrx-is-active {
+        .mrx-hamburger__icon {
+            transform: rotate(225deg);
+            transition-delay: 0.12s;
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+            &::before {
+                top: 0;
+                opacity: 0;
+                transition: top 0.1s ease-out,
+                opacity 0.1s 0.12s ease-out;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom 0.1s ease-out,
+                transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+        }
+    }
+}

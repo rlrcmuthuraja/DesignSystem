@@ -1,0 +1,139 @@
+// ==========================================================================
+// Component: card
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-card__img {
+    object-fit: cover;
+}
+
+.mrx-card__title-link {
+    color: $color-card-title-link-txt;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.mrx-card__title {
+    @include type-scale(medium);
+}
+
+.mrx-card__tagitem {
+    @include type-scale(tiny);
+    @include type-weight(bold);
+    line-height: 1rem;
+
+    &:not(:last-of-type) {
+        &:after {
+            @include mr(tiny);
+            content: ',';
+        }
+    }
+}
+
+.mrx-card__taglist {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.mrx-card__tags {
+    display: flex;
+    align-items: flex-start;
+    color: $color-card-tags-txt;
+
+    .mrx-icon {
+        margin-top: rem-calc(1);
+        margin-right: rem-calc(4);
+        margin-left: rem-calc(-2);
+        flex: 0 0 auto;
+    }
+}
+
+.mrx-card__cta {
+    margin-left: auto;
+    flex: 0 0 auto;
+
+    &.mrx-btn--skin-flat {
+        margin-right: rem-calc(-12);
+    }
+}
+
+.mrx-card__header {
+    @include p(large, large, none, large);
+}
+
+.mrx-card__body {
+    @include type-scale(small);
+    @include p(base, large, base, large);
+}
+
+.mrx-card__footer {
+    @include p(base, large, base, large);
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-card {
+    @include shadow(1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all $duration-default cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-card--skin-default {
+    background-color: $color-card-bg;
+}
+
+.mrx-card--has-img {
+    color: $color-card-has-img-txt;
+
+    .mrx-card__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom, rgba($color-navy-base, 0.3), $color-navy-shade-40);
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .mrx-card__header {
+        @include p(xxxlarge, large, none, large);
+    }
+
+    .mrx-card__header,
+    .mrx-card__body,
+    .mrx-card__footer {
+        position: relative;
+        z-index: 1;
+    }
+
+    .mrx-card__title-link {
+        color: inherit;
+    }
+
+    .mrx-card__tags {
+        color: $color-card-has-img-tags-txt;
+    }
+}

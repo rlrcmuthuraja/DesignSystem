@@ -1,0 +1,26 @@
+{% if id %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = id | replace(' ', '-') | lower + '--' + random_number %}
+{% else %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = label | replace(' ', '-') | lower + '--' + random_number %}
+{% endif %}
+<div class="mrx-modal" tabindex="-1"{% if alert %} role="alertdialog"{% else %} role="dialog"{% endif %} aria-labelledby="{{ id }}">
+    <div class="mrx-modal__dialog{% if skin %} mrx-modal--skin-{{ skin }}{% endif %}{% if size %} mrx-modal--size-{{ size }}{% endif %}" role="document">
+        <div class="mrx-modal__content">
+            <div class="mrx-modal__header">
+                {% if title %}<h5 class="mrx-modal__title" id="{{ id }}">{{ title }}</h5>{% endif %}
+                {% render '@button', { text: 'Close', size: 'base', hideText: true, icon: { symbol: 'close', size: 'moderate' }, classes: [ 'mrx-modal__close' ] } %}
+            </div>
+            <div class="mrx-modal__body">
+                <p>{{ content }}</p>
+            </div>
+            {% if cta %}
+            <div class="mrx-modal__footer">
+                {% render '@button-group', cta %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="mrx-modal__backdrop"></div>
+</div>

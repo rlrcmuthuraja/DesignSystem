@@ -1,0 +1,62 @@
+// ==========================================================================
+// Component: input-group
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+// Block (parent)
+// ==========================================================================
+
+.mrx-inputgroup {
+    display: flex;
+    align-items: flex-end;
+
+    > .mrx-form__element {
+        flex: 1 1 auto;
+
+        &:not(:first-child):not(:last-child) {
+            .mrx-field {
+                border-radius: 0;
+            }
+        }
+
+        &:first-child {
+            .mrx-field {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        &:last-child {
+            .mrx-field {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        + .mrx-form__element {
+            margin-left: rem-calc(-1);
+        }
+    }
+
+    > .mrx-btn {
+        &:not(:first-of-type):not(:last-of-type) {
+            border-radius: 0;
+        }
+
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+// Modifiers
+// ==========================================================================
+

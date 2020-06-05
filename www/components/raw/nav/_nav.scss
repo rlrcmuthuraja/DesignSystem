@@ -1,0 +1,145 @@
+// ==========================================================================
+// Component: nav
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-nav__search {
+    @include p(small);
+}
+
+// Block (parent)
+// ==========================================================================
+
+
+// Modifiers
+// ==========================================================================
+$icon-size: 18px;
+
+.mrx-nav--main {
+    .mrx-tree__link {
+        padding-left: 12px;
+    }
+
+    .mrx-tree__item {
+        &[data-treedepth='1'] {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 2) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='2'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 2) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 3) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='3'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 3) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 4) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='4'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 4) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 5) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='5'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 5) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 6) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='6'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 6) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 7) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='7'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 7) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 5) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='8'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 8) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 9) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='9'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 9) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 10) + 12px);
+                }
+            }
+        }
+
+        &[data-treedepth='10'] {
+            .mrx-tree__link {
+                padding-left: calc((#{$icon-size} * 10) + 12px);
+            }
+
+            &.mrx-is-leaf {
+                .mrx-tree__link {
+                    padding-left: calc((#{$icon-size} * 11) + 12px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,336 @@
+// ==========================================================================
+// Colors: Contextual. See tokens/tokens_color.scss for abstract color-values
+// ==========================================================================
+
+// Base
+// ==========================================================================
+$color-bg:                                  $color-white;
+$color-txt:                                 $color-navy-base;
+$color-selection-bg:                        $color-teal-tint-80;
+$color-selection-txt:                       $color-txt;
+
+// Link
+// ==========================================================================
+$color-link-txt:                            $color-blue-base;
+$color-link-txt-hover:                      $color-link-txt;
+$color-link-txt-focus:                      $color-txt;
+$color-link-txt-active:                     $color-aqua-base;
+$color-link-txt-visited:                    $color-link-txt;
+$color-link-bg-focus:                       $color-aqua-tint-80;
+
+// Shadow
+// ==========================================================================
+$color-shadow-base:                         $color-gray-tint-60;
+
+// Themes
+// ==========================================================================
+$color-theme-navy-bg:                       $color-navy-base;
+$color-theme-navy-txt:                      $color-navy-tint-60;
+$color-theme-teal-bg:                       $color-teal-base;
+$color-theme-teal-txt:                      $color-white;
+$color-theme-aqua-bg:                       $color-aqua-base;
+$color-theme-aqua-txt:                      $color-navy-base;
+$color-theme-foam-bg:                       $color-foam-base;
+$color-theme-foam-txt:                      $color-navy-base;
+$color-theme-white-bg:                      $color-white;
+$color-theme-white-txt:                     $color-txt;
+
+// Notification
+// ==========================================================================
+$color-notification-bg-neutral:             $color-gray-tint-80;
+$color-notification-bg-success:             $color-green-tint-80;
+$color-notification-bg-warning:             $color-yellow-tint-60;
+$color-notification-bg-danger:              $color-red-tint-90;
+$color-notification-bg-info:                $color-blue-tint-90;
+
+$color-notification-txt-neutral:            $color-gray-base;
+$color-notification-txt-success:            $color-green-shade-70;
+$color-notification-txt-warning:            $color-yellow-shade-80;
+$color-notification-txt-danger:             $color-red-shade-20;
+$color-notification-txt-info:               $color-blue-base;
+
+$color-notification-bg-banner-neutral:      $color-gray-tint-80;
+$color-notification-bg-banner-success:      $color-green-base;
+$color-notification-bg-banner-warning:      $color-yellow-base;
+$color-notification-bg-banner-danger:       $color-red-base;
+$color-notification-bg-banner-info:         $color-blue-base;
+
+$color-notification-txt-banner-neutral:     $color-white;
+$color-notification-txt-banner-success:     $color-black;
+$color-notification-txt-banner-warning:     $color-black;
+$color-notification-txt-banner-danger:      $color-white;
+$color-notification-txt-banner-info:        $color-white;
+
+// Badge
+// ==========================================================================
+$color-badge-bg:                            $color-gray-tint-80;
+$color-badge-bg-primary:                    $color-teal-shade-20;
+$color-badge-bg-secondary:                  $color-white;
+$color-badge-bg-info:                       $color-blue-tint-90;
+$color-badge-bg-success:                    $color-green-base;
+$color-badge-bg-warning:                    $color-yellow-base;
+$color-badge-bg-danger:                     $color-red-base;
+$color-badge-bg-foam:                       $color-theme-foam-bg;
+$color-badge-bg-navy:                       $color-theme-navy-bg;
+
+$color-badge-txt:                           $color-txt;
+$color-badge-txt-primary:                   $color-white;
+$color-badge-txt-secondary:                 $color-teal-base;
+$color-badge-txt-info:                      $color-txt;
+$color-badge-txt-success:                   $color-black;
+$color-badge-txt-warning:                   $color-txt;
+$color-badge-txt-danger:                    $color-white;
+$color-badge-txt-foam:                      $color-theme-foam-txt;
+$color-badge-txt-navy:                      $color-theme-navy-txt;
+
+// Validation
+// ==========================================================================
+$color-txt-error:                           $color-red-base;
+$color-border-error:                        $color-red-base;
+
+// Horizontal rule
+// ==========================================================================
+$color-hr-border:                           transparentize($color-black, 0.9);
+
+// Button
+// ==========================================================================
+
+// Primary button
+$color-btn-primary-bg:                      $color-teal-shade-20;
+$color-btn-primary-bg-hover:                $color-teal-base;
+$color-btn-primary-bg-focus:                $color-btn-primary-bg-hover;
+$color-btn-primary-bg-active:               $color-teal-shade-40;
+$color-btn-primary-bg-disabled:             $color-btn-primary-bg;
+$color-btn-primary-txt:                     $color-white;
+$color-btn-primary-txt-hover:               $color-white;
+$color-btn-primary-txt-focus:               $color-white;
+$color-btn-primary-txt-active:              $color-white;
+$color-btn-primary-txt-disabled:            $color-btn-primary-txt;
+$color-btn-primary-border:                  $color-teal-shade-20;
+$color-btn-primary-border-hover:            $color-btn-primary-border;
+$color-btn-primary-border-focus:            $color-aqua-base;
+$color-btn-primary-border-active:           $color-teal-shade-40;
+$color-btn-primary-border-disabled:         $color-btn-primary-border;
+
+// Secondary button
+$color-btn-secondary-bg:                    $color-white;
+$color-btn-secondary-bg-hover:              $color-white;
+$color-btn-secondary-bg-focus:              $color-btn-secondary-bg-hover;
+$color-btn-secondary-bg-active:             $color-foam-base;
+$color-btn-secondary-bg-disabled:           $color-btn-secondary-bg;
+$color-btn-secondary-bg-selected:           $color-btn-primary-bg;
+$color-btn-secondary-txt:                   $color-teal-base;
+$color-btn-secondary-txt-hover:             $color-teal-base;
+$color-btn-secondary-txt-focus:             $color-teal-base;
+$color-btn-secondary-txt-active:            $color-teal-shade-20;
+$color-btn-secondary-txt-disabled:          $color-btn-secondary-txt;
+$color-btn-secondary-txt-selected:          $color-btn-primary-txt;
+$color-btn-secondary-border:                $color-gray-tint-60;
+$color-btn-secondary-border-hover:          $color-btn-secondary-border;
+$color-btn-secondary-border-focus:          $color-aqua-base;
+$color-btn-secondary-border-active:         $color-gray-tint-40;
+$color-btn-secondary-border-disabled:       $color-btn-secondary-border;
+
+// Flat button
+$color-btn-flat-bg:                         transparent;
+$color-btn-flat-bg-hover:                   $color-foam-tint-20;
+$color-btn-flat-bg-focus:                   $color-btn-flat-bg-hover;
+$color-btn-flat-bg-active:                  $color-foam-base;
+$color-btn-flat-bg-disabled:                $color-btn-flat-bg;
+$color-btn-flat-txt:                        $color-teal-base;
+$color-btn-flat-txt-hover:                  $color-teal-tint-20;
+$color-btn-flat-txt-focus:                  $color-teal-tint-20;
+$color-btn-flat-txt-active:                 $color-teal-shade-20;
+$color-btn-flat-txt-disabled:               $color-btn-flat-txt;
+$color-btn-flat-border-focus:               $color-aqua-base;
+
+// Link button
+$color-btn-link-bg:                         transparent;
+$color-btn-link-bg-hover:                   transparent;
+$color-btn-link-bg-focus:                   transparent;
+$color-btn-link-bg-active:                  transparent;
+$color-btn-link-bg-disabled:                transparent;
+$color-btn-link-txt:                        $color-link-txt;
+$color-btn-link-txt-hover:                  $color-link-txt-hover;
+$color-btn-link-txt-focus:                  $color-link-txt-hover;
+$color-btn-link-txt-active:                 $color-link-txt-hover;
+$color-btn-link-txt-disabled:               transparentize($color-link-txt, 0.3);
+
+// Dropdown
+// ==========================================================================
+$color-dropdownmenu-bg:                     $color-white;
+$color-dropdownmenu-bg-hover:               $color-foam-base;
+$color-dropdownmenu-txt:                    $color-txt;
+$color-dropdownmenu-border:                 $color-gray-tint-60;
+$color-dropdownmenu-border-primary:         $color-teal-shade-40;
+
+// Divider
+// ==========================================================================
+$color-divider-bg:                          $color-gray-tint-60;
+
+// Listgroup
+// ==========================================================================
+$color-listgroup-row-bg:                    $color-white;
+$color-listgroup-row-bg-hover:              $color-foam-base;
+$color-listgroup-row-bg-focus:              $color-aqua-base;
+$color-listgroup-row-bg-selected:           $color-teal-base;
+$color-listgroup-row-border:                $color-gray-tint-60;
+
+// Form Field
+// ==========================================================================
+$color-formfield-bg:                        $color-white;
+$color-formfield-bg-disabled:               $color-gray-tint-80;
+$color-formfield-bg-readonly:               $color-formfield-bg-disabled;
+$color-formfield-txt:                       $color-txt;
+$color-formfield-txt-disabled:              $color-gray-tint-20;
+$color-formfield-placeholder:               transparentize($color-formfield-txt, 0.4);
+$color-formfield-placeholder-disabled:      $color-gray-tint-20;
+$color-formfield-border:                    $color-gray-tint-60;
+$color-formfield-border-hover:              $color-formfield-border;
+$color-formfield-border-focus:              $color-aqua-base;
+$color-formfield-border-disabled:           $color-formfield-border;
+$color-formfield-border-readonly:           $color-formfield-border;
+$color-formfield-border-invalid:            $color-border-error;
+
+// Form Switch (radio/ checkbox)
+// ==========================================================================
+$color-switch-bg:                           $color-white;
+$color-switch-bg-hover:                     $color-white;
+$color-switch-bg-focus:                     $color-white;
+$color-switch-bg-checked:                   $color-teal-base;
+$color-switch-bg-disabled:                  $color-gray-tint-80;
+$color-switch-txt:                          $color-black;
+$color-switch-txt-hover:                    $color-black;
+$color-switch-txt-focus:                    $color-black;
+$color-switch-txt-checked:                  $color-black;
+$color-switch-txt-disabled:                 $color-black;
+$color-switch-border:                       $color-gray-tint-60;
+$color-switch-border-hover:                 $color-gray-tint-20;
+$color-switch-border-focus:                 $color-aqua-base;
+$color-switch-border-checked:               $color-teal-base;
+$color-switch-border-disabled:              $color-gray-tint-60;
+$color-switch-symbol:                       $color-teal-base;
+$color-switch-symbol-hover:                 $color-black;
+$color-switch-symbol-focus:                 $color-black;
+$color-switch-symbol-checked:               $color-white;
+$color-switch-symbol-disabled:              $color-gray-tint-80;
+$color-switch-symbol-checked-disabled:      $color-txt;
+
+// Form input type 'range'
+// ==========================================================================
+$color-thumb-bg: $color-switch-bg;
+$color-thumb-border: $color-switch-border;
+$color-track-bg: $color-teal-base;
+
+// Form Fieldset + legend
+// ==========================================================================
+$color-fieldset-border:                     $color-gray-tint-60;
+$color-legend-border:                       $color-gray-tint-60;
+
+// Form Hint
+// ==========================================================================
+$color-formhint-bg:                         $color-gray-shade-40;
+
+// Hero
+// ==========================================================================
+$color-hero-bg-overlay:                     $color-navy-shade-60;
+$color-hero-bg-grad-top:                    $color-teal-base;
+$color-hero-bg-grad-bottom:                 $color-teal-shade-60;
+$color-hero-title-txt:                      $color-aqua-base;
+$color-hero-txt:                            $color-white;
+
+// Table
+// ==========================================================================
+$color-table-bg:                            $color-white;
+$color-table-border:                        $color-navy-tint-80;
+$color-th-bg:                               $color-white;
+$color-th-txt:                              $color-txt;
+$color-th-border:                           $color-table-border;
+$color-td-bg:                               $color-white;
+$color-td-bg-odd:                           $color-white;
+$color-td-bg-even:                          $color-foam-tint-40;
+$color-td-bg-hover:                         $color-aqua-tint-80;
+$color-td-border:                           $color-table-border;
+
+// Tabs
+// ==========================================================================
+$color-tabs-bg:                             transparent;
+$color-tab-bg-hover:                        $color-foam-base;
+$color-tab-bg-active:                       inherit;
+$color-tab-txt:                             inherit;
+$color-tab-txt-hover:                       inherit;
+$color-tab-txt-active:                      $color-teal-base;
+$color-tab-border-active:                   $color-teal-base;
+$color-tabs-border:                         $color-navy-tint-80;
+
+// Modal
+// ==========================================================================
+$color-modal-dialog-bg:                     $color-white;
+$color-modal-header-prominent-bg:           $color-navy-base;
+$color-modal-header-prominent-txt:          $color-white;
+$color-modal-header-discreet-bg:            $color-white;
+$color-modal-footer-prominent-bg:           $color-foam-base;
+$color-modal-footer-prominent-border:       $color-navy-tint-80;
+$color-modal-footer-discreet-bg:            $color-white;
+$color-modal-close-prominent-hover:         $color-aqua-base;
+$color-modal-close-discreet-hover:          $color-teal-base;
+
+// Breadcrumb
+// ==========================================================================
+$color-breadcrumb-bg:                       transparent;
+$color-breadcrumb-bg-theme-white:           $color-white;
+$color-breadcrumb-bg-theme-foam:            $color-foam-base;
+$color-breadcrumb-txt:                      $color-navy-tint-40;
+$color-breadcrumb-txt-theme-white:          $color-breadcrumb-txt;
+$color-breadcrumb-txt-theme-foam:           $color-navy-tint-20;
+$color-breadcrumb-link:                     $color-teal-base;
+$color-breadcrumb-border:                   $color-navy-tint-80;
+
+// Overlay
+// ==========================================================================
+$color-overlay-bg:                          $color-navy-base;
+
+// Card
+// ==========================================================================
+$color-card-bg:                             $color-white;
+$color-card-title-link-txt:                 $color-teal-base;
+$color-card-tags-txt:                       $color-navy-tint-20;
+$color-card-has-img-txt:                    $color-white;
+$color-card-has-img-tags-txt:               $color-navy-tint-40;
+
+// TopicTile
+// ==========================================================================
+
+$color-topictile-odd-bg:                    $color-teal-shade-60;
+$color-topictile-even-bg:                   $color-teal-shade-40;
+$color-topictile-txt:                       $color-white;
+
+// Code
+// ==========================================================================
+$color-code-bg:                             tint($color-black, 95%);
+$color-code-txt:                            inherit;
+
+// Mark
+// ==========================================================================
+$color-mark-bg:                             $color-yellow-tint-60;
+$color-mark-txt:                            $color-black;
+
+// Shell
+// ==========================================================================
+
+$color-page-bg:                             $color-white;
+$color-canvas-bg:                           $color-foam-base;
+
+$color-header-bg:                           $color-theme-navy-bg;
+$color-header-txt:                          $color-theme-navy-txt;
+$color-header-logo:                         $color-white;
+$color-header-title-txt:                    $color-white;
+$color-header-title-txt-hover:              $color-aqua-base;
+$color-header-navtoggle-bg:                 $color-navy-shade-80;
+$color-header-navtoggle:                    $color-white;
+$color-header-icon:                         $color-theme-navy-txt;
+$color-header-icon-hover:                   $color-aqua-base;
+
+$color-nav-bg:                              $color-foam-base;
+$color-nav-border:                          $color-navy-tint-80;
+

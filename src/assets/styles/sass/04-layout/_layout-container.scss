@@ -1,0 +1,95 @@
+// ==========================================================================
+// Container
+// ==========================================================================
+
+// This is a generic, reusable class that applies a container-context to an
+// element. Combined with modifiers, you can set a max-width and alignment as
+// you wish.
+// ==========================================================================
+
+// Block (parent)
+// ==========================================================================
+.mrx-container {
+    @include cf;
+    padding-left: gutter() / 2;
+    padding-right: gutter() / 2;
+    box-sizing: content-box;
+
+    @if ($debug-container) {
+        background: susy-svg-grid($offset: 16px) no-repeat scroll;
+    }
+
+    .mrx-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+// Modifiers
+// =========================================================================
+
+// Maximum width - equals to media queries defined sass-map $mq-breakpoints
+// in _conf_mq.scss. Only use these modifiers if you'd like to constrain the
+// container to a maximum width.
+
+.mrx-container--mob-s {
+    max-width: rem-calc(mq-get-breakpoint-width(mob-s) - 1px) - gutter();
+}
+
+.mrx-container--mob-m {
+    max-width: rem-calc(mq-get-breakpoint-width(mob-m) - 1px) - gutter();
+}
+
+.mrx-container--mob-l {
+    max-width: rem-calc(mq-get-breakpoint-width(mob-l) - 1px) - gutter();
+}
+
+.mrx-container--tab-s {
+    max-width: rem-calc(mq-get-breakpoint-width(tab-s) - 1px) - gutter();
+}
+
+.mrx-container--tab-m {
+    max-width: rem-calc(mq-get-breakpoint-width(tab-m) - 1px) - gutter();
+}
+
+.mrx-container--tab-l {
+    max-width: rem-calc(mq-get-breakpoint-width(tab-l) - 1px) - gutter();
+}
+
+.mrx-container--ltp-s {
+    max-width: rem-calc(mq-get-breakpoint-width(ltp-s) - 1px) - gutter();
+}
+
+.mrx-container--ltp-m {
+    max-width: rem-calc(mq-get-breakpoint-width(ltp-m) - 1px) - gutter();
+}
+
+.mrx-container--ltp-l {
+    max-width: rem-calc(mq-get-breakpoint-width(ltp-l) - 1px) - gutter();
+}
+
+.mrx-container--dtp {
+    max-width: rem-calc(mq-get-breakpoint-width(dtp) - 1px) - gutter();
+}
+
+.mrx-container--wqhd {
+    max-width: rem-calc(mq-get-breakpoint-width(wqhd) - 1px) - gutter();
+}
+
+// Alignment
+// You can choose to align the container to the left, center, or right side of
+// the screen.
+
+.mrx-container--left {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.mrx-container--center {
+    @include center-box();
+}
+
+.mrx-container--right {
+    margin-right: 0;
+    margin-left: auto;
+}

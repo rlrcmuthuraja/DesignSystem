@@ -1,0 +1,140 @@
+// ==========================================================================
+// Component: Hero
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+.mrx-hero__img {
+    @include cover;
+    object-fit: cover;
+}
+
+// The media container: <picture>, <video> etc
+.mrx-hero__poster {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+    &:before {
+        @include cover;
+        content: '';
+        z-index: 1;
+        background: linear-gradient(to bottom, $color-hero-bg-grad-top 0%, $color-hero-bg-grad-bottom 100%);
+        opacity: 0.5;
+
+        @supports (mix-blend-mode: multiply) {
+            opacity: 1;
+            mix-blend-mode: multiply;
+        }
+    }
+
+    &:after {
+        @include cover;
+        content: '';
+        z-index: 1;
+        background-color: $color-hero-bg-overlay;
+        opacity: 0.65;
+
+        @supports (mix-blend-mode: multiply) {
+            background-color: $color-hero-bg-overlay;
+            opacity: 0.1;
+        }
+    }
+}
+
+.mrx-hero__title {
+    @include type-scale(super);
+    color: $color-hero-title-txt;
+}
+
+.mrx-hero__lead {
+    @include type-scale(medium);
+    color: $color-hero-txt;
+
+    .mrx-hero__title + & {
+        @include mt(small);
+    }
+
+    @at-root {
+        p#{&} {
+            max-width: none !important;
+        }
+    }
+}
+
+.mrx-hero__cta {
+    .mrx-hero__title + & {
+        @include mt(medium);
+    }
+
+    .mrx-hero__lead + & {
+        @include mt(xxlarge);
+    }
+}
+
+.mrx-hero__content__item {
+    width: 100%;
+
+    > .mrx-container {
+        padding-left: gutter() / 2;
+        padding-right: gutter() / 2;
+    }
+}
+
+// Container for content on top of poster, e.g: Title and/ or text
+.mrx-hero__content {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 48px 0;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+// Block (parent)
+// ==========================================================================
+
+.mrx-hero {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
+    @include mq($until: tab-m) {
+        .mrx-hero__title {
+            @include type-scale(xxlarge);
+        }
+    }
+}
+
+// Modifiers: Size of hero, relative to viewport
+// ==========================================================================
+
+// 100% of viewport height
+.mrx-hero--100 {
+    min-height: 100vh;
+}
+
+// 75 / 100th of viewport width/ height, whichever is smallest
+.mrx-hero--75 {
+    min-height: 75vmin;
+}
+
+// 50 / 100th of viewport width/ height, whichever is smallest
+.mrx-hero--50 {
+    min-height: 50vmin;
+}
+
+// 25 / 100th of viewport width/ height, whichever is smallest
+.mrx-hero--25 {
+    min-height: 25vmin;
+}

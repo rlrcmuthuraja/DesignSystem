@@ -1,0 +1,34 @@
+// ==========================================================================
+// Component: footer
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-footer__logo {
+    @include m(large, none, large, none);
+    width: rem-calc(88);
+    height: rem-calc(48);
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mrx-footer__text {
+    @include m(large, none, large, none);
+    @include type-scale(small);
+    text-align: right;
+}
+
+
+// Block (parent)
+// ==========================================================================
+.mrx-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+// Modifiers
+// ==========================================================================

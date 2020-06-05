@@ -1,0 +1,165 @@
+{% extends "@page" %}
+
+{% block main %}
+    <div class="mrx-menubar mrx-theme--foam">
+        <div class="mrx-container">
+            <div class="mrx-row mrx-row--middle@all">
+                <div class="mrx-col">
+                    {% render '@tabs', tabs %}
+                </div>
+                <div class="mrx-col">
+                    {% render '@button-group',
+                        {
+                            ariaLabel: 'A button group',
+                            align: ['end'],
+                            buttons: [
+                                {
+                                    context: {
+                                        text: 'New',
+                                        skin: 'primary',
+                                        size: 'base',
+                                        icon: {
+                                            symbol: 'plus',
+                                            size: 'base'
+                                        }
+                                    }
+                                },
+                                {
+                                    context: {
+                                        text: 'Details',
+                                        skin: 'secondary',
+                                        size: 'base',
+                                        'items': [
+                                            {
+                                                'text': 'Password',
+                                                'href': '#'
+                                            },
+                                            {
+                                                'text': 'Caci',
+                                                'href': '#'
+                                            },
+                                            {
+                                                'text': 'Download',
+                                                'href': '#',
+                                                icon: {
+                                                    symbol: 'arrow-down',
+                                                    size: 'base'
+                                                }
+                                            },
+                                            {
+                                                'text': 'Edit',
+                                                'href': '#'
+                                            },
+                                            {
+                                                'text': 'Notes',
+                                                'href': '#',
+                                                icon: {
+                                                    symbol: 'papers',
+                                                    size: 'base'
+                                                }
+                                            },
+                                            {
+                                                'text': 'Server',
+                                                'href': '#'
+                                            },
+                                            {
+                                                'text': 'Retire',
+                                                'href': '#'
+                                            },
+                                            {
+                                                'text': 'Tools',
+                                                'href': '#',
+                                                icon: {
+                                                    symbol: 'cog',
+                                                    size: 'base'
+                                                }
+                                            },
+                                            {
+                                                'text': 'Deploy',
+                                                'href': '#'
+                                            }
+                                        ],
+                                        'caret': true,
+                                        'menuAlignment': 'right'
+                                    }
+                                }
+                            ]
+                        }
+                    %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mrx-app__header">
+        <h1 class="mrx-app__title">{{ pageTitle }}</h1>
+    </header>
+    <div class="mrx-container">
+        <div class="mrx-row mrx-row--gutters">
+            <div class="mrx-col mrx-col--12@all">
+                <div class="mrx-card mrx-card--skin-default mrx-p--small@all">
+                    <div class="mrx-row mrx-row--gutters">
+                        <div class="mrx-col mrx-col--12@all mrx-col--6@tab-s mrx-col--3@tab-l">
+                            <div class="mrx-row mrx-row--gutters">
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Node ID', element: 'input', type: 'text', value: '117', size: 'base', readonly: true } %}
+                                </div>
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Type', element: 'input', type: 'text', value: 'router', size: 'base', readonly: true} %}
+                                </div>
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Created by', element: 'input', type: 'text', value: 'Development user', size: 'base', readonly: true} %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mrx-col mrx-col--12@all mrx-col--6@tab-s mrx-col--3@tab-l">
+                            <div class="mrx-row mrx-row--gutters">
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Last Latency', element: 'input', type: 'text', value: 'N/a', size: 'base', readonly: true} %}
+                                </div>
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Logical Network', element: 'input', type: 'text', value: 'Pacific Drilling', size: 'base', readonly: true } %}
+                                </div>
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Device', element: 'input', type: 'text', value: 'Cisco-TK421', size: 'base', readonly: true} %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mrx-col mrx-col--12@all mrx-col--6@tab-s mrx-col--3@tab-l">
+                            <div class="mrx-row mrx-row--gutters">
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Created', element: 'input', type: 'text', value: '2017.11.16 13:10:48', size: 'base', readonly: true} %}
+                                </div>
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Host Name', element: 'input', type: 'text', value: '117', size: 'base', readonly: true } %}
+                                </div>
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Description', element: 'input', type: 'text', value: 'fn2187', size: 'base', readonly: true} %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mrx-col mrx-col--12@all mrx-col--6@tab-s mrx-col--3@tab-l">
+                            <div class="mrx-row mrx-row--gutters">
+                                <div class="mrx-col mrx-col--12@all">
+                                    {% render '@field', { label: 'Last Seen', element: 'input', type: 'text', value: 'N/A', size: 'base', readonly: true} %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mrx-row mrx-row--gutters mrx-row--stretch@all">
+            <div class="mrx-col mrx-col--12@all">
+                <div class="mrx-card mrx-card--skin-default">
+                    {% render '@table', { fluid: true, theme: 'foam', highlight: true }, true %}
+                </div>
+            </div>
+            <div class="mrx-col mrx-col--12@all">
+                <div class="mrx-card mrx-card--skin-default">
+                    {% render '@table', { fluid: true, theme: 'foam', highlight: true }, true %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

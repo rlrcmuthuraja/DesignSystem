@@ -1,0 +1,68 @@
+// ==========================================================================
+// Component: tabs
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-tabs__label {
+    @include type-scale(small);
+    @include p(small);
+    @include reset-text-underline;
+    display: flex;
+    align-items: center;
+
+    &:focus,
+    &:hover {
+        background-color: $color-tab-bg-hover;
+        background-color: rgba($color-navy-base, 0.06);
+    }
+
+    .mrx-is-active & {
+        color: $color-tab-txt-active;
+        box-shadow: inset rem-calc(0 -2 0 0) $color-tab-border-active;
+    }
+
+    .mrx-icon {
+        + .mrx-tabs__txt {
+            @include ml(mini);
+        }
+    }
+
+    .mrx-tabs__txt:not(.mrx-is-vishidden) {
+        + .mrx-icon {
+            @include ml(mini);
+        }
+    }
+}
+
+.mrx-tabs__item {
+    display: flex;
+    align-items: stretch;
+}
+
+.mrx-tabs__list {
+    @include cf;
+    @include reset-list;
+    display: flex;
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-tabs {
+    background-color: $color-tabs-bg;
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-tabs--theme-white {
+    background-color: $color-breadcrumb-bg-theme-white;
+    color: $color-breadcrumb-txt-theme-white;
+    box-shadow: 0 rem-calc(1) 0 0 $color-breadcrumb-border;
+}
+
+.mrx-tabs--theme-foam {
+    background-color: $color-breadcrumb-bg-theme-foam;
+    color: $color-breadcrumb-txt-theme-foam;
+    box-shadow: 0 0 0 rem-calc(1) $color-breadcrumb-border;
+}

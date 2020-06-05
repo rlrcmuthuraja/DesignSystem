@@ -1,0 +1,23 @@
+<div class="mrx-page__header">
+    <header class="mrx-header" role="banner">
+        {% render '@hamburger', menuBtn %}
+        {% if logo.mark or logo.type -%}
+        <a class="mrx-header__logo" href="#">
+            {% if logo.mark -%}
+            <img src="{{ componentPath + logo.mark }}" alt="{% if logo.alt %}{{ logo.alt }}{% endif %}">
+            {% endif -%}
+            {% if logo.type -%}
+            <img src="{{ componentPath + logo.type }}" alt="{% if logo.alt %}{{ logo.alt }}{% endif %}">
+            {% endif -%}
+        </a>
+        {% endif -%}
+        {% if title -%}
+        <a class="mrx-header__title" href="#">
+            {{ title }}
+        </a>
+        {% endif -%}
+        <div class="mrx-header__tools">
+            {% render '@button-group', tools %}
+        </div>
+    </header>
+</div>

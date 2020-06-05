@@ -1,0 +1,457 @@
+// ==========================================================================
+// Component: button
+// ==========================================================================
+
+$border-radius-btn: $radius-global;
+
+// Elements (children)
+// ==========================================================================
+.mrx-btn__txt {
+    color: inherit;
+    white-space: nowrap;
+}
+
+// Fix for http://stackoverflow.com/questions/35464067/flexbox-not-working-on-button-element-in-some-browsers
+.mrx-btn__inner {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    width: 100%;
+    justify-content: center;
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-btn {
+    transition: all $duration-instant ease-in-out;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    border: 0;
+    color: inherit;
+
+    .mrx-icon,
+    .mrx-btn__txt {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .mrx-icon {
+        + .mrx-btn__txt {
+            @include ml(mini);
+        }
+    }
+
+    .mrx-btn__txt:not(.mrx-is-vishidden) {
+        + .mrx-icon {
+            @include ml(mini);
+        }
+    }
+
+    &:focus,
+    &.mrx-is-focus {
+        box-shadow: inset 0 0 0 rem-calc(2) currentColor;
+        outline: 0;
+    }
+
+    &:hover,
+    &.mrx-is-hover {
+        z-index: 1;
+        box-shadow: none;
+    }
+
+    &:not(.mrx-btn--skin-link) {
+        &:hover,
+        &.mrx-is-hover {
+            cursor: pointer;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &.mrx-is-hover,
+    &.mrx-is-active {
+        box-shadow: none;
+    }
+
+    &:disabled,
+    &.mrx-is-disabled {
+        cursor: not-allowed !important;
+    }
+
+    &.mrx-is-processing {
+        .mrx-process {
+            .path {
+                stroke: currentColor;
+            }
+        }
+    }
+}
+
+// If button is an <a>-tag, we remove text-decoration
+a.mrx-btn {
+    text-decoration: none;
+}
+
+// Modifiers
+// ==========================================================================
+
+// Width
+.mrx-btn--fluid {
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+// Size
+.mrx-btn--size-tiny {
+    @include type-scale(tiny);
+    @include p(nano, mini, nano, mini);
+
+    &.mrx-btn--icon {
+        &:not(.mrx-btn--skin-link) {
+            // 14px x 14px
+            .mrx-icon--size-tiny {
+                margin: rem-calc(6);
+            }
+
+            // 16px x 16px
+            .mrx-icon--size-small {
+                margin: rem-calc(5);
+            }
+
+            // 18px x 18px
+            .mrx-icon--size-base {
+                margin: rem-calc(3);
+            }
+
+            // 24px x 24px
+            .mrx-icon--size-moderate {
+                margin: rem-calc(0);
+            }
+        }
+
+        &.mrx-btn--skin-link {
+            // 14px x 14px
+            .mrx-icon--size-tiny {
+                margin: rem-calc(5 0);
+            }
+
+            // 16px x 16px
+            .mrx-icon--size-small {
+                margin: rem-calc(4 0);
+            }
+
+            // 18px x 18px
+            .mrx-icon--size-base {
+                margin: rem-calc(3 0);
+            }
+
+            // 24px x 24px
+            .mrx-icon--size-moderate {
+                margin: rem-calc(0 0);
+            }
+        }
+    }
+}
+
+.mrx-btn--size-base {
+    @include type-scale(small);
+    @include px(small);
+    padding-top: rem-calc(6);
+    padding-bottom: rem-calc(6);
+
+    &.mrx-btn--icon {
+        &:not(.mrx-btn--skin-link) {
+            // 14px x 14px
+            .mrx-icon--size-tiny {
+                margin: rem-calc(10);
+            }
+
+            // 16px x 16px
+            .mrx-icon--size-small {
+                margin: rem-calc(9);
+            }
+
+            // 18px x 18px
+            .mrx-icon--size-base {
+                margin: rem-calc(7);
+            }
+
+            // 24px x 24px
+            .mrx-icon--size-moderate {
+                margin: rem-calc(4);
+            }
+        }
+
+        &.mrx-btn--skin-link {
+            // 14px x 14px
+            .mrx-icon--size-tiny {
+                margin: rem-calc(9 0);
+            }
+
+            // 16px x 16px
+            .mrx-icon--size-small {
+                margin: rem-calc(16 0);
+            }
+
+            // 18px x 18px
+            .mrx-icon--size-base {
+                margin: rem-calc(7 0);
+            }
+
+            // 24px x 24px
+            .mrx-icon--size-moderate {
+                margin: rem-calc(4 0);
+            }
+        }
+    }
+}
+
+.mrx-btn--size-large {
+    @include type-scale(base);
+    @include px(moderate, moderate);
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(10);
+
+    &.mrx-btn--icon {
+        &:not(.mrx-btn--skin-link) {
+            // 14px x 14px
+            .mrx-icon--size-tiny {
+                margin: rem-calc(16);
+            }
+
+            // 16px x 16px
+            .mrx-icon--size-small {
+                margin: rem-calc(15);
+            }
+
+            // 18px x 18px
+            .mrx-icon--size-base {
+                margin: rem-calc(13);
+            }
+
+            // 24px x 24px
+            .mrx-icon--size-moderate {
+                margin: rem-calc(10);
+            }
+        }
+
+        &.mrx-btn--skin-link {
+            // 14px x 14px
+            .mrx-icon--size-tiny {
+                margin: rem-calc(15 0);
+            }
+
+            // 16px x 16px
+            .mrx-icon--size-small {
+                margin: rem-calc(14 0);
+            }
+
+            // 18px x 18px
+            .mrx-icon--size-base {
+                margin: rem-calc(13 0);
+            }
+
+            // 24px x 24px
+            .mrx-icon--size-moderate {
+                margin: rem-calc(10 0);
+            }
+        }
+    }
+}
+
+// Skin
+.mrx-btn--skin-primary {
+    background-color: $color-btn-primary-bg;
+    color: $color-btn-primary-txt;
+
+    &:focus,
+    &.mrx-is-focus {
+        background-color: $color-btn-primary-bg-focus;
+        color: $color-btn-primary-txt-focus;
+        box-shadow: inset 0 0 0 rem-calc(2) $color-btn-primary-border-focus;
+    }
+
+    &:hover,
+    &.mrx-is-hover {
+        background-color: $color-btn-primary-bg-hover;
+        color: $color-btn-primary-txt-hover;
+        box-shadow: none;
+    }
+
+    &:active,
+    &.mrx-is-active {
+        background-color: $color-btn-primary-bg-active;
+        color: $color-btn-primary-txt-active;
+        outline: 0;
+    }
+
+    &:disabled,
+    &.mrx-is-disabled {
+        background-color: $color-btn-primary-bg-disabled;
+        color: $color-btn-primary-txt-disabled;
+        opacity: 0.35;
+    }
+}
+
+.mrx-btn--skin-secondary {
+    background-color: $color-btn-secondary-bg;
+    color: $color-btn-secondary-txt;
+    box-shadow: 0 0 0 rem-calc(1) $color-btn-secondary-border inset;
+
+    &:focus,
+    &.mrx-is-focus {
+        background-color: $color-btn-secondary-bg-focus;
+        color: $color-btn-secondary-txt-focus;
+        box-shadow: inset 0 0 0 rem-calc(2) $color-btn-secondary-border-focus;
+    }
+
+    &:hover,
+    &.mrx-is-hover {
+        background-color: $color-btn-secondary-bg-hover;
+        color: $color-btn-secondary-txt-hover;
+        box-shadow: 0 0 0 rem-calc(1) $color-btn-secondary-border inset, rem-calc(0 1 4 0) $color-shadow-base;
+    }
+
+    &:active,
+    &.mrx-is-active {
+        background-color: $color-btn-secondary-bg-active;
+        color: $color-btn-secondary-txt-active;
+        box-shadow: 0 0 0 rem-calc(1) $color-btn-secondary-border inset;
+        outline: 0;
+    }
+
+    &:disabled,
+    &.mrx-is-disabled {
+        background-color: $color-btn-secondary-bg-disabled;
+        color: $color-btn-secondary-txt-disabled;
+        box-shadow: 0 0 0 rem-calc(1) $color-btn-secondary-border-disabled inset;
+        opacity: 0.35;
+    }
+
+    &.mrx-is-selected {
+        background-color: $color-btn-secondary-bg-selected;
+        color: $color-btn-secondary-txt-selected;
+        box-shadow: none;
+    }
+}
+
+.mrx-btn--skin-flat {
+    @include type-weight(bold);
+    text-transform: uppercase;
+    background-color: $color-btn-flat-bg;
+    color: $color-btn-flat-txt;
+
+    &:focus,
+    &.mrx-is-focus {
+        background-color: $color-btn-flat-bg-focus;
+        color: $color-btn-flat-txt-focus;
+        box-shadow: inset 0 0 0 rem-calc(2) $color-btn-flat-border-focus;
+    }
+
+    &:hover,
+    &.mrx-is-hover {
+        background-color: $color-btn-flat-bg-hover;
+        color: $color-btn-flat-txt-hover;
+        box-shadow: none;
+    }
+
+    &:active,
+    &.mrx-is-active {
+        background-color: $color-btn-flat-bg-active;
+        color: $color-btn-flat-txt-active;
+        outline: 0;
+    }
+
+    &:disabled,
+    &.mrx-is-disabled {
+        background-color: $color-btn-flat-bg-disabled;
+        color: $color-btn-flat-txt-disabled;
+        opacity: 0.35;
+    }
+}
+
+.mrx-btn--skin-primary,
+.mrx-btn--skin-secondary {
+    @include type-weight(bold);
+    border-radius: rem-calc($border-radius-btn);
+}
+
+.mrx-btn--skin-link {
+    background-color: $color-btn-link-bg;
+    color: $color-btn-link-txt;
+    padding-left: 0;
+    padding-right: 0;
+
+    .mrx-btn__txt {
+        text-decoration: underline;
+        color: inherit;
+    }
+
+    &:focus,
+    &.mrx-is-focus {
+        background-color: $color-btn-link-bg-focus;
+        color: $color-btn-link-txt-focus;
+        box-shadow: none;
+
+        .mrx-btn__txt {
+            @include px(tiny);
+            margin-left: rem-calc(-4);
+            margin-right: rem-calc(-4);
+            outline: none;
+            color: $color-link-txt-focus;
+            background-color: $color-link-bg-focus;
+        }
+    }
+
+    .mrx-btn__txt {
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 0;
+            color: $color-link-txt-hover;
+            background: none;
+        }
+    }
+
+    &:active,
+    &.mrx-is-active {
+        background-color: $color-btn-link-bg-active;
+        color: $color-btn-link-txt-active;
+    }
+
+    &:disabled,
+    &.mrx-is-disabled {
+        background-color: $color-btn-link-bg;
+        color: rgba($color-btn-link-txt, 0.3);
+
+        .mrx-btn__txt {
+            &:hover,
+            &.mrx-is-hover {
+                @include text-underline(currentColor, currentColor);
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+.mrx-btn--icon {
+    // Reset padding on button to compensate for margins on actual icon
+    padding: 0;
+}
+
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    &.mrx-btn--skin-link {
+        text-decoration: underline;
+    }
+
+    &:hover,
+    &.mrx-is-hover {
+        text-decoration: none;
+    }
+}

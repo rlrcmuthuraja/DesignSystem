@@ -1,0 +1,121 @@
+// ==========================================================================
+// Component: button-group
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+// Block (parent)
+// ==========================================================================
+.mrx-btngroup {
+    @include reset-list;
+    display: flex;
+    align-items: flex-start;
+
+    > .mrx-btn,
+    > .mrx-dropdown {
+        + .mrx-btn,
+        + .mrx-dropdown {
+            @include ml(mini);
+        }
+    }
+}
+
+
+// Modifiers
+// ==========================================================================
+
+.mrx-btngroup--fit-stretch {
+    > .mrx-btn,
+    > .mrx-dropdown {
+        flex: 1 1 auto;
+    }
+
+    > .mrx-dropdown {
+        .mrx-btn {
+            flex-grow: 1;
+        }
+    }
+}
+
+.mrx-btngroup--fit-tight {
+
+    > .mrx-btn {
+        &:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+
+        &:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    > .mrx-dropdown {
+        &:first-child {
+            .mrx-btn {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        &:not(:first-child):not(:last-child) {
+            .mrx-btn {
+                border-radius: 0;
+            }
+        }
+
+        &:last-child {
+            .mrx-btn {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+
+    > .mrx-btn,
+    > .mrx-dropdown {
+        + .mrx-btn,
+        + .mrx-dropdown {
+            margin-left: rem-calc(-1);
+        }
+
+        + .mrx-btn--skin-link {
+            @include ml(mini);
+
+            + .mrx-btn,
+            + .mrx-dropdown {
+                @include ml(mini);
+            }
+        }
+    }
+}
+
+.mrx-btngroup--align-start {
+    @include row-start();
+}
+
+.mrx-btngroup--align-center {
+    @include row-center();
+}
+
+.mrx-btngroup--align-end {
+    @include row-end();
+}
+
+.mrx-btngroup--align-top {
+    @include row-top();
+}
+
+.mrx-btngroup--align-middle {
+    @include row-middle();
+}
+
+.mrx-btngroup--align-bottom {
+    @include row-bottom();
+}

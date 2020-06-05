@@ -1,0 +1,38 @@
+// Align - To put stuff where you want it.
+// ==========================================================================
+
+.mrx-center {
+    @include center;
+}
+
+.mrx-start {
+    @include text-align(start);
+}
+
+.mrx-end {
+    @include text-align(end);
+}
+
+.mrx-left {
+    @include text-align(left);
+}
+
+.mrx-right {
+    @include text-align(right);
+}
+
+.mrx-justify {
+    @include text-align(justify);
+}
+
+.mrx-justify-all {
+    @include text-align(justify-all);
+}
+
+.mrx-match-parent {
+    @include text-align(match-parent);
+}
+
+
+
+

@@ -1,0 +1,25 @@
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ frctl.get('project.title') }}</title>
+
+<link rel="preload" href="/assets/fonts/OpenSans/opensans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/OpenSans/opensans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/OpenSans/opensans-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/OpenSans/opensans-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
+<meta name="description" content="KDS - A Front-end UI toolkit built with Fractal">
+<meta name="format-detection" content="telephone=no">
+<meta name="referrer" content="origin">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ frctl.get('project.title') }}">
+<meta name="application-name" content="{% if page.title %}{{ page.title }} | {% endif %}{{ frctl.get('project.title') }}">
+<meta name="msapplication-TileColor" content="{{ path(frctl.theme.get('ms_tile_color')) }}">
+<meta name="msapplication-TileImage" content="{{ path(frctl.theme.get('ms_tile_img')) }}">
+<meta name="theme-color" content="{{ path(frctl.theme.get('meta_theme_color')) }}">
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ path(frctl.theme.get('apple_touch_ico')) }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ path(frctl.theme.get('favicon_32')) }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ path(frctl.theme.get('favicon_16')) }}">
+<link rel="mask-icon" href="{{ path(frctl.theme.get('safari_pin_tab_img')) }}" color="{{ path(frctl.theme.get('safari_pin_tab_color')) }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ path(frctl.theme.get('favicon')) }}">
+
+<link rel="manifest" href="{{ path(frctl.theme.get('manifest')) }}">
+{% include 'partials/stylesheets.nunj' %}

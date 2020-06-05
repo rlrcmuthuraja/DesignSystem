@@ -1,0 +1,20 @@
+<div class="mrx-ui">
+    {% for category in categories %}
+        <h3>{{ category.name }}</h3>
+        <p>{{ category.description }}</p>
+        <ul class="mrx-row mrx-row--gutters mrx-row--stretch swatches swatches--icons mrx-my--xxlarge@all">
+            {% for icon in category.icons %}
+            <li class="mrx-col mrx-col--6@all mrx-col--4@mob-s mrx-col--3@mob-m mrx-col--2@tab-s">
+                <div class="swatch swatch--icon mrx-center mrx-card mrx-p--small@all">
+                    <div class="swatch__tile">
+                        {% render '@icon', icon.context, true %}
+                    </div>
+                    <div class="swatch__info">
+                        <span class="swatch__symbol">{{ icon.context.symbol }}</span>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</div>

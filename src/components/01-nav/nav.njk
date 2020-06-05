@@ -1,0 +1,21 @@
+{% if id %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = id | replace(' ', '-') | lower + '--' + random_number %}
+{% else %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = label | replace(' ', '-') | lower + '--' + random_number %}
+{% endif %}
+<nav class="mrx-nav{% for class in classes %} {{ class }}{% endfor %}" aria-labelledby="{{ id }}">
+    {%- if search -%}
+    <div class="mrx-nav__search">
+        <div class="mrx-inputgroup">
+            {% render '@field', { label: 'Find Component', hideLabel: true, element: 'input', type: 'search', placeholder: 'Find component', size: 'base'} %}
+            {% render '@button', { text: 'Search', skin: 'primary', size: 'base', hideText: true, icon: { symbol: 'search', size: 'base'} } %}
+        </div>
+    </div>
+    {%- endif -%}
+    {%- if header -%}
+    <h2 class="mrx-nav__header{% if hideHeader == true %} mrx-is-vishidden{% endif %}" id="{{ id }}">{{ header }}</h2>
+    {%- endif -%}
+    {% render '@tree' %}
+</nav>

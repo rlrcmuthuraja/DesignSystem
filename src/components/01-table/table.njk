@@ -1,0 +1,25 @@
+<table class="mrx-table{% if fit %} mrx-table--fit-{{ fit }}{% endif %}{% if fluid %} mrx-table--fluid{% endif %}{% if border %} mrx-table--border{% endif %}{% if highlight %} mrx-table--highlight{% endif %}{% if rowBorder %} mrx-table--rows{% endif %}{% if colBorder %} mrx-table--cols{% endif %}{% if zebra %} mrx-table--zebra{% endif %}{% for class in classes %} {{ class }}{% endfor %}">
+    {% if caption %}<caption>{{ caption }}</caption>{% endif -%}
+
+    {% if thead -%}
+    <thead{% if theme %} class="mrx-theme--{{ theme }}"{% endif %}>
+        <tr>
+        {% for cell in thead -%}
+            <th>{{ cell }}</th>
+        {% endfor -%}
+        </tr>
+    </thead>
+    {% endif -%}
+
+    {% if tbody -%}
+        <tbody>
+            {% for row in tbody -%}
+            <tr>
+                {% for cell in row.cells -%}
+                <td>{{ cell }}</td>
+                {% endfor -%}
+            </tr>
+            {% endfor -%}
+        </tbody>
+    {% endif -%}
+</table>

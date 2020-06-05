@@ -1,0 +1,40 @@
+// ==========================================================================
+// Component: pagination
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-pagination__item {
+    @include pt(mini);
+    @include mr(mini);
+}
+
+.mrx-pagination__group {
+    @include reset-list;
+    margin-top: rem-calc(-8);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-pagination {
+    @include pb(mini);
+    position: relative;
+    overflow: hidden;
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-pagination__group--center {
+    @include row-center();
+}
+
+.mrx-pagination__group--end {
+    @include row-end();
+
+    .mrx-pagination__item {
+        @include mx(none, mini);
+    }
+}

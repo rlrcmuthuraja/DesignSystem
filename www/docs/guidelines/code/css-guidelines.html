@@ -1,0 +1,5958 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <title>CSS/ Scss Guidelines | Muthu Design System</title>
+
+<link rel="preload" href="/assets/fonts/OpenSans/opensans-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/OpenSans/opensans-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/OpenSans/opensans-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/OpenSans/opensans-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
+<meta name="description" content="KDS - A Front-end UI toolkit built with Fractal">
+<meta name="format-detection" content="telephone=no">
+<meta name="referrer" content="origin">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="CSS/ Scss Guidelines | Muthu Design System">
+<meta name="application-name" content="CSS/ Scss Guidelines | Muthu Design System">
+<meta name="msapplication-TileColor" content="../../../#006776">
+<meta name="msapplication-TileImage" content="../../../assets/img/favicons/mstile-144x144.png">
+<meta name="theme-color" content="../../../#006776">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicons/favicon-16x16.png">
+<link rel="mask-icon" href="../../../assets/img/favicons/safari-pinned-tab.svg" color="../../../#006776">
+<link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favicons/favicon.ico">
+
+<link rel="manifest" href="../../../manifest.json">
+
+<link rel="stylesheet" href="../../../assets/styles/css/mrx-fonts.css?cachebust=0.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../../assets/styles/css/fractal.css?cachebust=0.4.0" type="text/css">
+
+
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+    <header class="Frame-header" role="banner">
+        <div class="Header">
+    <button class="mrx-btn mrx-hamburger mrx-hamburger--spin Header-button Header-navToggle" data-action="toggle-sidebar">
+        <span class="mrx-hamburger__inner">
+            <span class="mrx-hamburger__icon"></span>
+        </span>
+        <span class="mrx-hamburger__txt mrx-is-vishidden">Menu</span>
+    </button>
+    <a href="../../../.." class="Header-title" data-pjax>Muthu Design System</a>
+    <span class="Header-version">v.0.4.0</span>
+</div>
+    </header>
+    <div class="Frame-body" data-role="body">
+        <main class="Frame-panel Frame-panel--main" data-role="main" role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+<div class="Document">
+
+    <div class="Document-header">
+        <div class="mrx-container mrx-container--center mrx-container--tab-l mrx-flex">
+        
+            <h1 class="Document-title">CSS/ Scss Guidelines</h1>
+            
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #ccf6e1; border-color: #00d268;">Ready</label>
+
+</div>
+
+
+        
+        </div>
+    </div>
+
+    <div class="Document-content">
+        <div class="mrx-container mrx-container--center mrx-container--tab-l">
+            
+    <div class="Prose mrx-prose">
+        
+            
+            
+                
+                
+                    <div class="Prose__ingress">
+    An opinionated styleguide for writing sane, maintainable and scalable (S)CSS for Muthuraja apps.
+</div>
+
+<!-- Content starts here -->
+<h2 id="syntax-formatting">Syntax &amp; Formatting</h2>
+<p>In order to keep stylesheets neat, readable, maintainable and scalable, it’s
+important that development is done according to conventions and rules that
+are agreed upon.</p>
+<p>At a very high-level, we want:</p>
+<ul>
+<li>SCSS-syntax</li>
+<li>four (4) spaces indents, no tabs;</li>
+<li>write US English.</li>
+<li>ideally, 80-characters wide lines;</li>
+<li>properly written multi-line CSS rules;</li>
+<li>meaningful use of whitespace. Use space after selector and property colon.</li>
+</ul>
+<p>The specifics are somewhat irrelevant - consistency is key</p>
+<code class="lang-scss"><pre><span class="hljs-comment">// Yep</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// I am a long-form comment. I describe, in detail, the CSS that follows. I am</span>
+<span class="hljs-comment">// such a long comment that I easily break the 80 character limit, so I am</span>
+<span class="hljs-comment">// broken across several lines.</span>
+<span class="hljs-comment">//</span>
+
+<span class="hljs-selector-class">.foo</span> {
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">overflow</span>: hidden;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">1em</span>;
+}
+
+<span class="hljs-comment">// Nope</span>
+
+<span class="hljs-comment">//I am a long-form comment. I describe, in detail, the CSS that follows. I am more than 80 characters wide, and I don't break. This makes me hard to read.</span>
+
+<span class="hljs-selector-class">.foo</span>{
+  <span class="hljs-attribute">display</span>: block;<span class="hljs-attribute">overflow</span>: hidden;
+
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">1em</span>;
+}</pre></code><h3 id="strings">Strings</h3>
+<p>Believe it or not, strings play quite a large role in both CSS and Sass
+ecosystems. Most CSS values are either lengths or strings (usually unquoted),
+ so it actually is quite crucial to stick to some guidelines when dealing
+ with strings in Sass.</p>
+<h4 id="encoding">Encoding</h4>
+<p>To avoid any potential issue with character encoding, it is highly
+recommended to force UTF-8 encoding in the main stylesheet using the @charset
+ directive. Make sure it is the very first element of the stylesheet and
+ there is no character of any kind before it.</p>
+<code class="lang-scss"><pre><span class="hljs-keyword">@charset</span> <span class="hljs-string">'utf-8'</span>;</pre></code><h4 id="quotes">Quotes</h4>
+<p>Sass does not require strings to be quoted(e.g. <code>&#39;abc&#39;</code> equals <code>abc</code>). But
+for better concistency with other languages, it’s recommended to to use
+<strong>single quotes</strong> (‘). Besides this, there are some other benefits:</p>
+<ul>
+<li>color names are treated as colors when unquoted, which can lead to serious
+issues.</li>
+<li>most syntax highlighter choke on unquoted strings</li>
+<li>it helps general readability</li>
+<li>there is no valid reason not to quote strings</li>
+</ul>
+<code class="lang-scss"><pre><span class="hljs-comment">// Yep</span>
+<span class="hljs-variable">$direction</span>: <span class="hljs-string">'left'</span>;
+
+<span class="hljs-comment">// Nope</span>
+<span class="hljs-variable">$direction</span>: left;</pre></code><h2 id="naming-conventions">Naming Conventions</h2>
+<p>We use the <a href="http://getbem.com/naming/"><strong>BEM</strong></a> naming convention as a foundation
+ and to ensure strict and rational control of naming things. In addition to a strict BEM
+convention, we use our own namespace as a class-prefix. As a last ingredient, we offer
+a range of utility-classes that can be used and combined in directly in your HTML.</p>
+<h3 id="namespacing">Namespacing</h3>
+<p>Namespacing in Sass is very useful for scoping project-specific styles and
+avoiding conflicts, e.g. with third party plugins og modules.</p>
+<ul>
+<li>Every selector, placeholder, mixin and function in the project should be
+namespaced</li>
+<li>Namespace should be <code>mrx</code> followed by the dash suffix <code>-</code>, like this: <code>mrx-</code></li>
+</ul>
+<code class="lang-scss"><pre><span class="hljs-comment">// Selector</span>
+<span class="hljs-selector-class">.mrx-myclass</span> {
+    ...
+}
+
+<span class="hljs-comment">// Placeholder</span>
+%mrx-myplaceholder {
+    ...
+}</pre></code><h3 id="block-identifiers-">Block (Identifiers)</h3>
+<p>Each block has a CSS class that identifies it. Examples of such classes
+include:</p>
+<ul>
+<li><code>mrx-btn</code></li>
+<li><code>mrx-icon</code></li>
+</ul>
+<p>The convention for block is <code>.[namespace]-[block]</code>.</p>
+<h3 id="element-children-">Element (Children)</h3>
+<p>An element is a part of a block and have no standalone meaning. Any element is
+semantically
+tied to its block. This helps us keep the specificity low since we are less
+dependent of using nested selectors. An elements relationship to its parent
+block is described in the elements classname itself.</p>
+<p>The convention for element is <code>.[namespace]-[block]__[element]</code>.</p>
+<ul>
+<li><code>mrx-btn__text</code></li>
+<li><code>mrx-btn__icon</code></li>
+</ul>
+<h3 id="modifiers-variation-">Modifiers (Variation)</h3>
+<p>Each block (or element) can have a few variations in terms of form/shape.
+Modifier-classes are meant used in addition to the identifier, and several
+modifier-classes can be added to the same block or element.</p>
+<p>The convention for modifiers is <code>.[namespace]-[block]--[modifier]</code>.</p>
+<ul>
+<li><code>mrx-btn--primary</code></li>
+<li><code>mrx-icon--user</code></li>
+</ul>
+<p>Try to write your identifiers and modifiers in a way that makes modifiers
+“add” properties to the base identifier, instead of overriding or resetting
+properties. Modifiers should be written below the base styles in your partials.</p>
+<code class="lang-scss"><pre><span class="hljs-comment">// Styling for button "base". All buttons shares padding</span>
+<span class="hljs-selector-class">.mrx-btn</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">12px</span>;
+}
+
+<span class="hljs-comment">// Styling for button "primary". This modifier sets background to red</span>
+<span class="hljs-selector-class">.mrx-btn--primary</span> {
+    <span class="hljs-attribute">background</span>: red;
+}
+
+<span class="hljs-comment">// Styling for button "secondary". This modifier sets background to blue</span>
+<span class="hljs-selector-class">.mrx-btn--secondary</span> {
+    <span class="hljs-attribute">background</span>: blue;
+}
+</pre></code><h3 id="states">States</h3>
+<p>An element can change “state”. In reality, these states are also modifiers,
+but are often applied to elements in combination with JS. A classic toggle
+for an “active” state is a good example of a change of state.</p>
+<p>The convention for states is <code>.[namespace]-[is|has]-[statename]</code>.</p>
+<p>States are usually closely connected to its base element, but some states
+contains properties that can be used on any element at a global level. This
+is why states does not include the <code>[identifiername]</code> in the classname, just
+the <code>namespace</code> and the <code>[statename]</code>, devided by <code>-is-</code> or <code>-has-</code>. Here are
+some examples of global states:</p>
+<ul>
+<li><code>.mrx-is-hidden</code></li>
+<li><code>.mrx-is-open</code></li>
+<li><code>.mrx-has-children</code></li>
+<li><code>.mrx-has-loaded</code></li>
+</ul>
+<p>These states are truly global. E.g <code>.mrx-is-hidden</code> hides whatever element
+it’s applied to. The styling of global states should always be at the bottom
+of the final CSS-file, hence put global states as “helpers” or “utilities” at
+the bottom of your main .scss-file. This way, they will override initial styles
+for a base element.</p>
+<p>In HTML, the DOM would look something like this:</p>
+<code class="lang-HTML"><pre><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mrx-myelement mrx-is-hidden"</span>&gt;</span>I'm invisible<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></pre></code><p>In the partial for <code>_myelement.scss</code>, we just include the basic styling for
+this
+element.</p>
+<code class="lang-scss"><pre><span class="hljs-comment">// _myelement.scss</span>
+
+<span class="hljs-selector-class">.mrx-myelement</span> {
+    <span class="hljs-attribute">display</span>: block;
+}</pre></code><p>And in the partial for global helpers (imported last in the CSS), we have the
+ global styling for
+<code>.mrx-is-hidden</code>:</p>
+<code class="lang-scss"><pre><span class="hljs-comment">// _helpers.scss</span>
+
+<span class="hljs-selector-class">.mrx-is-hidden</span> {
+    <span class="hljs-attribute">display</span>: none;
+    <span class="hljs-attribute">visibility</span>: hidden;
+}</pre></code><p>This way, the <code>.mrx-is-hidden</code> overwrites the initial <code>display: block;</code> of <code>.mrx-myelement</code>.</p>
+<p>Other states can be more contextual and should be used in conjunction with
+the base class for the actual element:</p>
+<ul>
+<li><code>.mrx-is-closed</code></li>
+<li><code>.mrx-is-disabled</code></li>
+<li><code>.mrx-is-loading</code></li>
+</ul>
+<p>Since the actual look of these states can vary significantly between each
+element they’re applied to, these states should be placed at the bottom of
+the partial in question (scoped):</p>
+<code class="lang-scss"><pre><span class="hljs-selector-class">.mrx-myelement</span> {
+    <span class="hljs-comment">// Default styling of myelement</span>
+    ...
+
+    &amp;<span class="hljs-selector-class">.mrx-is-loading</span> {
+        <span class="hljs-comment">// Styling for the loading state of myelement</span>
+        ...
+    }
+}</pre></code><p>In HTML, the DOM would look something like this:</p>
+<code class="lang-HTML"><pre><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mrx-myelement mrx-is-loading"</span>&gt;</span>Loading...<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></pre></code><h2 id="comments">Comments</h2>
+<p>Well commented code is extremely important. Take time to describe components,
+ how they work, their limitations, and the way they are constructed. Don’t
+ leave others in the team guessing as to the purpose of uncommon or
+ non-obvious code.</p>
+<p>Please use Sass-comments instead of CSS-comments. Comments are meant to help
+developers understand the codebase, and should not really be a part of the
+compiled CSS. Using Sass-comments starting with <code>//</code> instead of <code>/*</code> will
+make them invisible in the finished stylesheet.</p>
+<code class="lang-scss"><pre><span class="hljs-comment">// ==========================================================================</span>
+<span class="hljs-comment">// Section comment block</span>
+<span class="hljs-comment">// ==========================================================================</span>
+
+<span class="hljs-comment">// Sub-section comment block</span>
+<span class="hljs-comment">// ==========================================================================</span>
+
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Short description using Doxygen-style comment format</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// The first sentence of the long description starts here and continues on this</span>
+<span class="hljs-comment">// line for a while finally concluding here at the end of this paragraph.</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// The long description is ideal for more detailed explanations and</span>
+<span class="hljs-comment">// documentation. It can include example HTML, URLs, or any other information</span>
+<span class="hljs-comment">// that is deemed necessary or useful.</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// @tag This is a tag named 'tag'</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> This is a todo statement that describes an atomic task to be completed</span>
+<span class="hljs-comment">//       at a later date. It wraps after 80 characters and following lines are</span>
+<span class="hljs-comment">//       indented by 7 spaces.</span>
+<span class="hljs-comment">//</span>
+
+<span class="hljs-comment">// Basic comment</span></pre></code><h2 id="specificity">Specificity</h2>
+<h3 id="ids-in-sass-css">IDs in Sass/ CSS</h3>
+<p>If we want to keep specificity low, which we do, we have one really
+quick-win, simple, easy-to-follow rule that we can employ to help us: <strong>avoid
+ using IDs in CSS</strong>.</p>
+<p>Not only are IDs inherently non-reusable, they are also vastly more specific
+than any other selector, and therefore become specificity anomalies. Where
+the rest of your selectors are relatively low specificity, your ID-based
+selectors are, comparatively, much, much higher.</p>
+<p><strong>N.B.</strong> It is still perfectly okay to use IDs in HTML and JavaScript (as
+identifiers and hooks); it is only in CSS that they prove troublesome.</p>
+<h3 id="nesting">Nesting</h3>
+<p>To keep specificity low, try to avoid nesting in your Sass-files. The concept
+ of nesting in Sass is very clever, and it easy to try to map the HTML
+ DOM-structure in your Sass - just because you can. But the output often
+ result in compiled CSS with selectors that are long and over specific. Try
+ keeping your nesting level as shallow as possible.</p>
+<code class="lang-scss"><pre><span class="hljs-comment">// YEP</span>
+<span class="hljs-selector-class">.mrx-mydiv</span> {}
+<span class="hljs-selector-class">.mrx-mydiv__child</span> {}
+<span class="hljs-selector-class">.mrx-mydiv__grandchild</span> {...}
+
+<span class="hljs-comment">// NOPE</span>
+<span class="hljs-selector-class">.mrx-mydiv</span> {
+    <span class="hljs-selector-class">.mrx-mydiv__child</span> {
+        <span class="hljs-selector-class">.mrx-mydiv__grandchild</span> {
+            ...
+        }
+    }
+}</pre></code><p>Compiled CSS:</p>
+<code class="lang-css"><pre>// YEP output with specificity = 1:
+.mrx-mydiv__grandchild {...}
+
+// NOPE output with specificity = 3:
+.mrx-mydiv .mrx-mydiv__child .mrx-mydiv__grandchild {...}
+</pre></code><p>Test your selectors with the tool
+<a href="http://specificity.keegan.st/">Specificity Calculator</a> to check specificity.</p>
+<h3 id="avoid-using-important">Avoid using <code>!important</code></h3>
+<p>It’s only ok on helpers and utility styles you absolutely know will trump previous styles.</p>
+<h3 id="avoid-styling-elements-by-tagname">Avoid styling elements by tagname</h3>
+<p>It will come back to haunt you. It’s better to create a class. In some cases of
+course, e.g. for setting base typographic styles, it’s hard to avoid it. But keep
+it tro a minimum, and make comments.</p>
+<h3 id="classes-as-hooks-for-css">Classes as hooks for CSS</h3>
+<p>it’s important to keep the coupling between the actual HTML DOM-structure and
+ the CSS as loose as possible. We often see developers referencing the actual
+  HTML-tags in their CSS. The reasons are mostly related to keeping the HTML
+  as clean as possible:</p>
+<blockquote>
+<p>… I don’t want clutter my clean and semantic HTML with presentational
+classes. This goes against the separation of concern between HTML and CSS.
+— Frustrated developer</p>
+</blockquote>
+<p>But the drawback is that the coupling between HTML and CSS is very tight.</p>
+<code class="lang-css"><pre>body &gt; header:first-of-type &gt; nav &gt; ul &gt; li &gt; a &gt; span {
+    ...
+}</pre></code><p>What happens if we need to swap one tag for another because it gives more
+semantic value, e.g. replace the <code>&lt;span&gt;</code> with the new <code>&lt;time&gt;</code>-element? We
+have to rewrite our CSS.</p>
+<p>Using classes as styling hooks is better to keep the coupling looser. The
+class <code>.time</code> can be applied to either <code>&lt;span class=&quot;mrx-time&quot;&gt;</code> or <code>&lt;time
+class=&quot;mrx-time&quot;&gt;&lt;/time&gt;</code> without touching the CSS.</p>
+<p><strong>NB</strong> Semantics in HTML is meant for machines. This makes computers able to
+understand the meaning of the HTML document. Adding presentational classes in
+ HTML does not add or subtract semantic value seen from a computers point of
+ view. But from a human perspective (yes, developers are human too…), these
+ classes can add semantic value in the context of how something is presented:
+  <code>&lt;button class=&quot;mrx-btn--large&quot;&gt;Click me!&lt;/button&gt;</code>.</p>
+<h3 id="classes-as-hooks-for-js">Classes as hooks for JS</h3>
+<p>We often need to select elements in the DOM with JS. Instead of referencing
+classes used for styling, it’s often better to use dedicated classes as hooks
+ for this purpose.</p>
+<p>The convention for JS-hooks <code>.[namespace]-js-[hookname]</code>.</p>
+<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mrx-mydiv mrx--is-closed"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hello!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mrx-btn mrx-btn--large mrx-js-mydiv-toggle"</span>&gt;</span>Say hello!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></pre></code><p>In short, this example shows a closed div and a button. Presentational
+styling can be something like this:</p>
+<code class="lang-scss"><pre><span class="hljs-selector-class">.mrx-mydiv</span> {
+    <span class="hljs-attribute">display</span>: block;
+
+    &amp;<span class="hljs-selector-class">.mrx-is-closed</span> {
+        <span class="hljs-attribute">display</span>: none;
+    }
+}
+
+<span class="hljs-selector-class">.mrx-btn--large</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">42px</span>;
+}</pre></code><p>Instead of referencing the styled class <code>mrx-btn--large</code> in your JS, use the
+class <code>mrx-js-mydiv-toggle</code> as your hook:</p>
+<code class="lang-js"><pre>$(<span class="hljs-string">'.mrx-js-mydiv-toggle'</span>).on(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'.mrx-mydiv'</span>).toggle(<span class="hljs-string">'mrx-is-closed'</span>);
+});</pre></code><h2 id="architecture">Architecture</h2>
+<h3 id="config">Config</h3>
+<p>Try to keep configuration within the global <code>/01-config</code>-folder. This includes
+design-tokens, variables, sass-maps and other sass-settings for the whole project.</p>
+<h3 id="shame-file">Shame file</h3>
+<p>There is an interesting concept that has been made popular by
+<a href="http://csswizardry.com/">Harry Roberts</a>,
+<a href="http://daverupert.com/">Dave Rupert</a> and
+<a href="http://css-tricks.com/">Chris Coyier</a> that consists of putting all the CSS
+declarations, hacks and things we are not proud of in a shame file. This
+file, dramatically titled <code>_shame.scss</code>, would be imported after any other
+file, at the very end of the stylesheet.</p>
+<code class="lang-scss"><pre><span class="hljs-comment">/**
+ * Nav specificity fix.
+ *
+ * Someone used an ID in the header code (`#header a {}`) which trumps the
+ * nav selectors (`.site-nav a {}`). Use !important to override it until I
+ * have time to refactor the header stuff.
+ */</span>
+<span class="hljs-selector-class">.site-nav</span> <span class="hljs-selector-tag">a</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#BADA55</span> <span class="hljs-meta">!important</span>;
+}</pre></code><p>We all know that, no matter how hard we may try, sometimes we do need to use
+quick fixes, hacks and questionable techniques in our code. It happens, whether
+we like to admit it or not.</p>
+<p>The real problem, though, is that we rarely go back and tidy these things up.
+They slip through the cracks, get ignored, go unnoticed, and stay for good.
+This we do not have to do.</p>
+<p>The idea of shame.scss is that you have a totally new file reserved just for
+your hacky code. The code you have to write to get the release out on time,
+but the code that makes you ashamed.</p>
+<ol>
+<li>If it’s a hack, it goes in shame.scss.</li>
+<li>Document all hacks fully:<ol>
+<li>What part of the codebase does it relate to?</li>
+<li>Why was this needed?</li>
+<li>How does this fix it?</li>
+<li>How might you fix it properly, given more time?</li>
+</ol>
+</li>
+<li>Do not blame the developer; if they explained why they had to do it then
+their reasons are probably (hopefully) valid.</li>
+<li>Try and clean shame.scss up when you have some down time.<ol>
+<li>Even better, get a tech-debt story in which you can dedicate actual
+sprint time to it.</li>
+</ol>
+</li>
+</ol>
+<p>For more info please visit: <a href="https://csswizardry.com/2013/04/shame-css/">shame.css</a>.</p>
+<h2 id="responsive-web-design-and-breakpoints">Responsive Web Design and Breakpoints</h2>
+<h3 id="naming-breakpoints">Naming Breakpoints</h3>
+<p>Media queries should not be tied to specific devices. For instance, it’s
+definitely a bad idea to try targeting iPads or Blackberry phones specifically.</p>
+<p>For the same reasons, breakpoints should not be named after devices but
+something more general. Especially since some phones are now bigger than
+tablets, some tablets bigger than some tiny screen computers, and so on…</p>
+<p>In this project, we use a Sass library called
+<a href="https://sass-mq.github.io/sass-mq/">Sass MQ</a> to handle our media queries. The
+different breakpoints are defined in the main <code>_conf_mq.scss</code>-file.</p>
+<p>Please see <a href="/docs/guidelines/responsive">this page</a> for further documentation on
+media queries.</p>
+<h3 id="media-queries-usage">Media Queries Usage</h3>
+<p>Not so long ago, there was quite a hot debate about where media queries
+should be written: do they belong within selectors (as Sass allows it) or
+strictly dissociated from them? Keeping them within the selector plays well
+with the ideas of “components” and modularity.</p>
+<code class="lang-scss"><pre><span class="hljs-selector-class">.foo</span> {
+    <span class="hljs-attribute">color</span>: red;
+
+    <span class="hljs-keyword">@include</span> mq(<span class="hljs-variable">$from</span>: tab-s) {
+        <span class="hljs-attribute">color</span>: blue;
+    }
+}</pre></code><p>Leading to the following CSS output:</p>
+<code class="lang-css"><pre><span class="hljs-selector-class">.foo</span> {
+    <span class="hljs-attribute">color</span>: red;
+}
+
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">321px</span>) {
+    <span class="hljs-selector-class">.foo</span> {
+        <span class="hljs-attribute">color</span>: blue;
+    }
+}</pre></code><p>You might hear that this convention results in duplicated media queries in
+the CSS output. That is definitely true. Although, tests have shown it doesn’t
+matter once Gzip (or any equivalent) has done its thing:</p>
+<blockquote>
+<p>… we hashed out whether there were performance implications of combining vs
+ scattering Media Queries and came to the conclusion that the difference,
+ while ugly, is minimal at worst, essentially non-existent at best.
+— <a href="https://twitter.com/snugug">Sam Richards</a></p>
+</blockquote>
+<h2 id="variables">Variables</h2>
+<h3 id="color-variables">Color variables</h3>
+<p>When using a color more than once, store it in a variable with a meaningful
+name representing the color.</p>
+<code class="lang-scss"><pre><span class="hljs-variable">$color-sass-pink</span>: <span class="hljs-number">#c69</span>;</pre></code><p>Now you are free to use this variable wherever you want. However, if your
+usage is strongly tied to a theme, I would advise against using the variable
+as is. Instead, store it in another variable with a name explaining how it
+should be used.</p>
+<code class="lang-scss"><pre><span class="hljs-variable">$color-main-theme</span>: <span class="hljs-variable">$color-sass-pink</span>;</pre></code><p>Doing this would prevent a theme change leading to something like <code>$color-sass-pink: blue</code>.</p>
+<h2 id="extend">Extend</h2>
+<p>The @extend directive has to be one of the features that made Sass so popular
+ a couple of years ago. As a reminder, it makes it possible to tell Sass to
+ style an element A exactly as though it also matched selector B. Needless to
+  say this can end up being a valuable ally when writing modular CSS.</p>
+<p><strong>However</strong> I feel like I must warn you against this feature. As clever as it
+ is, @extend still is a tricky concept that might do more harm than good,
+ especially when poorly used. The thing is, when extending a selector, you
+ have little to no way to answer these questions without having an in-depth
+ knowledge of the whole codebase:</p>
+<ul>
+<li>where is my current selector going to be appended?</li>
+<li>am I likely to be causing undesired side-effects?</li>
+<li>how large is the CSS generated by this single extend?</li>
+</ul>
+<p>For all you know, the result could range from doing nothing to causing
+disastrous side-effects. Because of this, it’s adviced to avoid the @extend
+directive altogether. It might sound brutal, but at the end of
+the day it can save you some headaches and troubles.</p>
+<p>There are scenarios where extending selectors might be helpful and worthwhile
+. Yet, always keep in mind those rules so you don’t get yourself into trouble:</p>
+<ul>
+<li>Use extend from within a module, not across different modules.</li>
+<li>Use extend on placeholders exclusively, not on actual selectors.</li>
+<li>Make sure the placeholder you extend is present as little as possible in
+the stylesheet.</li>
+</ul>
+<p>If you are going to use extend, let me also remind you that it does not play
+well with @media blocks. As you may know, Sass is unable to extend an outer
+selector from within a media query. When doing so, the compiler simply
+crashes, telling you that you cannot do such a thing. Not great. Especially
+since media queries are almost all we do know.</p>
+<p>To sum up, <strong>It’s strongly advised against using the @extend directive</strong>.</p>
+<h2 id="mixins">Mixins</h2>
+<p>Mixins are one of the most used features from the whole Sass language. They
+are the key to reusability and DRY components. And for good reason: mixins
+allow authors to define styles that can be reused throughout the stylesheet
+without needing to resort to non-semantic classes such as <code>.float-left</code>.</p>
+<p>Still, the keyword is <em>simplicity</em>. Don’t over-engineer or over think your
+mixins. If a mixin ends up being longer than 20 lines or so, then it should
+be either split into smaller chunks or completely revised.</p>
+<p>The main rule of thumb is to limit the use of mixins without arguments, but
+in some cases, like the <a href="http://nicolasgallagher.com/micro-clearfix-hack/">micro-clearfix hackfrom Nicolas Gallagher</a>,
+an argument mixin is your weapon of choice.</p>
+<!-- Content ends here -->
+<div class="learn-more">
+
+</div>
+
+                
+            
+
+            
+                
+            
+        
+    </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+            </div>
+        </main>
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../.." data-pjax>
+                <span>Overview</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-docs-collection-getting-started">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Getting Started</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../getting-started/installation" data-pjax>
+                <span>Installation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../getting-started/contribute" data-pjax>
+                <span>Contribute</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../getting-started/browser-support" data-pjax>
+                <span>Browser Support</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-docs-collection-guidelines">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Guidelines</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-docs-collection-utilities">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Utilities</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../utilities/muthubox" data-pjax>
+                <span>Muthubox</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-docs-collection-visual-language">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Visual Language</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../visual-language/color" data-pjax>
+                <span>Color</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../visual-language/icons" data-pjax>
+                <span>Icons</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../visual-language/spacing" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../visual-language/typography" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-docs-collection-guidelines">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Guidelines</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-docs-collection-code">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Code</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="editorconfig" data-pjax>
+                <span>Editorconfig</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Css Guidelines</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accessibility" data-pjax>
+                <span>Accessibility</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-docs-collection-layout">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Layout</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../layout/container" data-pjax>
+                <span>Container</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../layout/grid-system" data-pjax>
+                <span>Grid System</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../layout/responsive" data-pjax>
+                <span>Responsive</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-docs-collection-utilities">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Utilities</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../utilities/aspect-ratio" data-pjax>
+                <span>Aspect Ratio</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../utilities/elevation" data-pjax>
+                <span>Elevation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../buttons" data-pjax>
+                <span>Buttons</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../notifications" data-pjax>
+                <span>Notifications</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../forms" data-pjax>
+                <span>Forms</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-badge">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Badge</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-default" data-pjax>
+                <span>Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-icon-only" data-pjax>
+                <span>Icon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-icon-text" data-pjax>
+                <span>Text + Icon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-primary" data-pjax>
+                <span>Primary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-secondary" data-pjax>
+                <span>Secondary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-success" data-pjax>
+                <span>Success</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-warning" data-pjax>
+                <span>Warning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-danger" data-pjax>
+                <span>Danger</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-foam" data-pjax>
+                <span>Foam</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/badge--badge-navy" data-pjax>
+                <span>Navy</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-breadcrumb">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Breadcrumb</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/breadcrumb--breadcrumb-theme-transparent" data-pjax>
+                <span>Transparent</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/breadcrumb--breadcrumb-theme-white" data-pjax>
+                <span>Theme White</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/breadcrumb--breadcrumb-theme-foam" data-pjax>
+                <span>Theme Foam</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/breadcrumb--breadcrumb-with-dropdown" data-pjax>
+                <span>With Dropdown</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Button</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-as-link" data-pjax>
+                <span>Element: Button as link</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--link-as-btn" data-pjax>
+                <span>Element: Link as button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-primary" data-pjax>
+                <span>Skin: Primary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-secondary" data-pjax>
+                <span>Skin: Secondary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-flat" data-pjax>
+                <span>Skin: Flat</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-link" data-pjax>
+                <span>Skin: Link</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-tiny" data-pjax>
+                <span>Size: Tiny</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-base" data-pjax>
+                <span>Size: Base</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-large" data-pjax>
+                <span>Size: Large</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-disabled-primary" data-pjax>
+                <span>Disabled: Primary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-disabled-secondary" data-pjax>
+                <span>Disabled: Secondary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-disabled-flat" data-pjax>
+                <span>Disabled: Flat</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-disabled-link" data-pjax>
+                <span>Disabled: Link</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-loading-primary" data-pjax>
+                <span>State: Processing Primary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-loading-secondary" data-pjax>
+                <span>State: Processing Secondary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-loading-flat" data-pjax>
+                <span>State: Processing Flat</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--btn-loading-link" data-pjax>
+                <span>State: Processing Link</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--icon-before-text" data-pjax>
+                <span>Icon: Before text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--icon-after-text" data-pjax>
+                <span>Icon: After text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--icon-only" data-pjax>
+                <span>Icon: Hidden text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--fluid" data-pjax>
+                <span>Fluid button spans 100%</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-button-group">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Button Group</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-align-start" data-pjax>
+                <span>Align Start</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-align-center" data-pjax>
+                <span>Align Center</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-align-end" data-pjax>
+                <span>Align End</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-align-top" data-pjax>
+                <span>Align Top</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-align-middle" data-pjax>
+                <span>Align Middle</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-align-bottom" data-pjax>
+                <span>Align Bottom</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-fit-stretch" data-pjax>
+                <span>Fit Stretch</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-tight" data-pjax>
+                <span>Fit Tight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-tight-stretch" data-pjax>
+                <span>Fit Tight + Stretch</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-group--btn-group-mixed" data-pjax>
+                <span>Mixed buttons</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button-toolbar" data-pjax>
+                <span>Button Toolbar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-card">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Card</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/card--card-default" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/card--card-tags" data-pjax>
+                <span>With Tags</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/card--card-img" data-pjax>
+                <span>With Image</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-divider">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Divider</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-spacing-none" data-pjax>
+                <span>Spacing None</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-spacing-nano" data-pjax>
+                <span>Spacing Nano</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-spacing-tiny" data-pjax>
+                <span>Spacing Tiny</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-spacing-small" data-pjax>
+                <span>Spacing Small</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-spacing-base" data-pjax>
+                <span>Spacing Base</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-spacing-moderate" data-pjax>
+                <span>Spacing Moderate</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-spacing-medium" data-pjax>
+                <span>Spacing Medium</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-spacing-large" data-pjax>
+                <span>Spacing Large</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/divider--divider-with-text" data-pjax>
+                <span>With Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-dropdown">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Dropdown</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/dropdown--dropdown-primary-single" data-pjax>
+                <span>Skin: Primary, Single</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/dropdown--dropdown-secondary-single" data-pjax>
+                <span>Skin: Secondary, Single</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/dropdown--dropdown-primary-split" data-pjax>
+                <span>Skin: Primary, Split</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/dropdown--dropdown-secondary-split" data-pjax>
+                <span>Skin: Secondary, Split</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/footer" data-pjax>
+                <span>Footer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-form">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Form</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-fieldset">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Fieldset</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/fieldset--fieldset-a" data-pjax>
+                <span>Fieldset A</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/fieldset--fieldset-b" data-pjax>
+                <span>Fieldset B</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/fieldset--fieldset-c" data-pjax>
+                <span>Fieldset C</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-input">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Input</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-button">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Button</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--button" data-pjax>
+                <span>Type Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--reset" data-pjax>
+                <span>Type Reset</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/button--submit" data-pjax>
+                <span>Type Submit</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-field">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Field</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--color" data-pjax>
+                <span>Type Color</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--date" data-pjax>
+                <span>Type Date</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--datetime-local" data-pjax>
+                <span>Type Datetime-Local</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--email" data-pjax>
+                <span>Type Email</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--file" data-pjax>
+                <span>Type File</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--hidden" data-pjax>
+                <span>Type Hidden</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--month" data-pjax>
+                <span>Type Month</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--number" data-pjax>
+                <span>Type Number</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--password" data-pjax>
+                <span>Type Password</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--range" data-pjax>
+                <span>Type Range</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--search" data-pjax>
+                <span>Type Search</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--tel" data-pjax>
+                <span>Type Tel</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--text" data-pjax>
+                <span>Type Text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--time" data-pjax>
+                <span>Type Time</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--url" data-pjax>
+                <span>Type Url</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/field--week" data-pjax>
+                <span>Type Week</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/input-group" data-pjax>
+                <span>Input Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-legend">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Legend</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/legend--default" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/legend--legend-underline" data-pjax>
+                <span>With underline</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/legend--legend-as-label" data-pjax>
+                <span>As label</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/legend--legend-is-hidden" data-pjax>
+                <span>Is hidden</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/select" data-pjax>
+                <span>Select</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-switch">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Switch</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--checkbox" data-pjax>
+                <span>Checkbox</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--checkbox-checked" data-pjax>
+                <span>Checkbox (Checked)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--checkbox-disabled" data-pjax>
+                <span>Checkbox (Disabled)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--checkbox-checked-disabled" data-pjax>
+                <span>Checkbox (Checked + Disabled)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--radio" data-pjax>
+                <span>Radio Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--radio-checked" data-pjax>
+                <span>Radio Button (Checked)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--radio-disabled" data-pjax>
+                <span>Radio Button (Disabled)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--radio-checked-disabled" data-pjax>
+                <span>Radio Button (Checked + Disabled)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--toggle" data-pjax>
+                <span>Toggle</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--toggle-checked" data-pjax>
+                <span>Toggle (Checked)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--toggle-disabled" data-pjax>
+                <span>Toggle (Disabled)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch--toggle-checked-disabled" data-pjax>
+                <span>Toggle (Checked + Disabled)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-switch-group">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Switch Group</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch-group--checkbox-group" data-pjax>
+                <span>Type: Checkbox Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch-group--radio-group" data-pjax>
+                <span>Type: Radio Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch-group--toggle-group" data-pjax>
+                <span>Type: Toggle Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch-group--force-vertical" data-pjax>
+                <span>Vertical</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/switch-group--auto-vertical" data-pjax>
+                <span>Auto Vertical</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/textarea" data-pjax>
+                <span>Textarea</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/hamburger" data-pjax>
+                <span>Hamburger</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-header">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Header</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/header--text" data-pjax>
+                <span>Text as logo</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/header--Muthuraja-logotype" data-pjax>
+                <span>Muthuraja Logotype</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/header--custom-logotype" data-pjax>
+                <span>Custom Logotype</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/header--Muthuraja-logomark" data-pjax>
+                <span>Muthuraja Logomark + text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/header--custom-logomark" data-pjax>
+                <span>Custom Logomark + text</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-hero">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Hero</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/hero--50-image" data-pjax>
+                <span>Image 50</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/hero--75-image" data-pjax>
+                <span>Image 75</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/hero--100-image" data-pjax>
+                <span>Image 100</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/icon" data-pjax>
+                <span>Icon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-listgroup">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Listgroup</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/listgroup--listgroup-default" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/listgroup--listgroup-selected" data-pjax>
+                <span>Selected</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/listgroup--listgroup-title" data-pjax>
+                <span>With Title</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/listgroup--listgroup-row-actions" data-pjax>
+                <span>With Actions</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/listgroup--listgroup-badge" data-pjax>
+                <span>With Badge</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/listgroup--listgroup-metadata" data-pjax>
+                <span>With Metadata</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-logo">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Logo</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/logo--positive" data-pjax>
+                <span>Positive</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/logo--negative" data-pjax>
+                <span>Negative</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/menubar" data-pjax>
+                <span>Menubar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-modal">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Modal</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/modal--modal-skin-prominent" data-pjax>
+                <span>Skin Prominent</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/modal--modal-skin-simple" data-pjax>
+                <span>Skin Discreet</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/modal--modal-size-small" data-pjax>
+                <span>Size Small</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/modal--modal-size-medium" data-pjax>
+                <span>Size Medium</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/modal--modal-size-large" data-pjax>
+                <span>Size Large</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-muthubox">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Muthubox</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/muthubox--muthubox-foo" data-pjax>
+                <span>Foo box</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/muthubox--muthubox-bar" data-pjax>
+                <span>Bar box</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/muthubox--muthubox-baz" data-pjax>
+                <span>Baz box</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/nav" data-pjax>
+                <span>Nav</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-notification">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Notification</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-neutral" data-pjax>
+                <span>Block Neutral</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-success" data-pjax>
+                <span>Block Success</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-warning" data-pjax>
+                <span>Block Warning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-danger" data-pjax>
+                <span>Block Danger</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-info" data-pjax>
+                <span>Block Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-banner-neutral" data-pjax>
+                <span>Banner Neutral</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-banner-success" data-pjax>
+                <span>Banner Success</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-banner-warning" data-pjax>
+                <span>Banner Warning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-banner-danger" data-pjax>
+                <span>Banner Danger</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-banner-info" data-pjax>
+                <span>Banner Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-inline-neutral" data-pjax>
+                <span>Inline Neutral</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-inline-success" data-pjax>
+                <span>Inline Success</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-inline-warning" data-pjax>
+                <span>Inline Warning</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-inline-danger" data-pjax>
+                <span>Inline Danger</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-inline-info" data-pjax>
+                <span>Inline Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #00d268;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/notification--notification-dismissable" data-pjax>
+                <span>Dismissable</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #fff300;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pagination">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Pagination</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/pagination--default" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/pagination--pagination-icons-only" data-pjax>
+                <span>Icons only</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/pagination--pagination-disabled-active" data-pjax>
+                <span>Disabled and active</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/pagination--pagination-align-center" data-pjax>
+                <span>Align Center</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/pagination--pagination-align-right" data-pjax>
+                <span>Align End</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/process" data-pjax>
+                <span>Process</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-table">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Table</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-simple" data-pjax>
+                <span>Simple</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-theme-foam" data-pjax>
+                <span>Theme Foam</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-theme-navy" data-pjax>
+                <span>Theme Navy</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-border" data-pjax>
+                <span>Border</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-rows" data-pjax>
+                <span>Row borders</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-cols" data-pjax>
+                <span>Column borders</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-zebra" data-pjax>
+                <span>Zebra striped</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-highlight" data-pjax>
+                <span>Highlight on hover</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-fluid" data-pjax>
+                <span>Fluid 100%</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/table--table-loose" data-pjax>
+                <span>Fit Loose</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-tabs">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Tabs</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/tabs--tabs-theme-transparent" data-pjax>
+                <span>Transparent</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/tabs--tabs-theme-white" data-pjax>
+                <span>Theme White</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/tabs--tabs-theme-foam" data-pjax>
+                <span>Theme Foam</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-topictile">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Topictile</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/topictile--topictile-link" data-pjax>
+                <span>With link</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/topictile--topictile-nolink" data-pjax>
+                <span>Without link</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/tree" data-pjax>
+                <span>Tree</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-page-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Page Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/dashboard" data-pjax>
+                <span>Dashboard</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/article" data-pjax>
+                <span>Article</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/landing" data-pjax>
+                <span>Landing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../../components/detail/layout" data-pjax>
+                <span>Layout</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #da3a2f;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../../themes/mandelbrot/js/mandelbrot.js?cachebust=0.4.0"></script>
+
+
+
+</body>
+</html>

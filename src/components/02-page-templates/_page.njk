@@ -1,0 +1,38 @@
+<body class="mrx-page">
+    <div class="mrx-page__canvas">
+        {# Header #}
+        {% render '@header' %}
+
+        {# Nav #}
+        <div class="mrx-page__nav">
+            {% render '@nav', navContext, true %}
+        </div>
+
+        {# Main #}
+        <div class="mrx-page__main">
+            <main class="mrx-main" role="main">
+
+                {# Overlay #}
+                <button class="mrx-page__overlay">
+                    <span class="mrx-is-vishidden">Close</span>
+                </button>
+
+                {# Breadcrumb #}
+                {% if breadcrumb %}
+                {% render '@breadcrumb', breadcrumb -%}
+                {% endif %}
+
+                {# Content #}
+                <div class="mrx-page__content">
+                    {% block main %}{% endblock %}
+                </div>
+            </main>
+        </div>
+
+        {# Footer #}
+        {% render '@footer' %}
+    </div>
+    {% include '@scripts-foot' %}
+    {# Custom scripts in foot goes here: #}
+    {% block scripts_custom %}{% endblock %}
+</body>

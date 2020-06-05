@@ -1,0 +1,61 @@
+// ==========================================================================
+// Component: loader
+// ==========================================================================
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+// Elements (children)
+// ==========================================================================
+.mrx-process__spinner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform-origin: center center;
+
+    .path {
+        stroke: #52d8e1;
+        stroke-linecap: round;
+        animation: dash 1.5s ease-in-out infinite;
+    }
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-process {
+    position: relative;
+    margin: 0 auto;
+    background-size: 100% auto;
+    background-position: center center;
+    animation: rotate 2s linear infinite;
+
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+}

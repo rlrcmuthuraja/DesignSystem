@@ -1,0 +1,18 @@
+<body class="mrx-page">
+    <div class="mrx-page__canvas">
+
+        {# Main #}
+        <div class="mrx-page__main">
+            <main class="mrx-main" role="main">
+                {# Content #}
+                <div class="mrx-page__content">
+                    {% block main %}{% endblock %}
+                </div>
+            </main>
+        </div>
+
+    </div>
+    {% include '@scripts-foot' %}
+    {# Custom scripts in foot goes here: #}
+    {% block scripts_custom %}{% endblock %}
+</body>

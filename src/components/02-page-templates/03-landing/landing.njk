@@ -1,0 +1,77 @@
+{% extends "@page" %}
+
+{% block main %}
+    {% render '@hero', hero.context, true %}
+
+    {% render '@muthubox--muthubox-baz' %}
+
+    <section class="mrx-py--large@all mrx-pt--xxlarge@tab-m mrx-pb--xlarge@tab-m">
+        <div class="mrx-container mrx-container--center mrx-container--tab-m mrx-center">
+            <h2>About Muthuraja Developers</h2>
+            <p>Here you will find information, instructions and guidelines that will help you build high quality applications and solutions, bringing out the value of your business.</p>
+            <p>The Application Framework, Global System Tools and IoT Services provide powerful and flexible capabilities for reading, presenting and analyzing asset performance data between remote locations in a secure environment.</p>
+        </div>
+    </section>
+
+    <section class="mrx-py--large@all mrx-py--xlarge@tab-m">
+        <div class="mrx-container mrx-container--center mrx-container--ltp-s">
+            <h2 class="mrx-center mrx-is-vishidden">Get started</h2>
+            <div class="mrx-row mrx-row--gutters mrx-row--stretch@all">
+                <div class="mrx-col mrx-col--12@all mrx-col--4@tab-m">
+                    <div class="mrx-pb--base@all mrx-px--large@tab-m mrx-center">
+                        <h3>Creating Applications</h3>
+                        <p>A quick introduction of the platform architecture and it services and help you set up your development environment.</p>
+                    </div>
+                </div>
+                <div class="mrx-col mrx-col--12@all mrx-col--4@tab-m">
+                    <div class="mrx-pb--base@all mrx-px--large@tab-m mrx-center">
+                        <h3>IoT Platform</h3>
+                        <p>Data Management, Analytics and IoT Platform capabilities.</p>
+                    </div>
+                </div>
+                <div class="mrx-col mrx-col--12@all mrx-col--4@tab-m">
+                    <div class="mrx-pb--base@all mrx-px--large@tab-m mrx-center">
+                        <h3>Secure Connectivity</h3>
+                        <p>A high-level introduction to the globally distributed and secure network.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mrx-py--large@all mrx-py--xlarge@tab-m">
+        <div class="mrx-container mrx-container--center mrx-container--ltp-s">
+            <div class="mrx-row mrx-row--stretch@all">
+            {% set cls = cycler("mrx-odd", "mrx-even") %}
+            {% for tile in tiles %}
+                <div class="mrx-col mrx-col--12@all mrx-col--4@tab-s {{ cls.next() }}">
+                {% render '@topictile', tile.context %}
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="mrx-py--large@all mrx-py--xlarge@tab-m">
+        <div class="mrx-container mrx-container--center mrx-container--tab-l">
+            <h2 class="mrx-center">Explore Muthuraja</h2>
+            <img src="/assets/img/content/explore-Muthuraja-diagram.png" class="mrx-py--large@all" alt="Diagram over Muthuraja">
+        </div>
+        <div class="mrx-container mrx-container--center mrx-container--ltp-s">
+            <div class="mrx-row mrx-row--gutters mrx-row--stretch@all">
+                {% for card in cards %}
+                    <div class="mrx-col mrx-col--12@all mrx-col--6@tab-m mrx-col--4@ltp-s">
+                        {% render '@card', card.context, true %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {#<section class="mrx-py--large@all mrx-py--xlarge@tab-m">#}
+        {#<div class="mrx-container">#}
+            {#Social media#}
+        {#</div>#}
+    {#</section>#}
+
+{% endblock %}

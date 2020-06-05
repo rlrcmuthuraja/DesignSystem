@@ -1,0 +1,26 @@
+<div class="mrx-card{% if skin %} mrx-card--skin-{{ skin }}{% endif %}{% if img.url %} mrx-card--has-img{% endif %}">
+    {% if img.url %}
+    <img class="mrx-card__img" src="{{ img.url }}" alt="{{ img.alt }}">
+    {% endif %}
+    <header class="mrx-card__header">
+        <h3 class="mrx-card__title">{% if cta.href %}<a class="mrx-card__title-link" href="{{ cta.href }}">{{ title }}</a>{% else %}{{ title }}{% endif %}</h3>
+    </header>
+    <div class="mrx-card__body">
+        <p>{{ content }}</p>
+    </div>
+    <footer class="mrx-card__footer">
+        {% if tags %}
+        <div class="mrx-card__tags">
+            {% render '@icon', { symbol: 'bookmark', size: 'small' } %}
+            <ul class="mrx-card__taglist">
+                {% for tag in tags %}
+                <li class="mrx-card__tagitem"><span>{{ tag }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% if cta.text %}
+        {% render '@button', cta %}
+        {% endif %}
+    </footer>
+</div>

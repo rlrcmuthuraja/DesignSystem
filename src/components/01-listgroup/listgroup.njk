@@ -1,0 +1,32 @@
+<div class="mrx-listgroup">
+    {% if title -%}
+    <header class="mrx-listgroup__header">
+        <h4 class="mrx-listgroup__title">
+            {{ title }}
+        </h4>
+    </header>
+    {% endif -%}
+    <ul class="mrx-listgroup__list">
+        {% for row in rows -%}
+        <li class="mrx-listgroup__row{% if row.selected %} mrx-is-selected{% endif %}">
+            {% if row.href -%}
+            {% render '@button', { text: row.label, href: row.href, classes: ['mrx-listgroup__link'] } %}
+            {% else -%}
+            <span>{{ row.label }}</span>
+            {% endif -%}
+
+            {% if row.metaData -%}
+                <span class="mrx-listgroup__metadata">{{ row.metaData }}</span>
+            {% endif -%}
+
+            {% if row.badge -%}
+                {% render '@badge', { text: row.badge, skin: 'info' } -%}
+            {% endif -%}
+
+            {% if actions -%}
+            {% render '@button-group', actions -%}
+            {% endif -%}
+        </li>
+        {% endfor -%}
+    </ul>
+</div>

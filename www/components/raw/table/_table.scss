@@ -1,0 +1,64 @@
+// ==========================================================================
+// Component: table
+// ==========================================================================
+
+// Block (parent)
+// ==========================================================================
+.mrx-table {
+    @include table-base;
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-table--fit-tight {
+    @include table-fit-tight;
+}
+
+.mrx-table--fit-loose {
+    @include table-fit-loose;
+}
+
+.mrx-table--border {
+    @include table-border;
+}
+
+.mrx-table--fluid {
+    @include table-fluid;
+}
+
+.mrx-table--rows {
+    @include table-rows;
+}
+
+.mrx-table--cols {
+    @include table-cols;
+}
+
+.mrx-table--zebra {
+    @include table-zebra;
+}
+
+.mrx-table--highlight {
+    @include table-highlight;
+}
+
+.mrx-table--responsive {
+    @include mq($until: tab-m) {
+        @include table-responsive;
+    }
+}
+
+.mrx-table--theme-foam {
+    thead {
+        background-color: $color-theme-foam-bg;
+        color: $color-theme-foam-txt;
+    }
+}
+
+.mrx-table--theme-navy {
+    thead {
+        background-color: $color-theme-navy-bg;
+        color: $color-theme-navy-txt;
+    }
+}

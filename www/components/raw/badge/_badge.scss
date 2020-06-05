@@ -1,0 +1,79 @@
+// ==========================================================================
+// Component: badge
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-badge__fill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 500px;
+    background-color: $color-notification-bg-neutral;
+
+    > .mrx-badge__txt {
+        @include p(nano, mini, nano, mini);
+    }
+
+    > .mrx-badge__icon {
+        margin: rem-calc(3);
+    }
+
+    + .mrx-badge__txt {
+        @include ml(tiny);
+    }
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-badge {
+    @include type-scale(small);
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-badge--skin-primary {
+    background-color: $color-badge-bg-primary;
+    color: $color-badge-txt-primary;
+}
+
+.mrx-badge--skin-secondary {
+    background-color: $color-badge-bg-secondary;
+    color: $color-badge-txt-secondary;
+}
+
+.mrx-badge--skin-info {
+    background-color: $color-badge-bg-info;
+    color: $color-badge-txt-info;
+}
+
+.mrx-badge--skin-success {
+    background-color: $color-badge-bg-success;
+    color: $color-badge-txt-success;
+}
+
+.mrx-badge--skin-warning {
+    background-color: $color-badge-bg-warning;
+    color: $color-badge-txt-warning;
+}
+
+.mrx-badge--skin-danger {
+    background-color: $color-badge-bg-danger;
+    color: $color-badge-txt-danger;
+}
+
+.mrx-badge--skin-foam {
+    background-color: $color-badge-bg-foam;
+    color: $color-badge-txt-foam;
+}
+
+.mrx-badge--skin-navy {
+    background-color: $color-badge-bg-navy;
+    color: $color-badge-txt-navy;
+}
+

@@ -1,0 +1,132 @@
+{%- if id -%}
+    {-% set random_number = range(0, 100000) | random -%}
+    {%- set id = id | replace(' ', '-') | lower + '--' + random_number -%}
+{%- else -%}
+    {%- set random_number = range(0, 100000) | random -%}
+    {%- set id = label | replace(' ', '-') | lower + '--' + random_number -%}
+{% endif -%}
+<!-- DROPDOWN Component -->
+{%- if split -%}
+<div class="mrx-dropdown mrx-dropdown--split mrx-btn-group" role="group" aria-label="{{ ariaLabel }}">
+    <button class="mrx-btn{% if skin %} mrx-btn--skin-{{ skin }}{% endif %}{% if size %} mrx-btn--size-{{ size }}{% endif %}">
+        <span class="mrx-btn__inner">
+            {%- if icon %}
+                {% if iconAfter -%}
+                <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+                {% render '@icon', icon, true %}
+                {%- else -%}
+                {% render '@icon', icon, true %}
+                <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+                {%- endif -%}
+            {%- else -%}
+            <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+            {%- endif %}
+        </span>
+    </button>
+    <button id="{{ id }}" class="mrx-dropdown__toggle mrx-btn{% if skin %} mrx-btn--skin-{{ skin }}{% endif %}{% if size %} mrx-btn--size-{{ size }}{% endif %}{% if show %} mrx-dropdown--show{% endif %} mrx-btn--icon mrx-js-dropdown__toggle" aria-haspopup="true" aria-expanded="false">
+        <span class="mrx-btn__inner">
+            <span class="mrx-btn__txt mrx-is-vishidden">Toggle Dropdown</span>
+            {% if caret %}
+            {% render '@icon', { symbol: 'caret-down', size: 'small' } %}
+            {% endif %}
+        </span>
+    </button>
+    <div class="mrx-dropdown__menu{% if menuAlignment %} mrx-dropdown__menu--align-{{ menuAlignment }}{% endif %}" aria-labelledby="{{ id }}">
+        <ul class="mrx-dropdown__list">
+            {% for item in items -%}
+                {% if item.divider -%}
+                    <li class="mrx-divider mrx-divider--size-mini" aria-hidden="true" tabindex="-1"></li>
+                {% else -%}
+                    <li class="mrx-dropdown__item">
+                        <a class="mrx-dropdown__link" href="{{ item.href }}">
+                            {% if item.icon -%}
+                                {% render '@icon', item.icon -%}
+                            {% endif -%}
+                            <span class="mrx-dropdown__item__txt">{{ item.text }}</span>
+                            {% if item.subitems -%}
+                                {% render '@icon', { symbol: 'angle-right', size: 'base' } %}
+                            {% endif -%}
+                        </a>
+                        {% if item.subitems -%}
+                            <div class="mrx-dropdown__menu">
+                                <ul class="mrx-dropdown__list">
+                                    {% for subitem in item.subitems -%}
+                                        <li class="mrx-dropdown__item">
+                                            <a class="mrx-dropdown__link" href="{{ subitem.href }}">
+                                                {{ subitem.text }}
+                                            </a>
+                                        </li>
+                                    {% endfor -%}
+                                </ul>
+                            </div>
+                        {% endif -%}
+                    </li>
+                {% endif %}
+            {%- endfor -%}
+        </ul>
+    </div>
+</div>
+
+{% else -%}
+
+<div class="mrx-dropdown{% if show %} mrx-dropdown--show{% endif %}" role="group">
+    <button id="{{ id }}" class="mrx-dropdown__toggle mrx-btn{% if skin %} mrx-btn--skin-{{ skin }}{% endif %}{% if size %} mrx-btn--size-{{ size }}{% endif %}{% if icon %}{% if hideText==true %} mrx-btn--icon{% endif %}{% endif %}{% if show %} mrx-dropdown--show{% endif %} mrx-js-dropdown__toggle" aria-haspopup="true" aria-expanded="false">
+        <span class="mrx-btn__inner">
+            {%- if icon %}
+                {% if iconAfter -%}
+                <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+                {% render '@icon', icon, true -%}
+                {% if caret %}
+                    {% render '@icon', { symbol: 'caret-down', size: 'small', classes: ['mrx-dropdown__caret'] } %}
+                {% endif %}
+                {%- else -%}
+                {% render '@icon', icon, true %}
+                <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+                {% if caret -%}
+                    {% render '@icon', { symbol: 'caret-down', size: 'small', classes: ['mrx-dropdown__caret'] } %}
+                {% endif -%}
+                {%- endif -%}
+            {%- else %}
+                <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+                {% if caret -%}
+                {%- render '@icon', { symbol: 'caret-down', size: 'small', classes: ['mrx-dropdown__caret'] } %}
+                {% endif -%}
+            {% endif -%}
+        </span>
+    </button>
+    <div class="mrx-dropdown__menu{% if menuAlignment %} mrx-dropdown__menu--align-{{ menuAlignment }}{% endif %} mrx-js-dropdown__menu" aria-labelledby="{{ id }}">
+        <ul class="mrx-dropdown__list">
+            {% for item in items -%}
+                {% if item.divider -%}
+                    <li class="mrx-divider mrx-divider--size-mini" aria-hidden="true" tabindex="-1"></li>
+                {% else -%}
+                    <li class="mrx-dropdown__item">
+                        <a class="mrx-dropdown__link" href="{{ item.href }}">
+                            {% if item.icon -%}
+                                {% render '@icon', item.icon -%}
+                            {% endif -%}
+                            <span class="mrx-dropdown__item__txt">{{ item.text }}</span>
+                            {% if item.subitems -%}
+                                {% render '@icon', { symbol: 'angle-right', size: 'base' } %}
+                            {% endif -%}
+                        </a>
+                        {% if item.subitems -%}
+                            <div class="mrx-dropdown__menu">
+                                <ul class="mrx-dropdown__list">
+                                    {% for subitem in item.subitems -%}
+                                        <li class="mrx-dropdown__item">
+                                            <a class="mrx-dropdown__link" href="{{ subitem.href }}">
+                                                {{ subitem.text }}
+                                            </a>
+                                        </li>
+                                    {% endfor -%}
+                                </ul>
+                            </div>
+                        {% endif -%}
+                    </li>
+                {% endif %}
+            {%- endfor -%}
+        </ul>
+    </div>
+</div>
+{% endif %}

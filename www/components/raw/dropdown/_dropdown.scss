@@ -1,0 +1,177 @@
+// ==========================================================================
+// Component: dropdown
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-dropdown__toggle {
+    position: relative;
+
+    .mrx-dropdown__caret {
+        will-change: transform;
+        transition: transform $duration-fast ease-in-out;
+        transform-origin: center;
+    }
+
+    &.mrx-dropdown--show,
+    &[aria-expanded='true'] {
+        + .mrx-dropdown__menu {
+            transition-property: visibility, opacity;
+            transition-duration: 0s, $duration-fast;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &.mrx-btn--skin-primary {
+            background-color: $color-btn-primary-bg-active;
+            color: $color-btn-primary-txt-active;
+        }
+
+        &.mrx-btn--skin-secondary {
+            background-color: $color-btn-secondary-bg-active;
+            color: $color-btn-secondary-txt-active;
+        }
+
+        &.mrx-btn--skin-flat {
+            background-color: $color-btn-flat-bg-active;
+            color: $color-btn-flat-txt-active;
+        }
+    }
+}
+
+.mrx-dropdown__link {
+    @include type-scale(small);
+    @include p(tiny, moderate, tiny, moderate);
+    display: flex;
+    align-items: flex-start;
+    border: 0;
+    text-decoration: none;
+    color: $color-dropdownmenu-txt;
+
+    &:focus {
+        box-shadow: 0 0 0 rem-calc(2) $color-btn-secondary-border-focus;
+        outline: 0;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $color-dropdownmenu-bg-hover;
+
+        + .mrx-dropdown__menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    &:active {
+        background-color: $color-link-bg-focus;
+    }
+
+    .mrx-icon {
+        flex: 0 0 auto;
+        transform: translateY(1px);
+
+        + .mrx-dropdown__item__txt {
+            @include ml(tiny);
+        }
+    }
+
+    .mrx-dropdown__item__txt {
+        flex: 1 1 auto;
+
+        + .mrx-icon {
+            margin-left: auto;
+        }
+    }
+}
+
+.mrx-dropdown__item {
+    position: relative;
+
+    .mrx-dropdown__menu {
+        position: absolute;
+        top: -11px;
+        left: 100%;
+    }
+
+    &:hover {
+        > .mrx-dropdown__item {
+            background-color: $color-dropdownmenu-bg-hover;
+            box-shadow: none;
+        }
+
+        > .mrx-dropdown__menu {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.mrx-dropdown__list {
+    @include reset-list;
+    @include p(mini, none, mini, none);
+    @include mt(nano);
+    @include shadow(3);
+    min-width: rem-calc(200);
+    border: rem-calc(1) solid $color-dropdownmenu-border;
+    background-color: $color-dropdownmenu-bg;
+}
+
+.mrx-dropdown__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    will-change: opacity, visibility;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: $duration-fast, 0s;
+    transition-delay: 0s, $duration-fast;
+    margin-left: -28%;
+    padding-left: 28%;
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-dropdown {
+    display: inline-flex;
+    position: relative;
+}
+
+
+// Modifiers
+// ==========================================================================
+
+.mrx-dropdown--split {
+    > .mrx-btn:first-of-type {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        + .mrx-btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: rem-calc(-1);
+        }
+    }
+
+    .mrx-btn--skin-primary {
+        + .mrx-btn--skin-primary {
+            border-left: rem-calc(1) solid $color-dropdownmenu-border-primary;
+        }
+    }
+}
+
+.mrx-dropdown__menu--align-left {
+    left: 0;
+    right: auto;
+}
+
+.mrx-dropdown__menu--align-right {
+    left: auto;
+    right: 0;
+}

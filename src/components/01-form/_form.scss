@@ -1,0 +1,81 @@
+// ==========================================================================
+// Component: form
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-form__element {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .mrx-field {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .mrx-label {
+        order: -1;
+    }
+
+    .mrx-form__hint {
+        @include type-scale(tiny);
+        flex: 1 1 auto;
+        width: 100%;
+        order: 1;
+        color: $color-formhint-bg;
+    }
+
+    .mrx-form__hint--error {
+        @include type-weight(bold);
+        color: $color-txt-error;
+    }
+}
+
+.mrx-form__element--inline {
+    align-items: center;
+    flex-wrap: nowrap;
+
+    .mrx-field {
+        flex: 0 0 auto;
+    }
+}
+
+// Form Block
+.mrx-form__block {
+    // Hide if empty
+    &:empty {
+        display: none;
+    }
+
+    + .mrx-form__block {
+        @include mt(xlarge)
+    }
+}
+
+// Block (parent)
+// ==========================================================================
+
+.mrx-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    .mrx-field {
+        width: 100%;
+    }
+
+    // Using grid within a form
+    .mrx-row {
+        margin: rem-calc(0 -8);
+    }
+
+    .mrx-col {
+        @include mb(base);
+        @include p(none, mini, none, mini);
+    }
+}

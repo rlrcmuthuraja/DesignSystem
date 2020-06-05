@@ -1,0 +1,164 @@
+// ==========================================================================
+// Component: notification
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+.mrx-notification__icon {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+
+    .mrx-icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mrx-notification__title {
+    @include type-scale(medium);
+    @include type-weight(bold);
+    @include mb(tiny);
+    line-height: 1.5rem;
+}
+
+.mrx-notification__header {
+    + .mrx-notification__body {
+        flex: 1 1 calc(100% - 32px);
+    }
+
+    .mrx-notification__icon + & {
+        + .mrx-notification__body {
+            @include ml(large);
+        }
+    }
+}
+
+.mrx-notification__content {
+    @include p(large, large, large, large);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    max-width: 80ch;
+    align-items: flex-start;
+}
+
+.mrx-notification__dismiss {
+    @include mt(large);
+    @include mr(large);
+    margin-left: auto;
+    color: inherit;
+
+    &:hover {
+        background-color: inherit;
+    }
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-notification {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    background-color: $color-notification-bg-neutral;
+
+    .mrx-notification__icon {
+        @include mr(mini);
+
+        svg {
+            fill: currentColor;
+        }
+    }
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-notification--success {
+    background-color: $color-notification-bg-success;
+    color: $color-notification-txt-success;
+
+    &.mrx-notification--banner {
+        background-color: $color-notification-bg-banner-success;
+        color: $color-notification-txt-banner-success;
+    }
+}
+
+.mrx-notification--warning {
+    background-color: $color-notification-bg-warning;
+    color: $color-notification-txt-warning;
+
+    &.mrx-notification--banner {
+        background-color: $color-notification-bg-banner-warning;
+        color: $color-notification-txt-banner-warning;
+    }
+}
+
+.mrx-notification--danger {
+    background-color: $color-notification-bg-danger;
+    color: $color-notification-txt-danger;
+
+    &.mrx-notification--banner {
+        background-color: $color-notification-bg-banner-danger;
+        color: $color-notification-txt-banner-danger;
+    }
+}
+
+.mrx-notification--info {
+    background-color: $color-notification-bg-info;
+    color: $color-notification-txt-info;
+
+    &.mrx-notification--banner {
+        background-color: $color-notification-bg-banner-info;
+        color: $color-notification-txt-banner-info;
+    }
+}
+
+.mrx-notification--inline {
+    display: inline-flex;
+
+    .mrx-notification__content {
+        @include p(tiny, tiny, tiny, tiny);
+    }
+
+    .mrx-notification__dismiss {
+        @include mt(tiny);
+        @include mr(tiny);
+    }
+}
+
+
+.mrx-notification--banner {
+    @include mq($until: tab-m) {
+        .mrx-notification__body {
+            flex: 1 1 auto;
+            width: calc(100% - 32px);
+        }
+    }
+
+    @include mq($from: tab-m) {
+        justify-content: center;
+
+        .mrx-notification__content {
+            justify-content: center;
+        }
+
+        .mrx-notification__header {
+            + .mrx-notification__body {
+                flex: 1 1 100%;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+
+        .mrx-notification__body {
+            text-align: center;
+            flex: 0 1 auto;
+            max-width: calc(100% - 32px);
+        }
+    }
+}

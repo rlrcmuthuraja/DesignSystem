@@ -1,0 +1,15 @@
+<!-- TABS Component -->
+<nav class="mrx-tabs{% if theme %} mrx-tabs--theme-{{ theme }}{% endif %}">
+    <ol class="mrx-tabs__list">
+        {% for item in items -%}
+        <li class="mrx-tabs__item{% if item.active %} mrx-is-active{% endif %}">
+            <a href="{{ item.href }}" class="mrx-tabs__label">
+                {% if item.icon %}
+                {% render '@icon', item.icon %}
+                {% endif %}
+                <span class="mrx-tabs__txt">{{ item.txt }}</span>
+            </a>
+        </li>
+        {%- endfor -%}
+    </ol>
+</nav>

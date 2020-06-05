@@ -1,0 +1,6 @@
+<!-- LEGEND Component -->
+{% if renderAsLabel -%}
+<legend class="mrx-label{% for class in classes %} {{ class }}{% endfor %}{% if hideLegend %} mrx-is-vishidden{% endif %}">{{ legendText }}</legend>
+{% else -%}
+<legend class="mrx-legend{% if underline %} mrx-legend--underline{% endif %}{% for class in classes %} {{ class }}{% endfor %}{% if hideLegend %} mrx-is-vishidden{% endif %}">{{ legendText }}</legend>
+{% endif -%}

@@ -1,0 +1,15 @@
+<nav class="mrx-pagination" aria-label="{{ ariaLabel }}">
+    <ul class="mrx-pagination__group{% if align %} mrx-pagination__group--{{ align }}{% endif %}">
+    {%- for page in pages -%}
+    {% if page.active -%}
+        <li class="mrx-pagination__item mrx-is-active">
+            <span class="mrx-btn mrx-btn--skin-secondary mrx-btn--size-large mrx-is-selected">{{ page.item.text }}</span>
+        </li>
+    {% else %}
+        <li class="mrx-pagination__item">
+            {% render '@button', page.item, true %}
+        </li>
+    {% endif %}
+    {% endfor -%}
+    </ul>
+</nav>

@@ -1,0 +1,6 @@
+<!-- BUTTON-TOOLBAR Component -->
+<div class="mrx-btntoolbar{% for class in classes %} {{ class }}{% endfor %}" role="toolbar" aria-label="{{ ariaLabel }}">
+    {% for group in groups -%}
+    {% render '@button-group', group.context %}
+    {% endfor -%}
+</div>

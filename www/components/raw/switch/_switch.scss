@@ -1,0 +1,347 @@
+// ==========================================================================
+// Component: Switch
+// ==========================================================================
+
+// Local variables
+// ==========================================================================
+
+$switch-size: 24px; // Equal to base line-height for body text
+$fake-radio-size: $switch-size / 2;
+$fake-check-width: ($switch-size / 4);
+$fake-check-height: $switch-size / 1.84;
+$switch-border-radius: $radius-global;
+
+// Elements (children)
+// ==========================================================================
+.mrx-switch__label {
+    display: inline-block;
+    float: left;
+    display: flex;
+    align-items: flex-start;
+
+    &:hover {
+        .mrx-switch__control {
+            &:not(:disabled):not(:focus):not(:checked) {
+                ~ .mrx-switch__fake {
+                    border-color: $color-switch-border-hover;
+                    box-shadow: 0 0 0 rem-calc(1) $color-switch-border-hover inset;
+                }
+            }
+        }
+    }
+}
+
+.mrx-switch__label__txt {
+    display: inline;
+    vertical-align: top;
+}
+
+.mrx-switch__control {
+    &:checked {
+        ~ .mrx-switch__fake {
+            background-color: $color-switch-bg-checked;
+            box-shadow: rem-calc(0 0 0 1) $color-switch-border-checked inset;
+
+            &:after {
+                display: block;
+                border-color: $color-switch-symbol-checked;
+            }
+        }
+    }
+
+    &:disabled {
+        ~ .mrx-switch__fake {
+            background: $color-switch-bg-disabled;
+            cursor: not-allowed;
+        }
+
+        ~ .mrx-switch__label__txt {
+            cursor: not-allowed;
+        }
+
+        &:checked {
+            ~ .mrx-switch__fake {
+                border-color: $color-switch-border-disabled;
+                box-shadow: 0 0 0 rem-calc(1) $color-switch-border-disabled inset;
+
+                &:after {
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
+
+    &:focus {
+        &:not(:disabled) {
+            ~ .mrx-switch__fake {
+                box-shadow: 0 0 0 rem-calc(2) $color-switch-border-focus inset;
+            }
+        }
+    }
+}
+
+// The visible indicator, all with custom styling
+.mrx-switch__fake {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: rem-calc($switch-size);
+    height: rem-calc($switch-size);
+    min-width: rem-calc($switch-size);
+    color: $color-switch-txt;
+    background-color: $color-switch-bg;
+    box-shadow: 0 0 0 rem-calc(1) $color-switch-border inset;
+    transition: all $duration-instant ease-in-out;
+    outline: none;
+
+    &:after {
+        content: '';
+        position: absolute;
+    }
+
+    + .mrx-switch__label__txt {
+        @include pl(mini);
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-switch {
+    @include cf;
+    @include mt(base);
+    display: flex;
+}
+
+// Modifiers
+// ==========================================================================
+// Fake radiobutton
+.mrx-switch--radio {
+    .mrx-switch__fake {
+        border-radius: 50%;
+
+        // The ✓-symbol within checkboxes
+        &:after {
+            display: none;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: rem-calc($fake-radio-size);
+            width: rem-calc($fake-radio-size);
+            border-radius: 50%;
+            background: $color-switch-symbol;
+        }
+    }
+
+    .mrx-switch__control {
+        &:checked {
+            ~ .mrx-switch__fake {
+                &:after {
+                    background: $color-switch-symbol-checked;
+                }
+            }
+        }
+
+        &:disabled {
+            &:checked {
+                ~ .mrx-switch__fake {
+                    &:after {
+                        background: $color-switch-symbol-checked-disabled;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Fake checkbox
+.mrx-switch--checkbox {
+    .mrx-switch__fake {
+        border-radius: $switch-border-radius;
+
+        // The ●-symbol within radio buttons
+        &:after {
+            display: none;
+            left: 50%;
+            top: 45%; // Visual adjustment to make it appear vertical center
+            width: rem-calc($fake-check-width);
+            height: rem-calc($fake-check-height);
+            border: solid $color-switch-symbol;
+            border-width: rem-calc(0 2 2 0);
+            transform: translate(-50%, -50%) rotate(38deg);
+        }
+    }
+
+    .mrx-switch__control {
+        &:disabled {
+            &:checked {
+                ~ .mrx-switch__fake {
+                    &:after {
+                        border-color: $color-switch-symbol-checked-disabled;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Fake toggle
+.mrx-switch--toggle {
+    .mrx-switch__fake {
+        height: rem-calc($switch-size - 4px);
+        width: rem-calc($switch-size * 2);
+        display: inline-block;
+        position: relative;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: rem-calc(2 0 2 1);
+        padding: rem-calc(0 8);
+        background: $color-switch-bg;
+        border-radius: ($switch-size/2) + 2;
+        transition: all $duration-instant;
+        box-shadow: rem-calc(0 0 0 1) $color-formfield-border inset;
+
+        &::after {
+            width: rem-calc($switch-size);
+            height: rem-calc($switch-size);
+            position: absolute;
+            top: 50%;
+            left: rem-calc(-1);
+            content: '';
+            will-change: transform;
+            background-color: $color-white;
+            border-radius: 100%;
+            box-shadow: rem-calc(0 0 0 1) $color-btn-secondary-border inset;
+            transition: all $duration-instant ease-in-out;
+            transform: translateY(-50%);
+        }
+    }
+
+    .mrx-switch__option-left {
+        transform: scale(0.1);
+        opacity: 0;
+
+        svg {
+            fill: $color-white;
+        }
+    }
+
+    .mrx-switch__option-right {
+        transform: scale(1);
+        opacity: 1;
+
+        svg {
+            fill: $color-gray-tint-60;
+        }
+    }
+
+    .mrx-switch__disabled-msg {
+        display: none;
+
+        &::before {
+            content: attr(data-unchecked);
+            font-style: italic;
+            opacity: 0.8;
+        }
+    }
+
+    [class^='mrx-switch__option-'] {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 auto;
+        position: relative;
+        z-index: 1;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all $duration-fast ease-out;
+        transition-delay: $duration-instant;
+        speak: none;
+    }
+
+    .mrx-switch__control {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+
+        &:focus {
+            ~ .mrx-switch__fake {
+                box-shadow: rem-calc(0 0 0 2) $color-switch-border-focus inset;
+            }
+        }
+
+        &:checked {
+            ~ .mrx-switch__fake {
+                background-color: $color-switch-bg-checked;
+                box-shadow: rem-calc(0 0 0 1) $color-switch-border-checked inset;
+
+                .mrx-switch__option-left {
+                    color: $color-white;
+                    transform: scale(1);
+                    opacity: 1;
+
+                    svg {
+                        fill: $color-white;
+                    }
+                }
+
+                .mrx-switch__option-right {
+                    color: $color-white;
+                    transform: scale(0.1);
+                    opacity: 0;
+
+                    svg {
+                        fill: $color-white;
+                    }
+                }
+
+                &::after {
+                    transform: translate3d(calc(100% + 2px), -50%, 0);
+                }
+            }
+
+            .mrx-switch__disabled-msg {
+                &::before {
+                    content: attr(data-checked);
+                }
+            }
+        }
+
+        &:checked {
+            &:focus {
+                ~ .mrx-switch__fake {
+                    box-shadow: rem-calc(0 0 0 2) $color-switch-border-focus inset;
+
+                    &::after {
+                        box-shadow: rem-calc(0 0 0 1) $color-btn-secondary-border inset;
+                    }
+                }
+            }
+        }
+
+        &[disabled] {
+            ~ .mrx-switch__disabled-msg {
+                display: block;
+            }
+
+            ~ .mrx-switch__fake,
+            ~ [class^='mrx-switch__option-'] {
+                display: none;
+            }
+        }
+    }
+
+    .mrx-switch__label {
+        &:hover {
+            .mrx-switch__fake {
+                &::after {
+                    box-shadow: 0 0 0 rem-calc(1) $color-btn-secondary-border inset, rem-calc(0 1 4 0) $color-shadow-base;
+                }
+            }
+        }
+    }
+}

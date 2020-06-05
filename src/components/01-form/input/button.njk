@@ -1,0 +1,9 @@
+{% if id %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = id | replace(' ', '-') | lower + '--' + random_number %}
+{% else %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = label | replace(' ', '-') | lower + '--' + random_number %}
+{% endif %}
+
+<input class="mrx-btn{% if skin %} mrx-btn--skin-{{ skin }}{% endif %}{% if size %} mrx-btn--size-{{ size }}{% endif %}{% if fluid %} mrx-btn--fluid{% endif %}" id="{{ id }}" type="{{ type }}" value="{{ value }}" {{'disabled="disabled"' if disabled }} {{'required="required"' if required }}/>

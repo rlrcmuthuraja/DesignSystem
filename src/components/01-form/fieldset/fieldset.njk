@@ -1,0 +1,13 @@
+<!-- FIELDSET Component -->
+<fieldset class="mrx-fieldset{% for class in classes %} {{ class }}{% endfor %}">
+    {% render '@legend', legendContext, true -%}
+    <div class="mrx-fieldset__content">
+        {{ content }}
+    {% block form_blocks -%}
+        This segment will be overwritten when component is called/ embedded.
+    {% endblock -%}
+    {% if fieldsetText -%}
+        <p>{{ fieldsetText }}</p>
+    {% endif -%}
+    </div>
+</fieldset>

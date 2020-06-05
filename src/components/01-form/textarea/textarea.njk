@@ -1,0 +1,21 @@
+{%- if id -%}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = id | replace(' ', '-') | lower + '--' + random_number %}
+{%- else -%}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = label | replace(' ', '-') | lower + '--' + random_number %}
+{% endif -%}
+<div class="mrx-form__element{% for class in classes %} {{ class }}{% endfor %}">
+    {% if hint -%}
+    <span class="mrx-form__hint">{{ hint }}</span>
+    {% endif -%}
+    {% if error -%}
+    <span class="mrx-form__hint mrx-form__hint--error">
+        <span class="mrx-form__hint__txt">{{ error }}</span>
+    </span>
+    {% endif -%}
+    <textarea class="mrx-field{% if size %} mrx-field--size-{{ size }}{% endif %}{{ ' mrx-is-invalid' if error }}" name="" id="{{ id }}"{% if cols %} cols="{{ cols }}"{% endif %}{% if rows %} rows="{{ rows }}"{% endif %}{% if placeholder %} placeholder="{{ placeholder }}"{% endif %} {{ 'disabled="disabled"' if disabled }} {{ 'required="required"' if required }}>{{ value }}</textarea>
+    <label class="mrx-label{% if hideLabel == true %} mrx-is-vishidden{% endif %}" for="{{ id }}">
+        {{ label }}{% if optional == true %}<span class="mrx-form__optional"> (valgfritt)</span>{% endif %}
+    </label>
+</div>

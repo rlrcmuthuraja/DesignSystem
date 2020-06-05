@@ -1,0 +1,16 @@
+// ==========================================================================
+// MIXIN: Center Box
+// ==========================================================================
+
+//
+// A mixin that helps centering a box or container using margin auto
+// on both sides.
+//
+// USAGE: center
+// @include center-box;
+//
+
+@mixin center-box() {
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,15 @@
+// ==========================================================================
+// MIXIN: Center
+// ==========================================================================
+
+//
+// A mixin that helps centering
+//
+// USAGE: center
+// @include center;
+//
+
+@mixin center() {
+    @include text-align(center);
+    @include center-box();
+}

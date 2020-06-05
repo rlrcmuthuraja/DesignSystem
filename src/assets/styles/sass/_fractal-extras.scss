@@ -1,0 +1,97 @@
+﻿@charset 'UTF-8';
+// ==========================================================================
+// Main stylesheet for your application
+// ==========================================================================
+
+// Swatches - Collections of colors, icons and such inside doc-pages
+// ==========================================================================
+
+.swatch__tile {
+    height: 5rem;
+
+    .swatch--color & {
+        margin: rem-calc(-12 -12 12 -12);
+
+    }
+
+    .swatch--icon & {
+        height: auto;
+    }
+}
+
+.swatch__info {
+    @include type-scale(small);
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+}
+
+.swatches {
+    list-style: none;
+    padding: 0 !important;
+}
+
+.box {
+    background: rgba($color-aqua-base, 0.25);
+    color: $color-black;
+}
+
+.learn-more {
+    padding-top: rem-calc(28);
+    padding-bottom: rem-calc(20);
+    margin-top: rem-calc(44);
+    border-top: 1px solid $color-navy-tint-80;
+}
+
+.mrx-dodont {
+    @include reset-list;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mrx-dodont__item {
+    width: calc(50% - 12px);
+
+    img {
+        @include p(base);
+        display: block;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+        border: 1px solid $color-gray-tint-60;
+        border-bottom: 8px solid $color-green-base;
+    }
+
+    p:before {
+        @include type-weight(extra-bold);
+        content: 'Do';
+        text-transform: uppercase;
+        color: $color-green-base;
+
+    }
+}
+
+.mrx-dodont__item--dont {
+    img {
+        border-bottom-color: $color-red-base;
+    }
+
+    p:before {
+        content: 'Don\'t';
+        color: $color-red-base;
+    }
+}
+
+.mrx-spaceboxes {
+    @include reset-list;
+}
+
+.mrx-spaceboxes__item {
+    @include py(small);
+    display: flex;
+    align-items: center;
+
+    + .mrx-spaceboxes__item {
+        border-top: 1px solid $color-navy-tint-80;
+    }
+}

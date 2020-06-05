@@ -1,0 +1,211 @@
+// ==========================================================================
+// Component: tree
+// ==========================================================================
+$icon-size: 18px;
+
+// Elements (children)
+// ==========================================================================
+.mrx-tree__link__txt {
+    flex: 1 1 auto;
+    margin-left: rem-calc(4);
+}
+
+.mrx-tree__link {
+    @include type-scale(small);
+    @include p(tiny, none, tiny, none);
+    color: $color-navy-tint-20;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    text-decoration: none;
+
+    .mrx-is-node > & {
+        @include type-weight(extra-bold);
+    }
+
+    &:hover {
+        background-color: rgba($color-navy-base, 0.05);
+    }
+}
+
+.mrx-tree__item {
+    .mrx-tree {
+        flex: 1 1 auto;
+    }
+
+    &.mrx-is-open {
+        > .mrx-tree__link {
+            .mrx-tree__caret {
+                transform: rotateZ(90deg);
+            }
+
+            + {
+                .mrx-tree {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &[data-treedepth='1'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size});
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 2);
+            }
+        }
+    }
+
+    &[data-treedepth='2'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 2);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 3);
+            }
+        }
+    }
+
+    &[data-treedepth='3'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 3);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 4);
+            }
+        }
+    }
+
+    &[data-treedepth='4'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 4);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 5);
+            }
+        }
+    }
+
+    &[data-treedepth='5'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 5);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 6);
+            }
+        }
+    }
+
+    &[data-treedepth='6'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 6);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 7);
+            }
+        }
+    }
+
+    &[data-treedepth='7'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 7);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 5);
+            }
+        }
+    }
+
+    &[data-treedepth='8'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 8);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 9);
+            }
+        }
+    }
+
+    &[data-treedepth='9'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 9);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 10);
+            }
+        }
+    }
+
+    &[data-treedepth='10'] {
+        .mrx-tree__link {
+            padding-left: calc(#{$icon-size} * 10);
+        }
+
+        &.mrx-is-leaf {
+            .mrx-tree__link {
+                padding-left: calc(#{$icon-size} * 11);
+            }
+        }
+    }
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-tree {
+    @include reset-list;
+
+    .mrx-icon {
+        margin-top: rem-calc(1);
+        flex: 0 0 auto;
+
+        + .mrx-icon {
+            @include ml(tiny);
+        }
+
+        + .mrx-tree__link__txt {
+            margin-left: rem-calc(6);
+        }
+    }
+
+    .mrx-tree__caret {
+        margin: rem-calc(4 -1 0 0);
+
+        + .mrx-tree__link__txt {
+            margin-left: rem-calc(10);
+        }
+    }
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-is-node {
+    > .mrx-tree {
+        display: none;
+    }
+
+    &.mrx-is-open {
+        > .mrx-tree {
+            display: block;
+        }
+    }
+}

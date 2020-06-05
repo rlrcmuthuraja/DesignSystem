@@ -1,0 +1,52 @@
+.mrx-divider__txt {
+    @include px(base);
+}
+
+.mrx-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &:before,
+    &:after {
+        content: '';
+        flex: 1 1 auto;
+        height: rem-calc(1);
+        background-color: $color-divider-bg;
+    }
+}
+
+.mrx-divider--size-nano {
+    @include my(nano);
+}
+
+.mrx-divider--size-tiny {
+    @include my(tiny);
+}
+
+.mrx-divider--size-mini {
+    @include my(mini);
+}
+
+.mrx-divider--size-small {
+    @include my(small);
+}
+
+.mrx-divider--size-base {
+    @include my(base);
+}
+
+.mrx-divider--size-moderate {
+    @include my(moderate);
+}
+
+.mrx-divider--size-medium {
+    @include my(medium);
+}
+
+.mrx-divider--size-large {
+    @include my(large);
+}
+
+
+

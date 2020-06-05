@@ -1,0 +1,148 @@
+// ==========================================================================
+// Component: header
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+.mrx-header__nav-toggle {
+    background-color: $color-header-navtoggle-bg;
+    color: $color-header-navtoggle;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-aqua-base;
+    }
+
+    @include mq($until: tab-m) {
+        padding: rem-calc(12 14 12 14);
+    }
+}
+
+.mrx-header__logo {
+    width: auto;
+    height: rem-calc(24);
+    color: $color-header-logo;
+
+    svg {
+        height: 100%;
+        width: auto;
+        fill: currentColor;
+    }
+
+    img {
+        width: auto;
+        height: 100%;
+        max-width: none;
+    }
+
+    + .mrx-header__title {
+        @include ml(mini);
+    }
+
+    [dir='ltr'] & {
+        @include ml(small);
+
+        + .mrx-header__title {
+            @include ml(mini);
+        }
+    }
+
+    [dir='rtl'] & {
+        @include mr(small);
+
+        + .mrx-header__title {
+            @include mr(mini);
+        }
+    }
+
+    @include mq($from: tab-m) {
+        [dir='ltr'] & {
+            @include ml(base);
+        }
+
+        [dir='rtl'] & {
+            @include mr(base);
+        }
+    }
+}
+
+.mrx-header__title {
+    @include ml(base);
+    @include type-weight(extra-bold);
+    color: $color-header-title-txt;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-header-title-txt-hover;
+    }
+
+    @include mq($until: tab-m) {
+        @include ml(small);
+        @include type-scale(small);
+        line-height: 0.9231;
+    }
+}
+
+.mrx-header__tools {
+    margin-left: auto;
+    height: 100%;
+
+    .mrx-btn--icon {
+        svg {
+            fill: $color-header-icon;
+        }
+
+        + .mrx-btn--icon {
+            margin-left: 0 !important;
+        }
+
+        .mrx-icon {
+            margin-left: rem-calc(13) !important;
+            margin-right: rem-calc(13) !important;
+        }
+
+        &:hover,
+        &:focus,
+        &.mrx-dropdown--show {
+            background-color: $color-header-navtoggle-bg;
+
+            svg {
+                fill: $color-header-icon-hover;
+            }
+        }
+
+        @include mq($until: tab-m) {
+            width: $header-height-small;
+        }
+
+        @include mq($from: tab-m) {
+            width: $header-height-wide;
+        }
+    }
+
+    .mrx-dropdown__menu {
+        margin-top: 0;
+    }
+
+    .mrx-btngroup {
+        align-items: stretch;
+        height: 100%;
+    }
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-header {
+    background-color: $color-header-bg;
+    color: $color-header-txt;
+    display: flex;
+    align-items: center;
+}
+
+// Modifiers
+// ==========================================================================

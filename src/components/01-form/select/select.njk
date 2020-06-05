@@ -1,0 +1,26 @@
+{% if id %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = id | replace(' ', '-') | lower + '--' + random_number %}
+{% else %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = label | replace(' ', '-') | lower + '--' + random_number %}
+{% endif %}
+<div class="mrx-form__element{% for class in classes %} {{ class }}{% endfor %}">
+    <select class="mrx-field{% if size %} mrx-field--size-{{ size }}{% endif %}{% for class in classes %} {{ class }}{% endfor %} {{ 'mrx-is-invalid' if error }}" id="{{ id }}">
+        {% for option in options -%}
+        <option value="{{ option.value }}">{{ option.label }}</option>
+        {% endfor -%}
+    </select>
+    <label class="mrx-label{% if hideLabel %} mrx-is-vishidden{% endif %}" for="{{ id }}">
+        {{ label }}
+    </label>
+    {% if hint -%}
+        <span class="mrx-form__hint">{{ hint }}</span>
+    {% endif -%}
+    {% if error -%}
+        <span class="mrx-form__hint mrx-form__hint--error">
+            {% render '@icon', { symbol: 'warning', size: 'small' } %}
+            <span class="nb-form__hint__txt">{{ error }}</span>
+        </span>
+    {% endif -%}
+</div>

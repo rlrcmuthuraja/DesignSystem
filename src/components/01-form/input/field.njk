@@ -1,0 +1,23 @@
+{% if id %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = id | replace(' ', '-') | lower + '--' + random_number %}
+{% else %}
+    {% set random_number = range(0, 100000) | random %}
+    {% set id = label | replace(' ', '-') | lower + '--' + random_number %}
+{% endif %}
+<!-- FIELD Component -->
+<div class="mrx-form__element{% for class in classes %} {{ class }}{% endfor %}">
+    {% if hint %}
+        <span class="mrx-form__hint">{{ hint }}</span>
+    {% endif -%}
+    {% if error %}
+        <span class="mrx-form__hint mrx-form__hint--error">
+        {% render '@icon', { symbol: 'warning', size: 'small' } %}
+            <span class="mrx-form__hint__txt">{{ error }}</span>
+        </span>
+    {% endif -%}
+    <input class="mrx-field{% if size %} mrx-field--size-{{ size }}{% endif %}{% if hideSpinBtn == true %} mrx-hide-spin-button{% endif %}{{ ' mrx-is-invalid' if error }}" id="{{ id }}" type="{{ type }}"{% if placeholder %} placeholder="{{ placeholder }}"{% endif %}{% if value %} value="{{ value }}"{% endif %} {{ 'disabled="disabled"' if disabled }} {{ 'required="required"' if required }} {{ 'readonly' if readonly }}{% if type == 'range' %} step="any"{% endif %} />
+    <label class="mrx-label{% if hideLabel == true %} mrx-is-vishidden{% endif %}" for="{{ id }}">
+        {{ label }}{% if optional == true %}<span class="mrx-form__optional">(valgfritt)</span>{% endif %}
+    </label>
+</div>

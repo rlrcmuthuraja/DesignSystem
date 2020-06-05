@@ -1,0 +1,78 @@
+// Image replacement
+// ==========================================================================
+%ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+// ==========================================================================
+.mrx-is-hidden {
+    @include hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+// ==========================================================================
+.mrx-is-vishidden {
+    @include vishidden;
+}
+
+// Hidden element becomes visible when it gets focus: h5bp.com/p
+// ==========================================================================
+.mrx-is-vishidden-focusable {
+    @include vishidden;
+
+    &:active,
+    &:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+// Sets position fixed on element. Can be used in conjunction with sticky.js
+// ==========================================================================
+.mrx-is-fixed {
+    @include fixed;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+// ==========================================================================
+.mrx-invisible {
+    @include invisible;
+}
+
+// Hide if JS is enabled, show if JS is disabled
+// ==========================================================================
+.hide-if-js {
+    @include hidden;
+
+    .no-js & {
+        display: block;
+        visibility: visible;
+    }
+}
+
+.mrx-mobile-only {
+    @include mq($from: tab-m) {
+        display: none;
+    }
+}
+
+.mrx-desktop-only {
+    @include mq($until: tab-m) {
+        display: none;
+    }
+}
+

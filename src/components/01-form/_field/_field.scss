@@ -1,0 +1,355 @@
+$border-radius-formfield: $radius-global;
+
+// Field - generic class for input-field, textarea 02-select.
+.mrx-field {
+    @include placeholder {
+        color: $color-formfield-placeholder;
+    }
+    appearance: none;
+    -webkit-tap-highlight-color: rgba($color-white, 0);
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    color: $color-formfield-txt;
+    background: $color-formfield-bg;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: $border-radius-formfield;
+    border: rem-calc(1) $color-formfield-border solid;
+    transition: all $duration-instant ease-in-out;
+
+    &:hover,
+    &.mrx-is-hover {
+        border: rem-calc(0 0 0 1) $color-formfield-border-hover solid;
+        box-shadow: rem-calc(0 1 4 0) $color-shadow-base;
+    }
+
+    &:focus,
+    &.mrx-is-focus {
+        outline: none;
+        border-color: $color-formfield-border-focus;
+        border-width: rem-calc(3);
+    }
+
+    &:disabled,
+    &.mrx-is-disabled {
+        @include placeholder {
+            color: $color-formfield-placeholder-disabled !important;
+        }
+        color: $color-formfield-txt-disabled !important;
+        background-color: $color-formfield-bg-disabled !important;
+        border-color: $color-formfield-border-disabled !important;
+        cursor: not-allowed;
+        box-shadow: none !important;
+    }
+
+    &:invalid,
+    &.mrx-is-invalid {
+        border: rem-calc(1) $color-formfield-border-invalid solid;
+
+        &:focus,
+        &.mrx-is-focus {
+            outline: none;
+            border-width: rem-calc(3);
+        }
+    }
+
+    &.mrx-hide-spin-button {
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            display: none;
+        }
+    }
+
+    @at-root {
+        input#{&} {
+            display: flex;
+            align-items: center;
+
+            &.mrx-field--size-tiny {
+                height: rem-calc(24);
+            }
+
+            &.mrx-field--size-base {
+                height: rem-calc(32);
+            }
+
+            &.mrx-field--size-large {
+                height: rem-calc(44);
+            }
+
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                align-self: center;
+                height: rem-calc(44);
+                width: rem-calc(20);
+                margin: 0;
+                background-image: url('../../img/icons/angle-swap-vertical.svg');
+                background-repeat: no-repeat;
+                background-size: rem-calc(18 18);
+                background-color: transparent;
+                background-position: center;
+            }
+
+            &::-webkit-clear-button {
+                -webkit-appearance: none;
+                height: rem-calc(44);
+                width: rem-calc(20);
+                margin: 0;
+                background-image: url('../../img/icons/close.svg');
+                background-repeat: no-repeat;
+                background-size: rem-calc(16 16);
+                background-color: transparent;
+                background-position: center;
+            }
+
+            &::-webkit-calendar-picker-indicator {
+                margin-right: rem-calc(-12);
+            }
+
+            &[type=color] {
+                padding: 0;
+                -webkit-appearance: none;
+
+                &::-webkit-color-swatch-wrapper {
+                    padding: 0;
+                }
+
+                &:focus {
+                    border-width: rem-calc(3);
+                }
+            }
+
+            &:read-only,
+            &.mrx-is-read-only {
+                @include placeholder {
+                    color: $color-formfield-placeholder-disabled !important;
+                }
+                background-color: $color-formfield-bg-readonly !important;
+                border-color: $color-formfield-border-readonly !important;
+                box-shadow: none !important;
+
+                &:focus,
+                &.mrx-is-focus {
+                    border-width: rem-calc(1);
+                }
+            }
+        }
+
+        input[type='file']#{&} {
+            padding: 0;
+            background-color: $color-formfield-bg !important;
+            position: relative;
+
+            &::-webkit-file-upload-button {
+                @include type-weight(bold);
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: 0;
+                border-right: rem-calc(1) $color-formfield-border solid;
+                height: 100%;
+                border-top-left-radius: $border-radius-btn;
+                border-bottom-left-radius: $border-radius-btn;
+                background-color: $color-btn-secondary-bg;
+                color: $color-btn-secondary-txt;
+            }
+
+            &.mrx-field--size-tiny {
+                &::-webkit-file-upload-button {
+                    @include px(mini, mini);
+                }
+            }
+
+            &.mrx-field--size-base {
+                &::-webkit-file-upload-button {
+                    @include px(small);
+                }
+            }
+
+            &.mrx-field--size-large {
+                &::-webkit-file-upload-button {
+                    @include px(moderate, moderate);
+                }
+            }
+        }
+
+        input[type='range']#{&} {
+            $track-height: 20px;
+
+            -webkit-appearance: none;
+            border: 0;
+            background-color: transparent !important;
+            padding: 0;
+
+            // Chrome and webkit based browsers
+            &::-webkit-slider-runnable-track {
+                @include range-track();
+            }
+
+            &::-webkit-slider-thumb {
+                @include range-thumb();
+            }
+
+            // Mozilla Firefox
+            &::-moz-range-track {
+                @include range-track();
+            }
+
+            &::-moz-range-thumb {
+                @include range-thumb();
+            }
+
+            // IE and MS Edge
+            &::-ms-track {
+                @include range-track();
+            }
+
+            &::-ms-thumb {
+                @include range-thumb();
+            }
+
+            &::-ms-fill-lower {
+                display: none;
+            }
+
+            &::-ms-fill-upper {
+                display: none;
+            }
+
+            &:focus {
+                outline: none !important;
+
+                &::-webkit-slider-runnable-track {
+                    outline: none;
+                    box-shadow: inset rem-calc(0 0 0 3) $color-formfield-border-focus;
+                }
+
+                &::-moz-range-track {
+                    outline: none;
+                    box-shadow: inset rem-calc(0 0 0 3) $color-formfield-border-focus;
+                }
+
+                &::-ms-track {
+                    outline: none;
+                    box-shadow: inset rem-calc(0 0 0 3) $color-formfield-border-focus;
+                }
+            }
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+
+        select#{&} {
+            // Custom down arrow for select-box
+            background-image: url('../../img/icons/angle-down.svg');
+            background-repeat: no-repeat;
+            background-size: rem-calc(16 16);
+            background-position: center right;
+
+            // Remove native down arrow for select-box in IE 11
+            &::-ms-expand {
+                display: none;
+            }
+
+            &.mrx-field--size-tiny {
+                @include pr(medium);
+                height: rem-calc(24);
+                background-position: right rem-calc(4) top 50%;
+            }
+
+            &.mrx-field--size-base {
+                padding-right: rem-calc(26);
+                height: rem-calc(32);
+                background-position: right rem-calc(5) top 50%;
+            }
+
+            &.mrx-field--size-large {
+                padding-right: rem-calc(36);
+                height: rem-calc(44);
+                background-position: right rem-calc(10) top 50%;
+            }
+        }
+
+        textarea#{&} {
+            display: block;
+            resize: vertical;
+
+            // Approx height if rows is specified other then 1-5
+            &[rows] {
+                height: auto;
+                min-height: auto;
+            }
+
+            &.mrx-field--size-tiny {
+                @include py(nano, none);
+                min-height: rem-calc(24);
+
+                &[rows='1'] {
+                    height: rem-calc(24);
+                }
+
+                &:not([rows]) {
+                    height: rem-calc($base-unit * 26);
+                }
+            }
+
+            &.mrx-field--size-base {
+                @include pb(tiny);
+                padding-top: rem-calc(5);
+                min-height: rem-calc(32);
+
+                &[rows='1'] {
+                    height: rem-calc(32);
+                }
+
+                &:not([rows]) {
+                    height: rem-calc($base-unit * 29);
+                }
+            }
+
+            &.mrx-field--size-large {
+                padding-top: rem-calc(9);
+                padding-bottom: rem-calc(7);
+                min-height: rem-calc(44);
+
+                &[rows='1'] {
+                    height: rem-calc(44);
+                }
+
+                &:not([rows]) {
+                    height: rem-calc($base-unit * 34);
+                }
+            }
+
+            &:read-only,
+            &.mrx-is-read-only {
+                @include placeholder {
+                    color: $color-formfield-placeholder-disabled !important;
+                }
+                background-color: $color-formfield-bg-readonly !important;
+                border-color: $color-formfield-border-readonly !important;
+                box-shadow: none !important;
+
+                &:focus,
+                &.mrx-is-focus {
+                    border-width: rem-calc(1);
+                }
+            }
+        }
+    }
+}
+
+.mrx-field--size-tiny {
+    @include type-scale(tiny);
+    padding: rem-calc(0 6 0 6);
+}
+
+.mrx-field--size-base {
+    @include type-scale(small);
+    @include px(mini, mini);
+}
+
+.mrx-field--size-large {
+    @include px(small, small);
+}

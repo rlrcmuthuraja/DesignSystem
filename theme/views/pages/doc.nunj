@@ -1,0 +1,38 @@
+{% extends "layouts/doc.nunj"%}
+{% import "macros/status.nunj" as status %}
+{% import "_macros.nunj" as nav %}
+
+{% set pathParam = request.params.path %}
+{% set doc = frctl.docs.find('path', pathParam | default('')) %}
+
+{% if pathParam and not doc %}{{ throw(404, 'Page not found') }}{% endif %}
+
+{% set page = {
+    title: doc.title | default(frctl.get('project.title')) | default('Welcome to your component library')
+} %}
+
+{% set status = status.tag(doc.status) %}
+
+{% block docContent %}
+    <div class="Prose mrx-prose">
+        {% block pageContent %}
+            {% import "macros/errors.nunj" as errors %}
+            {% if doc %}
+                {% set contents = doc.render(null, renderEnv) | async(true) %}
+                {% if contents | isError %}
+                    {{ errors.renderError('page', contents.message) }}
+                {% else %}
+                    {{ contents }}
+                {% endif %}
+            {% else %}
+                {% include 'partials/content/overview.nunj' %}
+            {% endif %}
+
+            {% block learnMore %}
+                {%for link in learnmore %}
+                    <a href="{{link.link_url}}">{{link.link_txt}}</a>
+                {% endfor %}
+            {% endblock %}
+        {% endblock %}
+    </div>
+{% endblock %}

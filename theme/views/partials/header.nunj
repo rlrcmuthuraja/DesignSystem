@@ -1,0 +1,10 @@
+<div class="Header">
+    <button class="mrx-btn mrx-hamburger mrx-hamburger--spin Header-button Header-navToggle" data-action="toggle-sidebar">
+        <span class="mrx-hamburger__inner">
+            <span class="mrx-hamburger__icon"></span>
+        </span>
+        <span class="mrx-hamburger__txt mrx-is-vishidden">Menu</span>
+    </button>
+    <a href="{{ path('/') }}" class="Header-title" data-pjax>{{ frctl.get('project.title') | default('Component Library') }}</a>
+    <span class="Header-version">v.{{ frctl.theme.get('version') }}</span>
+</div>

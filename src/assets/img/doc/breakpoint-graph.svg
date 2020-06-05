@@ -1,0 +1,1863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 3096 5764" style="enable-background:new 0 0 3096 5764;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{opacity:0.125;fill:#00738E;}
+	.st2{fill:none;stroke:#004758;stroke-width:8;stroke-miterlimit:10;}
+	.st3{fill:#004758;}
+	.st4{font-family:'MyriadPro-Regular';}
+	.st5{font-size:24px;}
+	.st6{fill:none;stroke:#BFBFBF;stroke-width:8;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#BFBFBF;stroke-width:8;stroke-miterlimit:10;stroke-dasharray:8.0031,8.0031;}
+	.st8{fill:none;stroke:#0084A3;stroke-width:8;stroke-miterlimit:10;}
+	.st9{fill:#0084A3;}
+	.st10{fill:none;stroke:#BFBFBF;stroke-width:8;stroke-miterlimit:10;stroke-dasharray:7.9937,7.9937;}
+</style>
+<g id="BG">
+	<rect class="st0" width="3096" height="5764"/>
+</g>
+<g id="Bullets">
+	<g>
+		<rect x="2930" y="103" class="st1" width="14" height="68"/>
+		<rect x="2954" y="103" class="st1" width="14" height="68"/>
+		<rect x="2978" y="103" class="st1" width="14" height="68"/>
+		<rect x="3002" y="103" class="st1" width="14" height="68"/>
+		<rect x="359" y="103" class="st1" width="2561" height="68"/>
+		<rect x="359" y="103" class="st1" width="1921" height="68"/>
+		<rect x="359" y="103" class="st1" width="1441" height="68"/>
+		<rect x="359" y="103" class="st1" width="1025" height="68"/>
+		<rect x="359" y="103" class="st1" width="769" height="68"/>
+		<rect x="359" y="103" class="st1" width="426" height="68"/>
+		<rect x="359" y="103" class="st1" width="376" height="68"/>
+		<rect x="359" y="103" class="st1" width="321" height="68"/>
+	</g>
+	<g>
+		<g>
+			<line class="st2" x1="359" y1="137" x2="3016" y2="137"/>
+		</g>
+		<g>
+			<circle class="st3" cx="2998.5" cy="123.1" r="4"/>
+			<circle class="st3" cx="3011.9" cy="136.5" r="4"/>
+			
+				<rect x="2995.7" y="125.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 971.9779 -2086.9973)" class="st3" width="19" height="8"/>
+		</g>
+		<g>
+			<circle class="st3" cx="2998.5" cy="149.9" r="4"/>
+			<circle class="st3" cx="3011.9" cy="136.5" r="4"/>
+			
+				<rect x="2995.7" y="139.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 778.9377 2166.957)" class="st3" width="19" height="8"/>
+		</g>
+	</g>
+	<g id="wqhd">
+		<g>
+			<g>
+				<circle class="st0" cx="2920" cy="137" r="20"/>
+				<path class="st3" d="M2920,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S2911.2,121,2920,121 M2920,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S2933.3,113,2920,113L2920,113z"/>
+			</g>
+			<g>
+				<circle cx="2920" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 2895.3762 95.0771)" class="st4 st5">2560</text>
+		</g>
+		<text transform="matrix(1 0 0 1 2890.9841 202.0771)" class="st4 st5">wqhd</text>
+	</g>
+	<g id="dtp">
+		<g>
+			<g>
+				<circle class="st0" cx="2280" cy="137" r="20"/>
+				<path class="st3" d="M2280,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S2271.2,121,2280,121 M2280,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S2293.3,113,2280,113L2280,113z"/>
+			</g>
+			<g>
+				<circle cx="2280" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 2256.3762 95.0771)" class="st4 st5">1920</text>
+		</g>
+		<text transform="matrix(1 0 0 1 2263.4319 202.0771)" class="st4 st5">dtp</text>
+	</g>
+	<g id="ltp-l">
+		<g>
+			<g>
+				<circle class="st0" cx="1960" cy="137" r="20"/>
+				<path class="st3" d="M1960,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S1951.2,121,1960,121 M1960,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S1973.3,113,1960,113L1960,113z"/>
+			</g>
+			<g>
+				<circle cx="1960" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 1935.3762 95.0771)" class="st4 st5">1600</text>
+		</g>
+		<text transform="matrix(1 0 0 1 1939.8523 202.0771)" class="st4 st5">ltp-l</text>
+	</g>
+	<g id="ltp-m">
+		<g>
+			<g>
+				<circle class="st0" cx="1800" cy="137" r="20"/>
+				<path class="st3" d="M1800,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S1791.2,121,1800,121 M1800,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S1813.3,113,1800,113L1800,113z"/>
+			</g>
+			<g>
+				<circle cx="1800" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 1775.3762 95.0771)" class="st4 st5">1440</text>
+		</g>
+		<text transform="matrix(1 0 0 1 1772.676 202.0771)" class="st4 st5">ltp-m</text>
+	</g>
+	<g id="ltp-s">
+		<g>
+			<g>
+				<circle class="st0" cx="1640" cy="137" r="20"/>
+				<path class="st3" d="M1640,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S1631.2,121,1640,121 M1640,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S1653.3,113,1640,113L1640,113z"/>
+			</g>
+			<g>
+				<circle cx="1640" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 1615.3762 95.0771)" class="st4 st5">1280</text>
+		</g>
+		<text transform="matrix(1 0 0 1 1617.9324 202.0771)" class="st4 st5">ltp-s</text>
+	</g>
+	<g id="tab-l">
+		<g>
+			<g>
+				<circle class="st0" cx="1384" cy="137" r="20"/>
+				<path class="st3" d="M1384,121c8.8,0,16,7.2,16,16s-7.2,16-16,16c-8.8,0-16-7.2-16-16S1375.2,121,1384,121 M1384,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24c13.3,0,24-10.7,24-24S1397.3,113,1384,113L1384,113z"/>
+			</g>
+			<g>
+				<circle cx="1384" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 1359.3762 95.0771)" class="st4 st5">1024</text>
+		</g>
+		<text transform="matrix(1 0 0 1 1360.9001 202.0771)" class="st4 st5">tab-l</text>
+	</g>
+	<g id="tab-m">
+		<g>
+			<g>
+				<circle class="st0" cx="1128" cy="137" r="20"/>
+				<path class="st3" d="M1128,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S1119.2,121,1128,121 M1128,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S1141.3,113,1128,113L1128,113z"/>
+			</g>
+			<g>
+				<circle cx="1128" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 1110.5325 95.0771)" class="st4 st5">768</text>
+		</g>
+		<text transform="matrix(1 0 0 1 1097.7244 202.0771)" class="st4 st5">tab-m</text>
+	</g>
+	<g id="tab-s">
+		<g>
+			<g>
+				<circle class="st0" cx="960" cy="137" r="20"/>
+				<path class="st3" d="M960,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S951.2,121,960,121 M960,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S973.3,113,960,113L960,113z"/>
+			</g>
+			<g>
+				<circle cx="960" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 942.5325 95.0771)" class="st4 st5">600</text>
+		</g>
+		<text transform="matrix(1 0 0 1 934.9802 202.0771)" class="st4 st5">tab-s</text>
+	</g>
+	<g id="mob-l">
+		<g>
+			<g>
+				<circle class="st0" cx="785" cy="137" r="20"/>
+				<path class="st3" d="M785,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S776.2,121,785,121 M785,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S798.3,113,785,113L785,113z"/>
+			</g>
+			<g>
+				<circle cx="785" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 765.5325 95.0771)" class="st4 st5">425</text>
+		</g>
+		<text transform="matrix(1 0 0 1 755.0603 202.0771)" class="st4 st5">mob-l</text>
+	</g>
+	<g id="mod-m">
+		<g>
+			<g>
+				<circle class="st0" cx="735" cy="137" r="20"/>
+				<path class="st3" d="M735,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S726.2,121,735,121 M735,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S748.3,113,735,113L735,113z"/>
+			</g>
+			<g>
+				<circle cx="735" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 716.5325 95.0771)" class="st4 st5">375</text>
+		</g>
+		<text transform="matrix(1 0 0 1 697.884 226.0771)" class="st4 st5">mob-m</text>
+	</g>
+	<g id="mob-s">
+		<g>
+			<g>
+				<circle class="st0" cx="680" cy="137" r="20"/>
+				<path class="st3" d="M680,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S671.2,121,680,121 M680,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S693.3,113,680,113L680,113z"/>
+			</g>
+			<g>
+				<circle cx="680" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 661.5325 95.0771)" class="st4 st5">320</text>
+		</g>
+		<text transform="matrix(1 0 0 1 648.1399 202.0771)" class="st4 st5">mob-s</text>
+	</g>
+	<g id="all">
+		<g>
+			<g>
+				<circle class="st0" cx="359" cy="137" r="20"/>
+				<path class="st3" d="M359,121c8.8,0,16,7.2,16,16s-7.2,16-16,16s-16-7.2-16-16S350.2,121,359,121 M359,113
+					c-13.3,0-24,10.7-24,24s10.7,24,24,24s24-10.7,24-24S372.3,113,359,113L359,113z"/>
+			</g>
+			<g>
+				<circle cx="359" cy="137" r="9"/>
+			</g>
+			<text transform="matrix(1 0 0 1 352.844 95.0771)" class="st4 st5">0</text>
+		</g>
+		<text transform="matrix(1 0 0 1 347.552 202.0771)" class="st4 st5">all</text>
+	</g>
+</g>
+<g id="Columns">
+	<line id="_x30__1_" class="st6" x1="359" y1="212" x2="359" y2="5688"/>
+	<line id="_x33_20_1_" class="st6" x1="680" y1="212" x2="680" y2="5688"/>
+	<line id="_x33_75_1_" class="st6" x1="735" y1="252.7" x2="735" y2="5688"/>
+	<line id="_x34_25_1_" class="st6" x1="785" y1="212" x2="785" y2="5688"/>
+	<line id="_x36_00_1_" class="st6" x1="960" y1="212" x2="960" y2="5688"/>
+	<line id="_x37_68_1_" class="st6" x1="1128" y1="212" x2="1128" y2="5688"/>
+	<line id="_x31_024_1_" class="st6" x1="1384" y1="212" x2="1384" y2="5688"/>
+	<line id="_x31_280_1_" class="st6" x1="1640" y1="212" x2="1640" y2="5688"/>
+	<line id="_x31_440_1_" class="st6" x1="1800" y1="212" x2="1800" y2="5688"/>
+	<line id="_x31_600_1_" class="st6" x1="1960" y1="212" x2="1960" y2="5688"/>
+	<line id="_x31_920_1_" class="st6" x1="2280" y1="212" x2="2280" y2="5688"/>
+	<line id="_x32_560_1_" class="st6" x1="2920" y1="212" x2="2920" y2="5688"/>
+</g>
+<g id="Graphs">
+	<g id="from_wqhd">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5681.3" x2="363" y2="5681.3"/>
+				<line class="st7" x1="371" y1="5681.3" x2="2912" y2="5681.3"/>
+				<line class="st6" x1="2916" y1="5681.3" x2="2920" y2="5681.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="2939.8" y1="5681.3" x2="2996.2" y2="5681.3"/>
+				<g>
+					<polygon class="st9" points="2920,5681.3 2947.9,5692.7 2941.2,5681.3 2947.9,5670 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,5681.3 2988.1,5692.7 2994.8,5681.3 2988.1,5670 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 230.8333 5688.3813)" class="st4 st5">from wqhd</text>
+	</g>
+	<g id="until_wqhd">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5610.3" x2="363" y2="5610.3"/>
+				<line class="st7" x1="371" y1="5610.3" x2="2912" y2="5610.3"/>
+				<line class="st6" x1="2916" y1="5610.3" x2="2920" y2="5610.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="5610.3" x2="2900.2" y2="5610.3"/>
+				<g>
+					<polygon class="st9" points="359,5610.3 386.9,5621.7 380.2,5610.3 386.9,5598.9 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,5610.3 2892.1,5621.7 2898.8,5610.3 2892.1,5598.9 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 233.1135 5617.3594)" class="st4 st5">until wqhd</text>
+	</g>
+	<g id="from_dtp">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5539.3" x2="363" y2="5539.3"/>
+				<line class="st7" x1="371" y1="5539.3" x2="2912" y2="5539.3"/>
+				<line class="st6" x1="2916" y1="5539.3" x2="2920" y2="5539.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="2299.8" y1="5539.3" x2="2996.2" y2="5539.3"/>
+				<g>
+					<polygon class="st9" points="2280,5539.3 2307.9,5550.7 2301.2,5539.3 2307.9,5527.9 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,5539.3 2988.1,5550.7 2994.8,5539.3 2988.1,5527.9 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 250.7288 5546.3379)" class="st4 st5">from dtp</text>
+	</g>
+	<g id="from_dtp_until_wqhd">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5468.3" x2="363" y2="5468.3"/>
+				<line class="st7" x1="371" y1="5468.3" x2="2912" y2="5468.3"/>
+				<line class="st6" x1="2916" y1="5468.3" x2="2920" y2="5468.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="2299.8" y1="5468.3" x2="2900.2" y2="5468.3"/>
+				<g>
+					<polygon class="st9" points="2280,5468.3 2307.9,5479.7 2301.2,5468.3 2307.9,5456.9 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,5468.3 2892.1,5479.7 2898.8,5468.3 2892.1,5456.9 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 136.7551 5475.3154)" class="st4 st5">from dtp until wqhd</text>
+	</g>
+	<g id="until_dtp">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5397.3" x2="363" y2="5397.3"/>
+				<line class="st7" x1="371" y1="5397.3" x2="2912" y2="5397.3"/>
+				<line class="st6" x1="2916" y1="5397.3" x2="2920" y2="5397.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="5397.3" x2="2260.2" y2="5397.3"/>
+				<g>
+					<polygon class="st9" points="359,5397.3 386.9,5408.6 380.2,5397.3 386.9,5385.9 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,5397.3 2252.1,5408.6 2258.8,5397.3 2252.1,5385.9 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 256.0095 5404.2939)" class="st4 st5">until dtp</text>
+	</g>
+	<g id="from_ltp-l">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5326.2" x2="363" y2="5326.2"/>
+				<line class="st7" x1="371" y1="5326.2" x2="2912" y2="5326.2"/>
+				<line class="st6" x1="2916" y1="5326.2" x2="2920" y2="5326.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1979.8" y1="5326.2" x2="2996.2" y2="5326.2"/>
+				<g>
+					<polygon class="st9" points="1960,5326.2 1987.9,5337.6 1981.2,5326.2 1987.9,5314.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,5326.2 2988.1,5337.6 2994.8,5326.2 2988.1,5314.8 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 248.5696 5333.271)" class="st4 st5">from ltp-l</text>
+	</g>
+	<g id="from_ltp-l_until_wqhd">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5255.2" x2="363" y2="5255.2"/>
+				<line class="st7" x1="371" y1="5255.2" x2="2912" y2="5255.2"/>
+				<line class="st6" x1="2916" y1="5255.2" x2="2920" y2="5255.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1979.8" y1="5255.2" x2="2900.2" y2="5255.2"/>
+				<g>
+					<polygon class="st9" points="1960,5255.2 1987.9,5266.6 1981.2,5255.2 1987.9,5243.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,5255.2 2892.1,5266.6 2898.8,5255.2 2892.1,5243.8 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 134.5955 5262.25)" class="st4 st5">from ltp-l until wqhd</text>
+	</g>
+	<g id="from_ltp-l_until_dtp">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5184.2" x2="363" y2="5184.2"/>
+				<line class="st7" x1="371" y1="5184.2" x2="2912" y2="5184.2"/>
+				<line class="st6" x1="2916" y1="5184.2" x2="2920" y2="5184.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1979.8" y1="5184.2" x2="2260.2" y2="5184.2"/>
+				<g>
+					<polygon class="st9" points="1960,5184.2 1987.9,5195.6 1981.2,5184.2 1987.9,5172.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,5184.2 2252.1,5195.6 2258.8,5184.2 2252.1,5172.8 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 154.4915 5191.228)" class="st4 st5">from ltp-l until dtp</text>
+	</g>
+	<g id="until_ltp-l">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5113.2" x2="363" y2="5113.2"/>
+				<line class="st7" x1="371" y1="5113.2" x2="2912" y2="5113.2"/>
+				<line class="st6" x1="2916" y1="5113.2" x2="2920" y2="5113.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="5113.2" x2="1940.2" y2="5113.2"/>
+				<g>
+					<polygon class="st9" points="359,5113.2 386.9,5124.5 380.2,5113.2 386.9,5101.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,5113.2 1932.1,5124.5 1938.8,5113.2 1932.1,5101.8 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 247.8499 5120.2061)" class="st4 st5">until ltp-l</text>
+	</g>
+	<g id="from_ltp-m">
+		<text transform="matrix(1 0 0 1 231.217 5049.1846)" class="st4 st5">from ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="5042.1" x2="363" y2="5042.1"/>
+				<line class="st7" x1="371" y1="5042.1" x2="2912" y2="5042.1"/>
+				<line class="st6" x1="2916" y1="5042.1" x2="2920" y2="5042.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1819.8" y1="5042.1" x2="2996.2" y2="5042.1"/>
+				<g>
+					<polygon class="st9" points="1800,5042.1 1827.9,5053.5 1821.2,5042.1 1827.9,5030.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,5042.1 2988.1,5053.5 2994.8,5042.1 2988.1,5030.8 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_ltp-m_until_wqhd">
+		<text transform="matrix(1 0 0 1 120.2434 4978.1631)" class="st4 st5">from ltp-m until wqhd</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4971.1" x2="363" y2="4971.1"/>
+				<line class="st7" x1="371" y1="4971.1" x2="2912" y2="4971.1"/>
+				<line class="st6" x1="2916" y1="4971.1" x2="2920" y2="4971.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1819.8" y1="4971.1" x2="2900.2" y2="4971.1"/>
+				<g>
+					<polygon class="st9" points="1800,4971.1 1827.9,4982.5 1821.2,4971.1 1827.9,4959.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,4971.1 2892.1,4982.5 2898.8,4971.1 2892.1,4959.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_ltp-m_until_dtp">
+		<text transform="matrix(1 0 0 1 143.1389 4907.1411)" class="st4 st5">from ltp-m until dtp</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4900.1" x2="363" y2="4900.1"/>
+				<line class="st7" x1="371" y1="4900.1" x2="2912" y2="4900.1"/>
+				<line class="st6" x1="2916" y1="4900.1" x2="2920" y2="4900.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1819.8" y1="4900.1" x2="2260.2" y2="4900.1"/>
+				<g>
+					<polygon class="st9" points="1800,4900.1 1827.9,4911.5 1821.2,4900.1 1827.9,4888.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,4900.1 2252.1,4911.5 2258.8,4900.1 2252.1,4888.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_ltp-m_until_ltp-l">
+		<text transform="matrix(1 0 0 1 137.9797 4836.1191)" class="st4 st5">from ltp-m until ltp-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4829.1" x2="363" y2="4829.1"/>
+				<line class="st7" x1="371" y1="4829.1" x2="2912" y2="4829.1"/>
+				<line class="st6" x1="2916" y1="4829.1" x2="2920" y2="4829.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1819.8" y1="4829.1" x2="1940.2" y2="4829.1"/>
+				<g>
+					<polygon class="st9" points="1800,4829.1 1827.9,4840.5 1821.2,4829.1 1827.9,4817.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,4829.1 1932.1,4840.5 1938.8,4829.1 1932.1,4817.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="until_ltp-m">
+		<text transform="matrix(1 0 0 1 236.4978 4765.0972)" class="st4 st5">until ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4758.1" x2="363" y2="4758.1"/>
+				<line class="st7" x1="371" y1="4758.1" x2="2912" y2="4758.1"/>
+				<line class="st6" x1="2916" y1="4758.1" x2="2920" y2="4758.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="4758.1" x2="1780.2" y2="4758.1"/>
+				<g>
+					<polygon class="st9" points="359,4758.1 386.9,4769.4 380.2,4758.1 386.9,4746.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1800,4758.1 1772.1,4769.4 1778.8,4758.1 1772.1,4746.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_ltp-s">
+		<text transform="matrix(1 0 0 1 241.7292 4694.0752)" class="st4 st5">from ltp-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4687" x2="363" y2="4687"/>
+				<line class="st7" x1="371" y1="4687" x2="2912" y2="4687"/>
+				<line class="st6" x1="2916" y1="4687" x2="2920" y2="4687"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1659.8" y1="4687" x2="2996.2" y2="4687"/>
+				<g>
+					<polygon class="st9" points="1640,4687 1667.9,4698.4 1661.2,4687 1667.9,4675.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,4687 2988.1,4698.4 2994.8,4687 2988.1,4675.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_ltp-s_until_wqhd">
+		<text transform="matrix(1 0 0 1 127.7551 4623.0537)" class="st4 st5">from ltp-s until wqhd</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4616" x2="363" y2="4616"/>
+				<line class="st7" x1="371" y1="4616" x2="2912" y2="4616"/>
+				<line class="st6" x1="2916" y1="4616" x2="2920" y2="4616"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1659.8" y1="4616" x2="2900.2" y2="4616"/>
+				<g>
+					<polygon class="st9" points="1640,4616 1667.9,4627.4 1661.2,4616 1667.9,4604.6 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,4616 2892.1,4627.4 2898.8,4616 2892.1,4604.6 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_ltp-s_until_dtp">
+		<text transform="matrix(1 0 0 1 153.6511 4552.0317)" class="st4 st5">from ltp-s until dtp</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4544" x2="363" y2="4544"/>
+				<line class="st7" x1="371" y1="4544" x2="2912" y2="4544"/>
+				<line class="st6" x1="2916" y1="4544" x2="2920" y2="4544"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1659.8" y1="4545" x2="2260.2" y2="4545"/>
+				<g>
+					<polygon class="st9" points="1640,4545 1667.9,4556.4 1661.2,4545 1667.9,4533.6 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,4545 2252.1,4556.4 2258.8,4545 2252.1,4533.6 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_ltp-s_until_ltp-l">
+		<text transform="matrix(1 0 0 1 148.4915 4481.0093)" class="st4 st5">from ltp-s until ltp-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4474" x2="363" y2="4474"/>
+				<line class="st10" x1="371" y1="4474" x2="2909" y2="4474"/>
+				<line class="st6" x1="2913" y1="4474" x2="2917" y2="4474"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1659.8" y1="4474" x2="1940.2" y2="4474"/>
+				<g>
+					<polygon class="st9" points="1640,4474 1667.9,4485.3 1661.2,4474 1667.9,4462.6 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,4474 1932.1,4485.3 1938.8,4474 1932.1,4462.6 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_ltp-s_until_ltp-m">
+		<text transform="matrix(1 0 0 1 131.1394 4409.9883)" class="st4 st5">from ltp-s until ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4402.9" x2="363" y2="4402.9"/>
+				<line class="st7" x1="371" y1="4402.9" x2="2912" y2="4402.9"/>
+				<line class="st6" x1="2916" y1="4402.9" x2="2920" y2="4402.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1659.8" y1="4402.9" x2="1780.2" y2="4402.9"/>
+				<g>
+					<polygon class="st9" points="1640,4402.9 1667.9,4414.3 1661.2,4402.9 1667.9,4391.6 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1800,4402.9 1772.1,4414.3 1778.8,4402.9 1772.1,4391.6 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="until_ltp-s">
+		<text transform="matrix(1 0 0 1 244.01 4338.9658)" class="st4 st5">until ltp-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4331.9" x2="363" y2="4331.9"/>
+				<line class="st7" x1="371" y1="4331.9" x2="2912" y2="4331.9"/>
+				<line class="st6" x1="2916" y1="4331.9" x2="2920" y2="4331.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="4331.9" x2="1618.2" y2="4331.9"/>
+				<g>
+					<polygon class="st9" points="359,4331.9 386.9,4343.3 380.2,4331.9 386.9,4320.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1638,4331.9 1610.1,4343.3 1616.8,4331.9 1610.1,4320.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-l">
+		<text transform="matrix(1 0 0 1 239.6653 4267.9438)" class="st4 st5">from tab-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4260.9" x2="363" y2="4260.9"/>
+				<line class="st7" x1="371" y1="4260.9" x2="2912" y2="4260.9"/>
+				<line class="st6" x1="2916" y1="4260.9" x2="2920" y2="4260.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1403.8" y1="4260.9" x2="2996.2" y2="4260.9"/>
+				<g>
+					<polygon class="st9" points="1384,4260.9 1411.9,4272.3 1405.2,4260.9 1411.9,4249.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,4260.9 2988.1,4272.3 2994.8,4260.9 2988.1,4249.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-l_until_wqhd">
+		<text transform="matrix(1 0 0 1 125.6917 4196.9229)" class="st4 st5">from tab-l until wqhd</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4189.9" x2="363" y2="4189.9"/>
+				<line class="st7" x1="371" y1="4189.9" x2="2912" y2="4189.9"/>
+				<line class="st6" x1="2916" y1="4189.9" x2="2920" y2="4189.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1403.8" y1="4189.9" x2="2900.2" y2="4189.9"/>
+				<g>
+					<polygon class="st9" points="1384,4189.9 1411.9,4201.3 1405.2,4189.9 1411.9,4178.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,4189.9 2892.1,4201.3 2898.8,4189.9 2892.1,4178.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-l_until_dtp">
+		<text transform="matrix(1 0 0 1 148.5872 4125.9004)" class="st4 st5">from tab-l until dtp</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4118.9" x2="363" y2="4118.9"/>
+				<line class="st7" x1="371" y1="4118.9" x2="2912" y2="4118.9"/>
+				<line class="st6" x1="2916" y1="4118.9" x2="2920" y2="4118.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1403.8" y1="4118.9" x2="2260.2" y2="4118.9"/>
+				<g>
+					<polygon class="st9" points="1384,4118.9 1411.9,4130.2 1405.2,4118.9 1411.9,4107.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,4118.9 2252.1,4130.2 2258.8,4118.9 2252.1,4107.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-l_until_ltp-l">
+		<text transform="matrix(1 0 0 1 143.428 4054.8787)" class="st4 st5">from tab-l until ltp-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="4047.8" x2="363" y2="4047.8"/>
+				<line class="st7" x1="371" y1="4047.8" x2="2912" y2="4047.8"/>
+				<line class="st6" x1="2916" y1="4047.8" x2="2920" y2="4047.8"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1403.8" y1="4047.8" x2="1940.2" y2="4047.8"/>
+				<g>
+					<polygon class="st9" points="1384,4047.8 1411.9,4059.2 1405.2,4047.8 1411.9,4036.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,4047.8 1932.1,4059.2 1938.8,4047.8 1932.1,4036.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-l_until_ltp-m">
+		<text transform="matrix(1 0 0 1 129.0754 3983.8572)" class="st4 st5">from tab-l until ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3976.8" x2="363" y2="3976.8"/>
+				<line class="st7" x1="371" y1="3976.8" x2="2912" y2="3976.8"/>
+				<line class="st6" x1="2916" y1="3976.8" x2="2920" y2="3976.8"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1403.8" y1="3976.8" x2="1780.2" y2="3976.8"/>
+				<g>
+					<polygon class="st9" points="1384,3976.8 1411.9,3988.2 1405.2,3976.8 1411.9,3965.4 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1800,3976.8 1772.1,3988.2 1778.8,3976.8 1772.1,3965.4 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-l_until_ltp-s">
+		<text transform="matrix(1 0 0 1 139.5876 3912.8352)" class="st4 st5">from tab-l until ltp-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3905.8" x2="363" y2="3905.8"/>
+				<line class="st7" x1="371" y1="3905.8" x2="2912" y2="3905.8"/>
+				<line class="st6" x1="2916" y1="3905.8" x2="2920" y2="3905.8"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1403.8" y1="3905.8" x2="1620.2" y2="3905.8"/>
+				<g>
+					<polygon class="st9" points="1384,3905.8 1411.9,3917.2 1405.2,3905.8 1411.9,3894.4 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1640,3905.8 1612.1,3917.2 1618.8,3905.8 1612.1,3894.4 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="until_tab-l">
+		<text transform="matrix(1 0 0 1 241.9456 3841.813)" class="st4 st5">until tab-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3834.8" x2="363" y2="3834.8"/>
+				<line class="st7" x1="371" y1="3834.8" x2="2912" y2="3834.8"/>
+				<line class="st6" x1="2916" y1="3834.8" x2="2920" y2="3834.8"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="3834.8" x2="1364.2" y2="3834.8"/>
+				<g>
+					<polygon class="st9" points="359,3834.8 386.9,3846.2 380.2,3834.8 386.9,3823.4 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1384,3834.8 1356.1,3846.2 1362.8,3834.8 1356.1,3823.4 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-m">
+		<text transform="matrix(1 0 0 1 225.3132 3770.7915)" class="st4 st5">from tab-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="360" y1="3763.7" x2="364" y2="3763.7"/>
+				<line class="st7" x1="372" y1="3763.7" x2="2913" y2="3763.7"/>
+				<line class="st6" x1="2917" y1="3763.7" x2="2921" y2="3763.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3763.7" x2="2996.2" y2="3763.7"/>
+				<g>
+					<polygon class="st9" points="1128,3763.7 1155.9,3775.1 1149.2,3763.7 1155.9,3752.4 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,3763.7 2988.1,3775.1 2994.8,3763.7 2988.1,3752.4 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-m_until_wqhd">
+		<text transform="matrix(1 0 0 1 111.3391 3699.769)" class="st4 st5">from tab-m until wqhd</text>
+		<g>
+			<g>
+				<line class="st6" x1="360" y1="3692.7" x2="364" y2="3692.7"/>
+				<line class="st7" x1="372" y1="3692.7" x2="2913" y2="3692.7"/>
+				<line class="st6" x1="2917" y1="3692.7" x2="2921" y2="3692.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3692.7" x2="2900.2" y2="3692.7"/>
+				<g>
+					<polygon class="st9" points="1128,3692.7 1155.9,3704.1 1149.2,3692.7 1155.9,3681.3 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,3692.7 2892.1,3704.1 2898.8,3692.7 2892.1,3681.3 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-m_until_dtp">
+		<text transform="matrix(1 0 0 1 134.2351 3628.7476)" class="st4 st5">from tab-m until dtp</text>
+		<g>
+			<g>
+				<line class="st6" x1="360" y1="3621.7" x2="364" y2="3621.7"/>
+				<line class="st7" x1="372" y1="3621.7" x2="2913" y2="3621.7"/>
+				<line class="st6" x1="2917" y1="3621.7" x2="2921" y2="3621.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3621.7" x2="2260.2" y2="3621.7"/>
+				<g>
+					<polygon class="st9" points="1128,3621.7 1155.9,3633.1 1149.2,3621.7 1155.9,3610.3 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,3621.7 2252.1,3633.1 2258.8,3621.7 2252.1,3610.3 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tabm_until_ltp-l">
+		<text transform="matrix(1 0 0 1 129.0754 3557.7258)" class="st4 st5">from tab-m until ltp-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3550.7" x2="363" y2="3550.7"/>
+				<line class="st7" x1="371" y1="3550.7" x2="2912" y2="3550.7"/>
+				<line class="st6" x1="2916" y1="3550.7" x2="2920" y2="3550.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3550.7" x2="1940.2" y2="3550.7"/>
+				<g>
+					<polygon class="st9" points="1128,3550.7 1155.9,3562.1 1149.2,3550.7 1155.9,3539.3 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,3550.7 1932.1,3562.1 1938.8,3550.7 1932.1,3539.3 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-m_until_ltp-m">
+		<text transform="matrix(1 0 0 1 114.7234 3486.7039)" class="st4 st5">from tab-m until ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3479.7" x2="363" y2="3479.7"/>
+				<line class="st7" x1="371" y1="3479.7" x2="2912" y2="3479.7"/>
+				<line class="st6" x1="2916" y1="3479.7" x2="2920" y2="3479.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3479.6" x2="1780.2" y2="3479.7"/>
+				<g>
+					<polygon class="st9" points="1128,3479.6 1155.9,3491 1149.2,3479.6 1155.9,3468.2 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1800,3479.7 1772.1,3491.1 1778.8,3479.7 1772.1,3468.3 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-m_until_ltp-s">
+		<text transform="matrix(1 0 0 1 125.2356 3415.6824)" class="st4 st5">from tab-m until ltp-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3408.6" x2="363" y2="3408.6"/>
+				<line class="st7" x1="371" y1="3408.6" x2="2912" y2="3408.6"/>
+				<line class="st6" x1="2916" y1="3408.6" x2="2920" y2="3408.6"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3408.6" x2="1620.2" y2="3408.6"/>
+				<g>
+					<polygon class="st9" points="1128,3408.6 1155.9,3420 1149.2,3408.6 1155.9,3397.3 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1640,3408.6 1612.1,3420 1618.8,3408.6 1612.1,3397.3 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-m_until_tab-l">
+		<text transform="matrix(1 0 0 1 123.1716 3344.6606)" class="st4 st5">from tab-m until tab-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3337.6" x2="363" y2="3337.6"/>
+				<line class="st7" x1="371" y1="3337.6" x2="2912" y2="3337.6"/>
+				<line class="st6" x1="2916" y1="3337.6" x2="2920" y2="3337.6"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3337.6" x2="1364.2" y2="3337.6"/>
+				<g>
+					<polygon class="st9" points="1128,3337.6 1155.9,3349 1149.2,3337.6 1155.9,3326.2 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1384,3337.6 1356.1,3349 1362.8,3337.6 1356.1,3326.2 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="until_tab-m">
+		<text transform="matrix(1 0 0 1 227.5935 3273.6387)" class="st4 st5">until tab-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3266.6" x2="363" y2="3266.6"/>
+				<line class="st7" x1="371" y1="3266.6" x2="2912" y2="3266.6"/>
+				<line class="st6" x1="2916" y1="3266.6" x2="2920" y2="3266.6"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="3266.6" x2="1108.2" y2="3266.6"/>
+				<g>
+					<polygon class="st9" points="359,3266.6 386.9,3278 380.2,3266.6 386.9,3255.2 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1128,3266.6 1100.1,3278 1106.8,3266.6 1100.1,3255.2 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-s">
+		<text transform="matrix(1 0 0 1 235.8254 3202.6169)" class="st4 st5">from tab-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3195.6" x2="363" y2="3195.6"/>
+				<line class="st7" x1="371" y1="3195.6" x2="2912" y2="3195.6"/>
+				<line class="st6" x1="2916" y1="3195.6" x2="2920" y2="3195.6"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3195.6" x2="2996.2" y2="3195.6"/>
+				<g>
+					<polygon class="st9" points="1128,3195.6 1155.9,3207 1149.2,3195.6 1155.9,3184.2 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,3195.6 2988.1,3207 2994.8,3195.6 2988.1,3184.2 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-s_until_wqhd">
+		<text transform="matrix(1 0 0 1 121.8513 3131.595)" class="st4 st5">from tab-s until wqhd</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3124.6" x2="363" y2="3124.6"/>
+				<line class="st7" x1="371" y1="3124.6" x2="2912" y2="3124.6"/>
+				<line class="st6" x1="2916" y1="3124.6" x2="2920" y2="3124.6"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3124.6" x2="2900.2" y2="3124.6"/>
+				<g>
+					<polygon class="st9" points="1128,3124.6 1155.9,3135.9 1149.2,3124.6 1155.9,3113.2 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,3124.6 2892.1,3135.9 2898.8,3124.6 2892.1,3113.2 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-s_until_dtp">
+		<text transform="matrix(1 0 0 1 144.7473 3060.573)" class="st4 st5">from tab-s until dtp</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="3053.5" x2="363" y2="3053.5"/>
+				<line class="st7" x1="371" y1="3053.5" x2="2912" y2="3053.5"/>
+				<line class="st6" x1="2916" y1="3053.5" x2="2920" y2="3053.5"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="3053.5" x2="2260.2" y2="3053.5"/>
+				<g>
+					<polygon class="st9" points="1128,3053.5 1155.9,3064.9 1149.2,3053.5 1155.9,3042.1 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,3053.5 2252.1,3064.9 2258.8,3053.5 2252.1,3042.1 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-s_until_ltp-l">
+		<text transform="matrix(1 0 0 1 139.5876 2989.5515)" class="st4 st5">from tab-s until ltp-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2982.5" x2="363" y2="2982.5"/>
+				<line class="st7" x1="371" y1="2982.5" x2="2912" y2="2982.5"/>
+				<line class="st6" x1="2916" y1="2982.5" x2="2920" y2="2982.5"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="2982.5" x2="1940.2" y2="2982.5"/>
+				<g>
+					<polygon class="st9" points="1128,2982.5 1155.9,2993.9 1149.2,2982.5 1155.9,2971.1 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,2982.5 1932.1,2993.9 1938.8,2982.5 1932.1,2971.1 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-s_until_ltp-m">
+		<text transform="matrix(1 0 0 1 125.2356 2918.5298)" class="st4 st5">from tab-s until ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2911.5" x2="363" y2="2911.5"/>
+				<line class="st7" x1="371" y1="2911.5" x2="2912" y2="2911.5"/>
+				<line class="st6" x1="2916" y1="2911.5" x2="2920" y2="2911.5"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="2911.5" x2="1780.2" y2="2911.5"/>
+				<g>
+					<polygon class="st9" points="1128,2911.5 1155.9,2922.9 1149.2,2911.5 1155.9,2900.1 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1800,2911.5 1772.1,2922.9 1778.8,2911.5 1772.1,2900.1 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_tab-s_until_ltp-s">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2840.5" x2="363" y2="2840.5"/>
+				<line class="st7" x1="371" y1="2840.5" x2="2912" y2="2840.5"/>
+				<line class="st6" x1="2916" y1="2840.5" x2="2920" y2="2840.5"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="2840.5" x2="1620.2" y2="2840.5"/>
+				<g>
+					<polygon class="st9" points="1128,2840.5 1155.9,2851.8 1149.2,2840.5 1155.9,2829.1 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1640,2840.5 1612.1,2851.8 1618.8,2840.5 1612.1,2829.1 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 135.7473 2847.5076)" class="st4 st5">from tab-s until ltp-s</text>
+	</g>
+	<g id="from_tab-s_until_tab-l">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2769.4" x2="363" y2="2769.4"/>
+				<line class="st7" x1="371" y1="2769.4" x2="2912" y2="2769.4"/>
+				<line class="st6" x1="2916" y1="2769.4" x2="2920" y2="2769.4"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="1147.8" y1="2769.5" x2="1364.2" y2="2769.6"/>
+				<g>
+					<polygon class="st9" points="1128,2769.4 1155.8,2780.9 1149.2,2769.5 1155.9,2758.1 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1384,2769.7 1356.1,2781 1362.8,2769.6 1356.2,2758.3 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 133.6838 2776.4858)" class="st4 st5">from tab-s until tab-l</text>
+	</g>
+	<g id="from_tab-s_until-m">
+		<text transform="matrix(1 0 0 1 119.3313 2705.4636)" class="st4 st5">from tab-s until tab-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2698.4" x2="363" y2="2698.4"/>
+				<line class="st7" x1="371" y1="2698.4" x2="2912" y2="2698.4"/>
+				<line class="st6" x1="2916" y1="2698.4" x2="2920" y2="2698.4"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="979.8" y1="2698.4" x2="1108.2" y2="2698.4"/>
+				<g>
+					<polygon class="st9" points="960,2698.4 987.9,2709.8 981.2,2698.4 987.9,2687 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1128,2698.4 1100.1,2709.8 1106.8,2698.4 1100.1,2687 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="until_tab-s">
+		<text transform="matrix(1 0 0 1 238.1067 2634.4421)" class="st4 st5">until tab-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2626.4" x2="363" y2="2626.4"/>
+				<line class="st10" x1="371" y1="2626.4" x2="2909" y2="2626.4"/>
+				<line class="st6" x1="2913" y1="2626.4" x2="2917" y2="2626.4"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="2626.4" x2="940.2" y2="2626.4"/>
+				<g>
+					<polygon class="st9" points="359,2626.4 386.9,2637.7 380.2,2626.4 386.9,2615 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="960,2626.4 932.1,2637.7 938.8,2626.4 932.1,2615 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l">
+		<text transform="matrix(1 0 0 1 225.9851 2563.4202)" class="st4 st5">from mob-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2556.4" x2="363" y2="2556.4"/>
+				<line class="st7" x1="371" y1="2556.4" x2="2912" y2="2556.4"/>
+				<line class="st6" x1="2916" y1="2556.4" x2="2920" y2="2556.4"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="2556.4" x2="2996.2" y2="2556.4"/>
+				<g>
+					<polygon class="st9" points="785,2556.4 812.9,2567.8 806.2,2556.4 812.9,2545 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,2556.4 2988.1,2567.8 2994.8,2556.4 2988.1,2545 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l_until_wqhd">
+		<text transform="matrix(1 0 0 1 112.011 2492.3987)" class="st4 st5">from mob-l until wqhd</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2485.4" x2="363" y2="2485.4"/>
+				<line class="st7" x1="371" y1="2485.4" x2="2912" y2="2485.4"/>
+				<line class="st6" x1="2916" y1="2485.4" x2="2920" y2="2485.4"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="2485.4" x2="2900.2" y2="2485.4"/>
+				<g>
+					<polygon class="st9" points="785,2485.4 812.9,2496.7 806.2,2485.4 812.9,2474 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,2485.4 2892.1,2496.7 2898.8,2485.4 2892.1,2474 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l_until_dtp">
+		<text transform="matrix(1 0 0 1 134.907 2421.3765)" class="st4 st5">from mob-l until dtp</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2414.3" x2="363" y2="2414.3"/>
+				<line class="st7" x1="371" y1="2414.3" x2="2912" y2="2414.3"/>
+				<line class="st6" x1="2916" y1="2414.3" x2="2920" y2="2414.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="2414.3" x2="2260.2" y2="2414.3"/>
+				<g>
+					<polygon class="st9" points="785,2414.3 812.9,2425.7 806.2,2414.3 812.9,2403 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,2414.3 2252.1,2425.7 2258.8,2414.3 2252.1,2403 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l_until_ltp-l">
+		<text transform="matrix(1 0 0 1 129.7473 2350.355)" class="st4 st5">from mob-l until ltp-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2343.3" x2="363" y2="2343.3"/>
+				<line class="st7" x1="371" y1="2343.3" x2="2912" y2="2343.3"/>
+				<line class="st6" x1="2916" y1="2343.3" x2="2920" y2="2343.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="2343.3" x2="1940.2" y2="2343.3"/>
+				<g>
+					<polygon class="st9" points="785,2343.3 812.9,2354.7 806.2,2343.3 812.9,2331.9 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,2343.3 1932.1,2354.7 1938.8,2343.3 1932.1,2331.9 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l_until_ltp-m">
+		<text transform="matrix(1 0 0 1 115.3962 2279.333)" class="st4 st5">from mob-l until ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2272.3" x2="363" y2="2272.3"/>
+				<line class="st7" x1="371" y1="2272.3" x2="2912" y2="2272.3"/>
+				<line class="st6" x1="2916" y1="2272.3" x2="2920" y2="2272.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="2272.3" x2="1780.2" y2="2272.3"/>
+				<g>
+					<polygon class="st9" points="785,2272.3 812.9,2283.7 806.2,2272.3 812.9,2260.9 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1800,2272.3 1772.1,2283.7 1778.8,2272.3 1772.1,2260.9 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l_until_ltp-s">
+		<text transform="matrix(1 0 0 1 125.9084 2208.3108)" class="st4 st5">from mob-l until ltp-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="360" y1="2201.3" x2="364" y2="2201.3"/>
+				<line class="st7" x1="372" y1="2201.3" x2="2913" y2="2201.3"/>
+				<line class="st6" x1="2917" y1="2201.3" x2="2921" y2="2201.3"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="2201.3" x2="1620.2" y2="2201.3"/>
+				<g>
+					<polygon class="st9" points="785,2201.3 812.9,2212.7 806.2,2201.3 812.9,2189.9 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1640,2201.3 1612.1,2212.7 1618.8,2201.3 1612.1,2189.9 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l_until_tab-l">
+		<text transform="matrix(1 0 0 1 123.8435 2137.2891)" class="st4 st5">from mob-l until tab-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2130.2" x2="363" y2="2130.2"/>
+				<line class="st7" x1="371" y1="2130.2" x2="2912" y2="2130.2"/>
+				<line class="st6" x1="2916" y1="2130.2" x2="2920" y2="2130.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="2130.2" x2="1364.2" y2="2130.2"/>
+				<g>
+					<polygon class="st9" points="785,2130.2 812.9,2141.6 806.2,2130.2 812.9,2118.9 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1384,2130.2 1356.1,2141.6 1362.8,2130.2 1356.1,2118.9 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l_until_tab-m">
+		<text transform="matrix(1 0 0 1 112.4924 2066.2673)" class="st4 st5">from mob-l until tab-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="2059.2" x2="363" y2="2059.2"/>
+				<line class="st7" x1="371" y1="2059.2" x2="2912" y2="2059.2"/>
+				<line class="st6" x1="2916" y1="2059.2" x2="2920" y2="2059.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="2059.2" x2="1108.2" y2="2059.2"/>
+				<g>
+					<polygon class="st9" points="785,2059.2 812.9,2070.6 806.2,2059.2 812.9,2047.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1128,2059.2 1100.1,2070.6 1106.8,2059.2 1100.1,2047.8 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-l_until_tab-s">
+		<text transform="matrix(1 0 0 1 120.0042 1995.2456)" class="st4 st5">from mob-l until tab-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1988.2" x2="363" y2="1988.2"/>
+				<line class="st7" x1="371" y1="1988.2" x2="2912" y2="1988.2"/>
+				<line class="st6" x1="2916" y1="1988.2" x2="2920" y2="1988.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="804.8" y1="1988.2" x2="940.2" y2="1988.2"/>
+				<g>
+					<polygon class="st9" points="785,1988.2 812.9,1999.6 806.2,1988.2 812.9,1976.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="960,1988.2 932.1,1999.6 938.8,1988.2 932.1,1976.8 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="until_mob-l">
+		<text transform="matrix(1 0 0 1 228.2659 1924.2234)" class="st4 st5">until mob-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1917.2" x2="363" y2="1917.2"/>
+				<line class="st7" x1="371" y1="1917.2" x2="2912" y2="1917.2"/>
+				<line class="st6" x1="2916" y1="1917.2" x2="2920" y2="1917.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="1917.2" x2="765.2" y2="1917.2"/>
+				<g>
+					<polygon class="st9" points="359,1917.2 386.9,1928.6 380.2,1917.2 386.9,1905.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="785,1917.2 757.1,1928.6 763.8,1917.2 757.1,1905.8 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m">
+		<text transform="matrix(1 0 0 1 211.6331 1853.202)" class="st4 st5">from mob-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1846.2" x2="363" y2="1846.2"/>
+				<line class="st7" x1="371" y1="1846.2" x2="2912" y2="1846.2"/>
+				<line class="st6" x1="2916" y1="1846.2" x2="2920" y2="1846.2"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1846.2" x2="2996.2" y2="1846.2"/>
+				<g>
+					<polygon class="st9" points="735,1846.2 762.9,1857.5 756.2,1846.2 762.9,1834.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="3016,1846.2 2988.1,1857.5 2994.8,1846.2 2988.1,1834.8 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_wqhd">
+		<text transform="matrix(1 0 0 1 97.6599 1782.1805)" class="st4 st5">from mob-m until wqhd</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1775.1" x2="363" y2="1775.1"/>
+				<line class="st7" x1="371" y1="1775.1" x2="2912" y2="1775.1"/>
+				<line class="st6" x1="2916" y1="1775.1" x2="2920" y2="1775.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1775.1" x2="2900.2" y2="1775.1"/>
+				<g>
+					<polygon class="st9" points="735,1775.1 762.9,1786.5 756.2,1775.1 762.9,1763.8 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,1775.1 2892.1,1786.5 2898.8,1775.1 2892.1,1763.8 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_dtp">
+		<text transform="matrix(1 0 0 1 120.5559 1711.1583)" class="st4 st5">from mob-m until dtp</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1704.1" x2="363" y2="1704.1"/>
+				<line class="st7" x1="371" y1="1704.1" x2="2912" y2="1704.1"/>
+				<line class="st6" x1="2916" y1="1704.1" x2="2920" y2="1704.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1704.1" x2="2260.2" y2="1704.1"/>
+				<g>
+					<polygon class="st9" points="735,1704.1 762.9,1715.5 756.2,1704.1 762.9,1692.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,1704.1 2252.1,1715.5 2258.8,1704.1 2252.1,1692.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_ltp-l">
+		<text transform="matrix(1 0 0 1 115.3953 1640.1368)" class="st4 st5">from mob-m until ltp-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1633.1" x2="363" y2="1633.1"/>
+				<line class="st7" x1="371" y1="1633.1" x2="2912" y2="1633.1"/>
+				<line class="st6" x1="2916" y1="1633.1" x2="2920" y2="1633.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1633.1" x2="1940.2" y2="1633.1"/>
+				<g>
+					<polygon class="st9" points="735,1633.1 762.9,1644.5 756.2,1633.1 762.9,1621.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,1633.1 1932.1,1644.5 1938.8,1633.1 1932.1,1621.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_ltp-m">
+		<text transform="matrix(1 0 0 1 104.0432 1569.1143)" class="st4 st5">from mob-m until ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1562.1" x2="363" y2="1562.1"/>
+				<line class="st7" x1="371" y1="1562.1" x2="2912" y2="1562.1"/>
+				<line class="st6" x1="2916" y1="1562.1" x2="2920" y2="1562.1"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1562.1" x2="1780.2" y2="1562.1"/>
+				<g>
+					<polygon class="st9" points="735,1562.1 762.9,1573.5 756.2,1562.1 762.9,1550.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1800,1562.1 1772.1,1573.5 1778.8,1562.1 1772.1,1550.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_ltp-s">
+		<text transform="matrix(1 0 0 1 114.5554 1498.0931)" class="st4 st5">from mob-m until ltp-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1491" x2="363" y2="1491"/>
+				<line class="st7" x1="371" y1="1491" x2="2912" y2="1491"/>
+				<line class="st6" x1="2916" y1="1491" x2="2920" y2="1491"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1491" x2="1620.2" y2="1491"/>
+				<g>
+					<polygon class="st9" points="735,1491 762.9,1502.4 756.2,1491 762.9,1479.7 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1640,1491 1612.1,1502.4 1618.8,1491 1612.1,1479.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_tab-l">
+		<text transform="matrix(1 0 0 1 112.4915 1427.0713)" class="st4 st5">from mob-m until tab-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1420" x2="363" y2="1420"/>
+				<line class="st7" x1="371" y1="1420" x2="2912" y2="1420"/>
+				<line class="st6" x1="2916" y1="1420" x2="2920" y2="1420"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1420" x2="1364.2" y2="1420"/>
+				<g>
+					<polygon class="st9" points="735,1420 762.9,1431.4 756.2,1420 762.9,1408.6 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1384,1420 1356.1,1431.4 1362.8,1420 1356.1,1408.6 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_tab-m">
+		<g>
+			<text transform="matrix(1 0 0 1 98.1389 1356.0492)" class="st4 st5">from mob-m until tab-m</text>
+			<g>
+				<g>
+					<line class="st6" x1="359" y1="1349" x2="363" y2="1349"/>
+					<line class="st7" x1="371" y1="1349" x2="2912" y2="1349"/>
+					<line class="st6" x1="2916" y1="1349" x2="2920" y2="1349"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1349" x2="1108.2" y2="1349"/>
+				<g>
+					<polygon class="st9" points="735,1349 762.9,1360.4 756.2,1349 762.9,1337.6 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1128,1349 1100.1,1360.4 1106.8,1349 1100.1,1337.6 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_tab-s">
+		<g>
+			<text transform="matrix(1 0 0 1 105.6511 1285.0273)" class="st4 st5">from mob-m until tab-s</text>
+			<g>
+				<g>
+					<line class="st6" x1="359" y1="1278" x2="363" y2="1278"/>
+					<line class="st7" x1="371" y1="1278" x2="2912" y2="1278"/>
+					<line class="st6" x1="2916" y1="1278" x2="2920" y2="1278"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1278" x2="940.2" y2="1278"/>
+				<g>
+					<polygon class="st9" points="735,1278 762.9,1289.4 756.2,1278 762.9,1266.6 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="960,1278 932.1,1289.4 938.8,1278 932.1,1266.6 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-m_until_mob-l">
+		<text transform="matrix(1 0 0 1 98.8113 1214.0055)" class="st4 st5">from mob-m until mob-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1207.9" x2="363" y2="1207.9"/>
+				<line class="st7" x1="371" y1="1207.9" x2="2912" y2="1207.9"/>
+				<line class="st6" x1="2916" y1="1207.9" x2="2920" y2="1207.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="754.8" y1="1207.9" x2="765.2" y2="1207.9"/>
+				<g>
+					<polygon class="st9" points="735,1207.9 762.9,1219.3 756.2,1207.9 762.9,1196.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="785,1207.9 757.1,1219.3 763.8,1207.9 757.1,1196.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="until_mob-m">
+		<text transform="matrix(1 0 0 1 193.6101 1142.9836)" class="st4 st5">until mobile-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1135.9" x2="363" y2="1135.9"/>
+				<line class="st7" x1="371" y1="1135.9" x2="2912" y2="1135.9"/>
+				<line class="st6" x1="2916" y1="1135.9" x2="2920" y2="1135.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="1135.9" x2="715.2" y2="1135.9"/>
+				<g>
+					<polygon class="st9" points="359,1135.9 386.9,1147.3 380.2,1135.9 386.9,1124.6 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="735,1135.9 707.1,1147.3 713.8,1135.9 707.1,1124.6 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="1066.5" x2="363" y2="1066.5"/>
+				<line class="st7" x1="371" y1="1066.5" x2="2912" y2="1066.5"/>
+				<line class="st6" x1="2916" y1="1066.5" x2="2920" y2="1066.5"/>
+			</g>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 201.8416 1071.9619)" class="st4 st5">from mobile-s</text>
+			<g>
+				<g>
+					<line class="st8" x1="699.8" y1="1066.9" x2="2996.2" y2="1066.9"/>
+					<g>
+						<polygon class="st9" points="680,1066.9 707.9,1078.3 701.2,1066.9 707.9,1055.5 						"/>
+					</g>
+					<g>
+						<polygon class="st9" points="3016,1066.9 2988.1,1078.3 2994.8,1066.9 2988.1,1055.5 						"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_wqhd">
+		<text transform="matrix(1 0 0 1 87.8674 1000.9401)" class="st4 st5">from mobile-s until wqhd</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="993.9" x2="363" y2="993.9"/>
+				<line class="st7" x1="371" y1="993.9" x2="2912" y2="993.9"/>
+				<line class="st6" x1="2916" y1="993.9" x2="2920" y2="993.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="993.9" x2="2900.2" y2="993.9"/>
+				<g>
+					<polygon class="st9" points="680,993.9 707.9,1005.3 701.2,993.9 707.9,982.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2920,993.9 2892.1,1005.3 2898.8,993.9 2892.1,982.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_dtp">
+		<text transform="matrix(1 0 0 1 110.7644 929.9181)" class="st4 st5">from mobile-s until dtp</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="922.9" x2="363" y2="922.9"/>
+				<line class="st7" x1="371" y1="922.9" x2="2912" y2="922.9"/>
+				<line class="st6" x1="2916" y1="922.9" x2="2920" y2="922.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="922.9" x2="2260.2" y2="922.9"/>
+				<g>
+					<polygon class="st9" points="680,922.9 707.9,934.3 701.2,922.9 707.9,911.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="2280,922.9 2252.1,934.3 2258.8,922.9 2252.1,911.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_ltp-l">
+		<text transform="matrix(1 0 0 1 105.6038 858.8963)" class="st4 st5">from mobile-s until ltp-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="851.9" x2="363" y2="851.9"/>
+				<line class="st7" x1="371" y1="851.9" x2="2912" y2="851.9"/>
+				<line class="st6" x1="2916" y1="851.9" x2="2920" y2="851.9"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="851.9" x2="1940.2" y2="851.9"/>
+				<g>
+					<polygon class="st9" points="680,851.9 707.9,863.2 701.2,851.9 707.9,840.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1960,851.9 1932.1,863.2 1938.8,851.9 1932.1,840.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_ltp-m">
+		<text transform="matrix(1 0 0 1 91.2517 787.8745)" class="st4 st5">from mobile-s until ltp-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="780.8" x2="363" y2="780.8"/>
+				<line class="st7" x1="371" y1="780.8" x2="2912" y2="780.8"/>
+				<line class="st6" x1="2916" y1="780.8" x2="2920" y2="780.8"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="780.8" x2="1780.2" y2="780.8"/>
+				<g>
+					<polygon class="st9" points="680,780.8 707.9,792.2 701.2,780.8 707.9,769.5 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1800,780.8 1772.1,792.2 1778.8,780.8 1772.1,769.5 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_ltp-s">
+		<text transform="matrix(1 0 0 1 101.7639 716.8524)" class="st4 st5">from mobile-s until ltp-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="709.8" x2="363" y2="709.8"/>
+				<line class="st7" x1="371" y1="709.8" x2="2912" y2="709.8"/>
+				<line class="st6" x1="2916" y1="709.8" x2="2920" y2="709.8"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="709.8" x2="1620.2" y2="709.8"/>
+				<g>
+					<polygon class="st9" points="680,709.8 707.9,721.2 701.2,709.8 707.9,698.4 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1640,709.8 1612.1,721.2 1618.8,709.8 1612.1,698.4 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_tab-l">
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="639.8" x2="363" y2="639.8"/>
+				<line class="st7" x1="371" y1="639.8" x2="2912" y2="639.8"/>
+				<line class="st6" x1="2916" y1="639.8" x2="2920" y2="639.8"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="639.8" x2="1364.2" y2="639.8"/>
+				<g>
+					<polygon class="st9" points="680,639.8 707.9,651.2 701.2,639.8 707.9,628.4 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1384,639.8 1356.1,651.2 1362.8,639.8 1356.1,628.4 					"/>
+				</g>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 123.0032 645.8309)" class="st4 st5">from mob-s until tab-l</text>
+	</g>
+	<g id="from_mob-s_until_tab-m">
+		<text transform="matrix(1 0 0 1 108.6511 574.809)" class="st4 st5">from mob-s until tab-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="567.8" x2="363" y2="567.8"/>
+				<line class="st7" x1="371" y1="567.8" x2="2912" y2="567.8"/>
+				<line class="st6" x1="2916" y1="567.8" x2="2920" y2="567.8"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="567.8" x2="1108.2" y2="567.8"/>
+				<g>
+					<polygon class="st9" points="680,567.8 707.9,579.1 701.2,567.8 707.9,556.4 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="1128,567.8 1100.1,579.1 1106.8,567.8 1100.1,556.4 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_tab-s">
+		<text transform="matrix(1 0 0 1 119.1633 503.7874)" class="st4 st5">from mob-s until tab-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="496.7" x2="363" y2="496.7"/>
+				<line class="st7" x1="371" y1="496.7" x2="2912" y2="496.7"/>
+				<line class="st6" x1="2916" y1="496.7" x2="2920" y2="496.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="496.4" x2="940.2" y2="496.4"/>
+				<g>
+					<polygon class="st9" points="680,496.4 707.9,507.8 701.2,496.4 707.9,485 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="960,496.4 932.1,507.8 938.8,496.4 932.1,485 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_mob-l">
+		<text transform="matrix(1 0 0 1 109.3235 432.7652)" class="st4 st5">from mob-s until mob-l</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="425.7" x2="363" y2="425.7"/>
+				<line class="st7" x1="371" y1="425.7" x2="2912" y2="425.7"/>
+				<line class="st6" x1="2916" y1="425.7" x2="2920" y2="425.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="425.7" x2="765.2" y2="425.7"/>
+				<g>
+					<polygon class="st9" points="680,425.7 707.9,437.1 701.2,425.7 707.9,414.3 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="785,425.7 757.1,437.1 763.8,425.7 757.1,414.3 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="from_mob-s_until_mob-m">
+		<text transform="matrix(1 0 0 1 94.9719 361.7437)" class="st4 st5">from mob-s until mob-m</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="355.7" x2="363" y2="355.7"/>
+				<line class="st7" x1="371" y1="355.7" x2="2912" y2="355.7"/>
+				<line class="st6" x1="2916" y1="355.7" x2="2920" y2="355.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="699.8" y1="355.7" x2="715.2" y2="355.7"/>
+				<g>
+					<polygon class="st9" points="680,355.7 707.9,367.1 701.2,355.7 707.9,344.3 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="735,355.7 707.1,367.1 713.8,355.7 707.1,344.3 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g id="until_mob-s">
+		<text transform="matrix(1 0 0 1 227.4255 290.7217)" class="st4 st5">until mob-s</text>
+		<g>
+			<g>
+				<line class="st6" x1="359" y1="283.7" x2="363" y2="283.7"/>
+				<line class="st7" x1="371" y1="283.7" x2="2912" y2="283.7"/>
+				<line class="st6" x1="2916" y1="283.7" x2="2920" y2="283.7"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<line class="st8" x1="378.8" y1="283.7" x2="660.2" y2="283.7"/>
+				<g>
+					<polygon class="st9" points="359,283.7 386.9,295.1 380.2,283.7 386.9,272.3 					"/>
+				</g>
+				<g>
+					<polygon class="st9" points="680,283.7 652.1,295.1 658.8,283.7 652.1,272.3 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Guides">
+</g>
+</svg>

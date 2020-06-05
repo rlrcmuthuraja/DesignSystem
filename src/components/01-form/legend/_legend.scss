@@ -1,0 +1,25 @@
+// ==========================================================================
+// Component: legend
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+// Block (parent)
+// ==========================================================================
+
+.mrx-legend {
+    @include type-scale(medium);
+    @include type-weight(extra-bold);
+    @include type-family(base);
+    @include mb(base);
+    display: block;
+    width: 100%;
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-legend--underline {
+    border-bottom: rem-calc(1) solid $color-legend-border;
+}

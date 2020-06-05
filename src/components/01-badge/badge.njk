@@ -1,0 +1,12 @@
+<span class="mrx-badge">
+    <span class="mrx-badge__fill{% if skin %} mrx-badge--skin-{{ skin }}{% endif %}">
+    {% if icon.symbol -%}
+        {% render '@icon', icon, true %}
+    </span>
+    <span class="mrx-badge__txt{% if hideTxt %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+    {%- else -%}
+        <span class="mrx-badge__txt">{{ text }}</span>
+    </span>
+    {% endif -%}
+</span>
+

@@ -1,0 +1,10 @@
+<!-- BUTTON-GROUP Component -->
+<div class="mrx-btngroup{% for class in fit %} mrx-btngroup--fit-{{ class }}{% endfor %}{% for class in align %} mrx-btngroup--align-{{ class }}{% endfor %}{% for class in classes %} {{ class }}{% endfor %}" role="group" aria-label="{{ ariaLabel }}">
+    {%- for button in buttons -%}
+        {% if button.context.items -%}
+        {% render '@dropdown', button.context %}
+        {% else -%}
+        {% render '@button', button.context %}
+        {% endif -%}
+    {% endfor -%}
+</div>

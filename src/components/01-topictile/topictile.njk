@@ -1,0 +1,4 @@
+<{% if href %}a href="{{ href }}"{% else %}div{% endif %} class="mrx-topictile{% for class in classes %} {{ class }}{% endfor %}">
+    <span class="mrx-topictile__title mrx-center">{{ title }}</span>
+    <img class="mrx-topictile__img" src="{{ img.url }}" alt="{{ img.alt }}">
+</{% if href %}a{% else %}div{% endif %}>

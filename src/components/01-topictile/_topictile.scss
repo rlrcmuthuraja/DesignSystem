@@ -1,0 +1,43 @@
+// ==========================================================================
+// Component: topictile
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-topictile__img {
+    max-width: rem-calc(128);
+}
+
+.mrx-topictile__title {
+    @include type-scale(small);
+    text-transform: uppercase;
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-topictile {
+    @include p(large, large, large, large);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: $color-topictile-txt;
+
+    @at-root {
+        a#{&} {
+            text-decoration: none;
+        }
+    }
+
+    &:nth-child(odd),
+    .mrx-odd & {
+        background: $color-topictile-odd-bg;
+    }
+
+    &:nth-child(even),
+    .mrx-even & {
+        background: $color-topictile-even-bg;
+    }
+}
+
+// Modifiers
+// ==========================================================================

@@ -1,0 +1,1 @@
+var getClosest;document.addEventListener("DOMContentLoaded",function(t){if(!Modernizr.objectfit)for(var e,o=document.querySelectorAll(".mrx-objectfit .mrx-objectfit__img"),r=[],a=0;a<o.length;a++)r.push(o[a].getAttribute("data-fallback")),r[a]&&((e=getClosest(o[a],".mrx-objectfit")).style.backgroundImage='url("'+r[a]+'")',e.classList.add("mrx-objectfit--compat"))});

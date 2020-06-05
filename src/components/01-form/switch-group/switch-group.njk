@@ -1,0 +1,6 @@
+<!-- SWITCH-GROUP Component -->
+<div class="mrx-switchgroup{% if inline %} mrx-switchgroup--inline{% endif %}{% for class in classes %} {{ class }}{% endfor %}">
+    {%- for switcher in switches -%}
+    {%- render '@switch', switcher.context, true -%}
+    {%- endfor -%}
+</div>

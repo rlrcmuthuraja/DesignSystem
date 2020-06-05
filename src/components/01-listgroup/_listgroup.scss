@@ -1,0 +1,85 @@
+// ==========================================================================
+// Component: listgroup
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+.mrx-listgroup__title {
+    @include p(mini, base);
+    @include type-scale(base);
+    @include type-weight(regular);
+    flex-grow: 1;
+    text-transform: uppercase;
+    color: $color-navy-tint-60;
+
+}
+
+.mrx-listgroup__link {
+    @include p(mini, base);
+    flex-grow: 1;
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+
+    .mrx-btn__inner {
+        justify-content: flex-start;
+    }
+}
+
+.mrx-listgroup__actions {
+    @include mr(tiny, $spacing-important: true);
+}
+
+.mrx-listgroup__metadata {
+    @include type-scale(small);
+    color: $color-navy-tint-40;
+}
+
+.mrx-listgroup__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    //background-color: $color-listgroup-row-bg;
+    box-shadow: 0 -1px 0 0 $color-listgroup-row-border inset;
+
+    &:first-child {
+        box-shadow: 0 -1px 0 0 $color-listgroup-row-border inset, 0 1px 0 0 $color-listgroup-row-border inset;
+    }
+
+    &.mrx-is-selected {
+        &:before {
+            position: absolute;
+            content: '';
+            flex: 0 0 auto;
+            width: rem-calc(8);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $color-listgroup-row-bg-selected;
+        }
+    }
+
+    > *:last-child {
+        @include mr(base);
+    }
+
+    &:hover {
+        background-color: $color-listgroup-row-bg-hover;
+    }
+}
+
+.mrx-listgroup__list {
+    @include reset-list;
+}
+
+
+// Block (parent)
+// ==========================================================================
+.mrx-listgroup {
+    position: relative;
+}
+
+// Modifiers
+// ==========================================================================

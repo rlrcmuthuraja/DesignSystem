@@ -1,0 +1,15 @@
+// Absolute Center - To put stuff in the center of things using absolute position
+// ==========================================================================
+.mrx-abcenter-x {
+    @include absolute-center(true, false);
+}
+
+.mrx-abcenter-y {
+    @include absolute-center(false, true);
+}
+
+.mrx-abcenter-xy {
+    @include absolute-center(true, true);
+}
+
+

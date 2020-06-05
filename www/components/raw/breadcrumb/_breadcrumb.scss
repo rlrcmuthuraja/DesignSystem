@@ -1,0 +1,71 @@
+// ==========================================================================
+// Component: breadcrumb
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+.mrx-breadcrumb__label {
+    @include type-scale(small);
+    @include type-weight(bold);
+    color: inherit;
+
+    @at-root {
+        a#{&} {
+            color: $color-breadcrumb-link;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            + .mrx-icon {
+                transform: translate(rem-calc(4), rem-calc(1));
+
+                svg {
+                    fill: currentColor;
+                }
+            }
+        }
+    }
+}
+
+.mrx-breadcrumb__item {
+    @include mr(mini);
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.mrx-breadcrumb__list {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-breadcrumb {
+    padding-top: rem-calc(6);
+    padding-bottom: rem-calc(6);
+    background-color: $color-breadcrumb-bg;
+    color: $color-breadcrumb-txt;
+}
+
+// Modifiers
+// ==========================================================================
+
+[class*='mrx-breadcrumb--theme-'] {
+    @include px(small);
+}
+
+.mrx-breadcrumb--theme-white {
+    background-color: $color-breadcrumb-bg-theme-white;
+    color: $color-breadcrumb-txt-theme-white;
+    box-shadow: 0 rem-calc(1) 0 0 $color-breadcrumb-border;
+}
+
+.mrx-breadcrumb--theme-foam {
+    background-color: $color-breadcrumb-bg-theme-foam;
+    color: $color-breadcrumb-txt-theme-foam;
+    box-shadow: 0 0 0 rem-calc(1) $color-breadcrumb-border;
+}

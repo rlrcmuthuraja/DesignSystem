@@ -1,0 +1,33 @@
+<div class="mrx-hero{% if size %} mrx-hero--{{ size }}{% endif %} mrx-objectfit{% for class in classes %} {{ class }}{% endfor %}">
+    {% if video.url -%}
+        <div class="mrx-hero__poster">
+            <video autoplay loop class="mrx-hero__img mrx-objectfit__img" muted>
+                <source src="{{ video.url | path }}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+        </div>
+    {% elseif img.url -%}
+        <picture class="mrx-hero__poster">
+            {% for size in img.rwd -%}
+                <source srcset="{{ size.srcset | path  }}" media="{{ size.size }}">
+            {% endfor -%}
+            <img class="mrx-hero__img mrx-objectfit__img" src="{{ img.fallback.url | path  }}" data-fallback="{{ img.fallback.url | path  }}" alt="{{ img.alt }}">
+        </picture>
+    {% endif -%}
+    {%- if content.title -%}
+        <div class="mrx-hero__content">
+            <div class="mrx-hero__content__item">
+                <div class="mrx-container mrx-container--center mrx-container--tab-m{% if content.align %} mrx-{{ content.align }}{% endif %}">
+                    <h1 class="mrx-hero__title">
+                        {{ content.title }}
+                    </h1>
+                    {% if content.lead %}
+                    <p class="mrx-hero__lead">{{ content.lead }}</p>
+                    {% endif %}
+                    {% if content.cta.text %}
+                    {% render '@button', content.cta, true %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endif -%}
+</div>

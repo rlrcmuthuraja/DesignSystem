@@ -1,0 +1,42 @@
+{%- if href -%}
+<!-- LINK AS BUTTON Component -->
+<a class="mrx-btn{% if skin %} mrx-btn--skin-{{ skin }}{% endif %}{% if size %} mrx-btn--size-{{ size }}{% endif %}{% if fluid %} mrx-btn--fluid{% endif %}{% if icon %}{% if hideText==true %} mrx-btn--icon{% endif %}{% endif %}{% for class in classes %} {{ class }}{% endfor %}{% if state %} mrx-is-{{ state }}{% if hideText==true %} mrx-btn--icon{% endif %}{% endif %}{% if disabled %} mrx-is-disabled{% endif %}"{% if disabled %} tabindex="-1"{% endif %}{% for data_attr in data %} data-{{ data_attr }}{% endfor %} href="{{ href }}"{% if ariaLabelledBy %} aria-labelledby="{{ ariaLabelledBy }}"{% endif %}{% if hideText %} aria-label="{{ text }}"{% endif%}>
+    <span class="mrx-btn__inner">
+    {%- if icon %}
+        {% if iconAfter -%}
+        <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+        {% render '@icon', icon, true %}
+        {%- else -%}
+        {% render '@icon', icon, true %}
+        <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+        {%- endif -%}
+    {%- elseif state=='processing' %}
+        {% render '@process', process, true %}
+        <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+    {%- else %}
+        <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+    {%- endif %}
+    </span>
+</a>
+
+{%- else -%}
+<!-- BUTTON Component -->
+<button class="mrx-btn{% if skin %} mrx-btn--skin-{{ skin }}{% endif %}{% if size %} mrx-btn--size-{{ size }}{% endif %}{% if fluid %} mrx-btn--fluid{% endif %}{% if icon %}{% if hideText==true %} mrx-btn--icon{% endif %}{% endif %}{% for class in classes %} {{ class }}{% endfor %}{% if state %} mrx-is-{{ state }}{% if hideText==true %} mrx-btn--icon{% endif %}{% endif %}"{% for data_attr in data %} data-{{ data_attr }}{% endfor %}{{ 'disabled="disabled"' if disabled }}{% if ariaLabelledBy %} aria-labelledby="{{ ariaLabelledBy }}"{% endif %}{% if hideText %} aria-label="{{ text }}"{% endif%}>
+    <span class="mrx-btn__inner">
+    {%- if icon %}
+        {% if iconAfter -%}
+        <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+        {% render '@icon', icon, true %}
+        {%- else -%}
+        {%- render '@icon', icon, true %}
+        <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+        {%- endif %}
+    {%- elseif state=='processing' %}
+        {% render '@process', process, true %}
+        <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+    {%- else %}
+        <span class="mrx-btn__txt{% if hideText %} mrx-is-vishidden{% endif %}">{{ text }}</span>
+    {%- endif %}
+    </span>
+</button>
+{%- endif -%}

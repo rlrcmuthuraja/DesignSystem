@@ -1,0 +1,150 @@
+// ==========================================================================
+// Component: modal
+// ==========================================================================
+
+// Elements (children)
+// ==========================================================================
+
+.mrx-modal__title {
+    @include type-scale(medium);
+    @include type-weight(bold);
+ }
+
+.mrx-modal__close {
+    margin-left: auto;
+}
+
+.mrx-modal__header {
+    @include p(base, base, base, base);
+    display: flex;
+    align-items: center;
+}
+
+.mrx-modal__body {
+    @include p(base, base, base, base);
+    background-color: $color-modal-dialog-bg;
+}
+
+.mrx-modal__footer {
+    @include p(base, base, base, base);
+    display: flex;
+
+    .mrx-btngroup {
+        width: 100%;
+    }
+
+    // Stack buttongroup on small screens
+    @include mq($until: mob-m) {
+        > .mrx-btngroup {
+            flex-direction: column;
+
+            .mrx-btn {
+                @include mt(mini);
+                @include ml(none);
+                width: 100%;
+            }
+        }
+    }
+}
+
+.mrx-modal__dialog {
+    @include my(small, small);
+    @include center-box;
+    border-radius: $radius-global * 3;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    z-index: 1;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: margin $duration-fast ease-out;
+
+    @include mq($from: tab-s) {
+        @include my(xlarge, xlarge);
+    }
+}
+
+.mrx-modal__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color-overlay-bg, 0.75);
+    opacity: 1;
+}
+
+// Block (parent)
+// ==========================================================================
+.mrx-modal {
+    padding-left: gutter() / 2;
+    padding-right: gutter() / 2;
+    box-sizing: content-box;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: 0;
+}
+
+// Modifiers
+// ==========================================================================
+
+.mrx-modal--skin-prominent {
+    .mrx-modal__close {
+        &:hover {
+            color: $color-modal-close-prominent-hover;
+        }
+    }
+
+    .mrx-modal__header {
+        color: $color-modal-header-prominent-txt;
+        background-color: $color-modal-header-prominent-bg;
+    }
+
+    .mrx-modal__footer {
+        background-color: $color-modal-footer-prominent-bg;
+        border-top: 1px solid $color-modal-footer-prominent-border;
+    }
+}
+
+.mrx-modal--skin-discreet {
+    .mrx-modal__close {
+        &:hover {
+            color: $color-modal-close-discreet-hover;
+        }
+    }
+
+    .mrx-modal__header {
+        background-color: $color-modal-header-discreet-bg;
+        padding-bottom: 0;
+    }
+
+    .mrx-modal__footer {
+        background-color: $color-modal-footer-discreet-bg;
+    }
+}
+
+.mrx-modal--size-small {
+    max-width: rem-calc(mq-get-breakpoint-width(mob-s) - 1px) - gutter();
+
+    .mrx-modal__footer {
+        > .mrx-btngroup {
+            flex-direction: column;
+
+            .mrx-btn {
+                @include mt(mini);
+                @include ml(none);
+                width: 100%;
+            }
+        }
+    }
+}
+
+.mrx-modal--size-medium {
+    max-width: rem-calc(mq-get-breakpoint-width(tab-s) - 1px) - gutter();
+}
+
+.mrx-modal--size-large {
+    max-width: rem-calc(mq-get-breakpoint-width(tab-l) - 1px) - gutter();
+}
