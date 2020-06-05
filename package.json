@@ -36,7 +36,7 @@
     "system"
   ],
   "publishConfig": {
-    "registry": "https://design.jfrog.io/kdi/api/npm/npm-local"
+    "registry": "https://XXXXX.XXXXX/api/npm/npm-local"
   },
   "author": "Ronny Siikaluoma",
   "devDependencies": {
